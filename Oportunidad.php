@@ -88,14 +88,11 @@ $fun->comprobar();
             <input name="telefono" type="text" class="form-control input-sm" placeholder="Telefono">
           </div>
           <div class="form-group col-lg-4">
-            <label>Direccion</label>
-            <input  name="direccion" type="text" class="form-control input-sm" placeholder="Direccion">
-          </div>
-          <div class="form-group col-lg-4">
             <label>Fecha limite</label>
             <input name="fecha" type="date" class="form-control input-sm" placeholder="AAAA\MM\DD">
           </div>
         </div>
+            </form>
       <div class="clearfix"></div>
 
       <div class="form-group col-lg-12">
@@ -104,12 +101,10 @@ $fun->comprobar();
         <button name="enviar" type="submit" class="btn btn-default">Enviar</button>
       </div>
     </div>
-  </form>
-</div>
+
 </div>
 </div>
 
-</div>
 <!--/Formulario--->
 
 

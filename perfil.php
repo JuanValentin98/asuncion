@@ -48,18 +48,13 @@ $fun->comprobar();
 <hr>
 <div class="col-md-12">
   <img src="img/perfil/user.png" class="profile">
-  <img src="img/perfil/empresa.png" class="empresa">
+
 </div>
 <div class="col-md-2 col-md-offset-1">
     <div >
       <h4>Nombre(s):</h4>
     </div><br>
-    <div >
-      <h4>Email@:</h4>
-    </div><br>
-    <div >
-      <h4>Telefono:</h4>
-    </div><br>
+   
     <div >
       <h4 >Nombre de usuario:</h4>
     </div><br>
@@ -73,12 +68,7 @@ $fun->comprobar();
     <div ><h4>
       '.$_SESSION['usuario'].'
     </h4></div><br>
-    <div><h4>
-      '.$_SESSION['email'].'
-    </h4></div><br>
-    <div ><h4>
-      '.$_SESSION['telefono'].'
-    </h4></div><br>
+       
     <div ><h4>
       '.$_SESSION['alias'].'
     </h4></div><br><br>
@@ -89,26 +79,8 @@ $fun->comprobar();
   </div>'; ?>
 </div>
 
-<div class="col-md-2 col-md-offset-1">
-      <div >
-        <h4>Nombre de la maquila:</h4>
-      </div><br>
-      <div>
-        <h4 >Dirección de la maquila:</h4>
-      </div><br>
-      <div>
-        <h4>Email@:</h4>
-      </div><br>
-      <div>
-        <h4>Telefono:</h4>
-      </div><br>
-      <div>
-        <h4>Descripción:</h4>
-      </div>
-</div>
-<div class="col-md-2 ">
-  <?php $fun->maqula(); ?>
-</div>
+
+
 </div>
 </div>
 
