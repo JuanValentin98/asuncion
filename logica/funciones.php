@@ -12,7 +12,7 @@ class funciones {
   //funcion para mostrar el mismo menu en todas las paginas
   public function menu() {
     $menu='
-    <div class="brand">Confecciones La Asunción S.A DE C.V</div>
+    <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
     <div class="address-bar">CENTRO DE DISEÑO Y DESARROLLO EN MODA URBANA A.C.</div>
 
     <!-- Navigation -->
@@ -24,7 +24,7 @@ class funciones {
     <span class="sr-only">Toggle navigation</span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>  
     </button>
     <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
     <a class="navbar-brand" href="index.html">Business Casual</a>
@@ -33,16 +33,17 @@ class funciones {
     <ul class="nav navbar-nav" style="font-size:15px;">
     <li><a href="index.php">INICIO</a></li>
     <li><a href="servicios.php">SERVICIOS</a></li>
-    <li><a href="catalogo.php">CATALOGO</a></li>
+    
+    <li><a href="catalogo.php">Catalogo</a></li>
     <li><a href="bolsa.php">Bolsa de trabajo</a></li>
     <li><a href="contact.php">Contacto</a></li>
     <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log in<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu">';
     // condicion de que exista una variable de sesion
     if(isset($_SESSION['usuario'])){
-      $menu.='<li><a href="perfil.php">Administrador</a></li>
-      <li><a href="oportunidad.php">Subir vacante</a></li>
+      $menu.='<li><a href="perfil.php">Ver Perfil</a></li>
+      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
       <form accion="'.$this->cerrarSession().'" method="post">
       <li><input type="submit" class="btn" name="salir" value="cerrar sesión"></li>
       </form>';
@@ -86,7 +87,7 @@ class funciones {
       </div>
       <div class="form-group sign-btn">
       <input type="submit" class="btn" name="logear" value="Entrar"> <br><br>
-      <p><strong>¿Eres nuevo?</strong><br><a href="registrarse.php" id="flip-btn" class="signup signup_link">Crea una cuenta ahora.</a></p>
+      
       </div>
       </form>
       </div>
@@ -99,9 +100,9 @@ class funciones {
     }
     echo $menu;
   }
+  //muestra el mismo footer
   
-  
-    public function music() {
+  public function music() {
      echo'
     <footer>
     <div class="container">
@@ -117,7 +118,7 @@ class funciones {
     <!-- /.footer -->
     </footer> ';
 }
-  //muestra el mismo footer
+  
   public function footer() {
     echo'<footer>
     <div class="footer">
@@ -137,7 +138,7 @@ class funciones {
     <ul class="list-unstyled">
     <li><a href="index.php">INICIO</a></li>
     <li><a href="servicios.php">SERVICIOS</a></li>
-   
+    <li><a href="cursos.php">CURSOS</a></li>
     <li><a href="bolsa.php">BOLSA DE TRABAJO</a></li>
     <li><a href="contact.php">CONTACTO</a></li>
 
@@ -148,9 +149,10 @@ class funciones {
     <div class="col-xs-12 col-sm-4 col-md-4 ">
     <h4>Contáctanos</h4>
     <ul class="list-unstyled">
-    <li><i class="glyphicon glyphicon-globe"></i> 27 Norte #115 Fracc.El rosario, Tehuacán Puebla.</li>
-    <li><i class="glyphicon glyphicon-earphone"></i> (044) 238 123 4567</li>
-    <li><i class="glyphicon glyphicon-envelope"></i><a href="#">   cddmu@contacto.com</a></li>
+    <li><i class="glyphicon glyphicon-globe"></i> Calle Emiliano Zapata #4004 Colonia La Huizachera, Tehuacán Puebla.</li>
+    <li><i class="glyphicon glyphicon-earphone"></i> (238) 383 3131</li>
+    <li><i class="glyphicon glyphicon-earphone"></i> (238) 380 2754</li>
+    
     </ul>
     </div>
     </div> <br>
@@ -161,6 +163,7 @@ class funciones {
     <!-- /.footer -->
     </footer>';
   }
+  
 
   public function bolsa(){
     //se usa la caonsulta
@@ -244,25 +247,19 @@ class funciones {
     }
   }
 
-
   public function N_bolsa(){
     if (isset($_POST['enviar'])) {
-      
-      if($activo == 0){
         $id= $_SESSION['id_user'];
         $nombre= $_POST['vacante'];
         $contenido=$_POST['contenido'];
-        $telefono= $_POST['telefono'];
-        $direccion= $_POST['direccion'];
+        $telefono= $_POST['telefono'];       
         $fecha=$_POST['fecha'];
         $fecha_limite= date("Y-m-d",strtotime($fecha));
-        $this->bd->N_bolsa($id, $nombre, $contenido, $telefono,$direccion, $fecha_limite);
+        $this->bd->N_bolsa($id, $nombre, $contenido, $telefono,$fecha_limite);
           echo '<script type="text/javascript">alert("Registro correcto");</script>';
-      }else{
-        echo '<script type="text/javascript">alert("No tiene permitido hacer esta acción");</script>';
       }
     }
-    }
+    
 
     public function N_empleado(){
       if (isset($_POST["enviar"])) {
@@ -272,7 +269,7 @@ class funciones {
         $email=$_POST['email'];
         $mensaje=$_POST['comentario'];
         $this->bd->Empleado($id, $nombre, $telefono, $email , $mensaje);
-          echo '<script type="text/javascript">alert("Registro correcto");</script>';
+          echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
       }
     }
 
@@ -282,16 +279,13 @@ class funciones {
       $contraseña= $_POST['contraseña'];
       $afi= $this->bd->afilidao_id($user,$contraseña);
       if (empty($afi)) {
-        echo '<script type="text/javascript">alert("No se encuentra segirtrado.");</script>';
+        echo '<script type="text/javascript">alert("No eres administrador.");</script>';
       }else {
         foreach ($afi as $v) {
-          $_SESSION['usuario'] = $v['Nombre'] ;
+          $_SESSION['usuario'] = $v['Nombre'];
           $_SESSION['alias'] = $v['Nombre_usuario'];
-          
-          
           $_SESSION['id_user'] = $v['Id_admin'];
-          $_SESSION['telefono'] = $v['Telefono'];
-          $_SESSION['contraseña'] = $v['Password'];
+          $_SESSION['contraseña'] = $v['passwors'];
           echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
         }
       }
@@ -306,10 +300,10 @@ class funciones {
   }
 
   public function activo(){
-    $usuario=$_SESSION['alias'];
+    $usuario=$_SESSION['alias'  ];
     $contraseña=$_SESSION['contraseña'];
     $afi= $this->bd->afilidao_id($usuario,$contraseña);
-    $activo= "";
+    $activo = "";
     foreach ($afi as $v) {
       $activo = $v['activo'];
     }

@@ -57,7 +57,7 @@ $fun->comprobar();
    
     <div >
       <h4 >Nombre de usuario:</h4>
-    </div><br>
+    </div>
     <div >
       <h4>Contraseña:</h4>
     </div>

@@ -4,8 +4,8 @@ class database {
 
   private $pdo;//variable para iniciar el pdo
   var $HOST = "localhost";//nombre del host que se ocupara
-  var $BDNAME = "cdmu";//nombre de la base de datos
-    var $USUARIO = "root";//nombre del usuario
+  var $BDNAME = "asuncion";//nombre de la base de datos
+  var $USUARIO = "root";//nombre del usuario
   var $PASSWORD = "";//la contraseña para acceder a la base
 
   public function __construct() {
@@ -43,30 +43,30 @@ class database {
   }
 
 
-
-
+ 
   function afilidao_id($user, $contraseña){
-    $sql = $this->pdo->prepare("SELECT * FROM `administrador` WHERE `Nombre_usuario` = ? AND `Password`= ?");
+    $sql = $this->pdo->prepare("SELECT * FROM `administrador` WHERE `Nombre_usuario` = ? AND `passwors`= ?");
     if ($sql->execute(array($user, $contraseña))) {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
   }
-
-  function N_bolsa($id, $nombre, $contenido, $telefono,$fecha_limite){
+ 
+  function N_bolsa($id, $nombre, $contenido, $telefono,$direccion,$fecha_limite){
     //inserta una nueva afiliacion
-    $sql = $this->pdo->prepare("INSERT INTO bolsa_trabajo(`Id_afiliado`,`Nombre_vacante`, `Contenido`, `Telefono`,  `Fecha_limite`) VALUES ('{$id}','{$_POST['vacante']}','{$_POST['contenido']}','{$_POST['telefono']},'{$_POST['fecha']}')");
-    $sql->execute(array($id, $nombre,$contenido, $telefono,$fecha_limite));
+    $sql = $this->pdo->prepare("INSERT INTO bolsa_trabajo(`Id_admin`,`Nombre_vacante`, `Contenido`, `Telefono`, `Direccion`, `Fecha_limite`) VALUES ('{$id}','{$_POST['vacante']}','{$_POST['contenido']}','{$_POST['telefono']}
+      ','{$_POST['direccion']}','{$_POST['fecha']}')");
+    $sql->execute(array($id, $nombre,$contenido, $telefono,$direccion,$fecha_limite));
   }
 
 
   function Empleado ($id, $nombre, $telefono, $email , $mensaje){
     //inserta una nueva afiliacion
-    $sql = $this->pdo->prepare("INSERT INTO `bolsa_aspirante`(`Id_bolsa`, `Nombre`, `Telefono`, `Correo`, `Mensaje`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['telefono']}','{$_POST['email']}
+    $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}
       ','{$_POST['comentario']}')");
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje));
   }
 
-
+ 
 
 }
