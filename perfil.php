@@ -3,6 +3,8 @@ include_once 'logica/funciones.php';
 $fun = new funciones();
 session_start();
 $fun->comprobar();
+   
+         
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,48 +43,31 @@ $fun->comprobar();
             <!-- Collect the nav links, forms, and other content for toggling -->
             <?php $fun->menu();  ?>
             <!-- /.navbar-collapse -->
-<div class="container">
-<div class="box">
-<hr>
-<h2 class="intro-text text-center" >Datos personales</h2>
-<hr>
-<div class="col-md-12">
-  <img src="img/perfil/user.png" class="profile">
+  <div class="container">
 
-</div>
-<div class="col-md-2 col-md-offset-1">
-    <div >
-      <h4>Nombre(s):</h4>
-    </div><br>
-   
-    <div >
-      <h4 >Nombre de usuario:</h4>
-    </div>
-    <div >
-      <h4>Contraseña:</h4>
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12">
+          <hr>
+          <h2 class="intro-text text-center">
+            <strong>Solicitudes</strong>
+          </h2>
+          
+          <table>
+            <tr>
+                <td>titulo</td>
+                <td>descripcion</td>
+                <td>tamaño</td>
+                <td>tipo</td>
+                <td>nombre</td>
+            </tr>
+          </table>
+          
+        </div>
+         <?php echo $fun->solicitud(); ?>
+      </div>
     </div>
   </div>
-<div class="col-md-2 ">
-  <?php echo '
-  <div style="color:black; ">
-    <div ><h4>
-      '.$_SESSION['usuario'].'
-    </h4></div><br>
-       
-    <div ><h4>
-      '.$_SESSION['alias'].'
-    </h4></div><br><br>
-    <div><h4>
-      '.$_SESSION['contraseña'].'
-      </h4>
-    </div>
-  </div>'; ?>
-</div>
-
-
-
-</div>
-</div>
 
 
     <!-- /.container -->

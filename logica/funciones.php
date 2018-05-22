@@ -42,7 +42,7 @@ class funciones {
     <ul class="dropdown-menu">';
     // condicion de que exista una variable de sesion
     if(isset($_SESSION['usuario'])){
-      $menu.='<li><a href="perfil.php">Ver Perfil</a></li>
+      $menu.='<li><a href="perfil.php">Solicitudes</a></li>
       <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
       <form accion="'.$this->cerrarSession().'" method="post">
       <li><input type="submit" class="btn" name="salir" value="cerrar sesión"></li>
@@ -163,6 +163,26 @@ class funciones {
     <!-- /.footer -->
     </footer>';
   }
+    public function solicitud(){
+    //realiza la consulta
+    $con=$this->bd->solicitud();
+    $texto='';
+    //recorre los datos
+    foreach ($con as $datos) {
+      $texto.='<div class="row">
+      <div class="box">
+      <div class="col-lg-12">
+      <hr>
+      <p>'.$datos['Nombre'].'</p>
+      <p>'.$datos['Correo'].'</p>
+      <p>'.$datos['Telefono'].'</p>
+      <p>'.$datos['Mensaje'].'</p>
+      <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
+      </div>
+      </div>';
+    }
+    return $texto;
+  }
   
 
   public function bolsa(){
@@ -252,7 +272,7 @@ class funciones {
         $id= $_SESSION['id_user'];
         $nombre= $_POST['vacante'];
         $contenido=$_POST['contenido'];
-        $telefono= $_POST['telefono'];       
+        $telefono= $_POST['telefono'];
         $fecha=$_POST['fecha'];
         $fecha_limite= date("Y-m-d",strtotime($fecha));
         $this->bd->N_bolsa($id, $nombre, $contenido, $telefono,$fecha_limite);
@@ -263,15 +283,22 @@ class funciones {
 
     public function N_empleado(){
       if (isset($_POST["enviar"])) {
+           $curri = $_FILES['archivo']['name'];
+        $ruta = $_FILES['archivo']['tmp_name'];
+    $destino = "archivos/" . $curri;
+    if ($nombre != "") {
+        if (copy($ruta, $destino)) {
+    
         $id=$_POST['Id_bolsa'];
         $nombre=$_POST['nombre'];
         $telefono=$_POST['telefono'];
         $email=$_POST['email'];
+        $curriculum=$_POST['archivo'];
         $mensaje=$_POST['comentario'];
-        $this->bd->Empleado($id, $nombre, $telefono, $email , $mensaje);
+        $this->bd->Empleado($id, $nombre, $telefono, $email , $curriculum, $mensaje);
           echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
       }
-    }
+    }}}
 
   public function login(){
     if(isset($_POST['logear'])){
@@ -315,31 +342,5 @@ class funciones {
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
     }
   }
-
-  public function maqula(){
-    $maquilas= $this->bd->maquila($_SESSION['id_user']);
-    $texto='';
-    //recorre los datos
-    foreach ($maquilas as $maq) {
-      $texto.='<div style="color:black; ">
-        <div ><h4>
-          '.$maq['Nombre_maqui'].'
-        </h4></div><br>
-        <div><h4>
-          '.$maq['Direccion'].'
-        </h4></div><br>
-        <div ><h4>
-          '.$maq['Telefono'].'
-        </h4></div><br>
-        <div><h4>
-          '.$maq['Email'].'
-        </h4></div><br>
-        <div><h4>
-          '.$maq['Descripcion'].'
-          </h4>
-        </div>
-      </div>';
-    }
-    echo $texto;
-  }
 }
+

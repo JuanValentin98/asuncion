@@ -80,10 +80,14 @@ session_start();
                 <label>Correo</label>
                 <input name="email" type="email" class="form-control" placeholder="Correo@" required="required" autofocus="autofocus">
               </div>
+              <div class="form-group col-lg-4">
+                <label>Curriculum</label>
+                <td colspan="2"> <input type="file" name="archivo" required="required"> </td>
+              </div>
               <div class="clearfix"></div>
               <div class="form-group col-lg-12">
                 <label>Deja un mensaje</label>
-                <textarea name="comentario" class="form-control" rows="6"></textarea>
+                <textarea name="comentario" class="form-control" rows="6" required="required"></textarea>
               </div>
               <div class="form-group col-lg-12">
 
