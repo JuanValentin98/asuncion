@@ -66,7 +66,7 @@ session_start();
           <h3>Solicita una entrevista</h3>
         </div>
         <div class="modal-body">
-          <form role="form" id="formulario" method="post">
+            <form role="form" id="formulario" method="post" enctype="multipart/form-data">
             <div class="row">
               <div class="form-group col-lg-4">
                 <label>Nombre(s)</label>
@@ -82,7 +82,7 @@ session_start();
               </div>
               <div class="form-group col-lg-4">
                 <label>Curriculum</label>
-                <td colspan="2"> <input type="file" name="archivo" required="required"> </td>
+                <td colspan="2"> <input type="file" name="archivo" required="required"></td>
               </div>
               <div class="clearfix"></div>
               <div class="form-group col-lg-12">

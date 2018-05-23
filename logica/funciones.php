@@ -177,6 +177,7 @@ class funciones {
       <p>'.$datos['Correo'].'</p>
       <p>'.$datos['Telefono'].'</p>
       <p>'.$datos['Mensaje'].'</p>
+          <p>'.$datos['Curriculum'].'</p>
       <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
       </div>
       </div>';
@@ -281,24 +282,28 @@ class funciones {
     }
     
 
-    public function N_empleado(){
-      if (isset($_POST["enviar"])) {
-           $curri = $_FILES['archivo']['name'];
-        $ruta = $_FILES['archivo']['tmp_name'];
-    $destino = "archivos/" . $curri;
-    if ($nombre != "") {
-        if (copy($ruta, $destino)) {
+    public function N_empleado() {
+        $Curriculum = $_FILES['archivo']['name'];
+    if (isset($_POST['enviar'])) {
     
-        $id=$_POST['Id_bolsa'];
+    $ruta = $_FILES['archivo']['tmp_name'];
+    $destino = "archivos/" . $Curriculum;
+    if ($curriculum != "") {
+        if (copy($ruta, $destino)) {
         $nombre=$_POST['nombre'];
         $telefono=$_POST['telefono'];
         $email=$_POST['email'];
-        $curriculum=$_POST['archivo'];
         $mensaje=$_POST['comentario'];
-        $this->bd->Empleado($id, $nombre, $telefono, $email , $curriculum, $mensaje);
-          echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
+        $this->bd->Empleado($id, $nombre, $telefono, $email , $Curriculum, $mensaje);
+        echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
+        }
+          
       }
-    }}}
+    }
+}
+
+     
+    
 
   public function login(){
     if(isset($_POST['logear'])){
