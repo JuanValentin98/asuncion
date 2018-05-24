@@ -54,9 +54,9 @@ class funciones {
     <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
-    </nav>  
+    </nav>  <hr>
     <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
-    <div class="address-bar">CENTRO DE DISEÑO Y DESARROLLO EN MODA URBANA A.C.</div>';
+    <hr>s'; 
     // agrega el modal de seccion
     if(!isset($_SESSION['usuario'])){
       $menu.='<div class="modal fade" id="modal-login" role="dialog">
