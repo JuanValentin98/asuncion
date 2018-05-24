@@ -283,24 +283,26 @@ class funciones {
     
 
     public function N_empleado() {
-        $Curriculum = $_FILES['archivo']['name'];
+        
     if (isset($_POST['enviar'])) {
-    
-    $ruta = $_FILES['archivo']['tmp_name'];
-    $destino = "archivos/" . $Curriculum;
-    if ($curriculum != "") {
-        if (copy($ruta, $destino)) {
+        $Curriculum =$_FILES['curri']['name'];
+        $carpeta = "archivos/";
+        opendir($carpeta);
+        $destino = $carpeta.$Curriculum;
+        $ruta = $_FILES['curri']['tmp_name'];
+         if ($Curriculum != "") {
+         if (copy($ruta, $destino)) {
+       
+        $id=$_POST['Id_bolsa'];
         $nombre=$_POST['nombre'];
         $telefono=$_POST['telefono'];
         $email=$_POST['email'];
-        $mensaje=$_POST['comentario'];
-        $this->bd->Empleado($id, $nombre, $telefono, $email , $Curriculum, $mensaje);
+        $mensaje=$_POST['comentario'];     
+        $this->bd->Empleado($id, $nombre, $telefono, $email ,$mensaje, $Curriculum);
         echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
         }
           
-      }
-    }
-}
+    }}}
 
      
     
