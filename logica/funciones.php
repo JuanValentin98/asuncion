@@ -11,33 +11,24 @@ class funciones {
   }
   //funcion para mostrar el mismo menu en todas las paginas
   public function menu() {
-    $menu='
-    <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
-    <div class="address-bar">CENTRO DE DISEÑO Y DESARROLLO EN MODA URBANA A.C.</div>
-
+       $menu='
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
+                <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>  
-    </button>
-    <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-    <a class="navbar-brand" href="index.html">Business Casual</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav" style="font-size:15px;">
-    <li><a href="index.php">INICIO</a></li>
-    <li><a href="servicios.php">SERVICIOS</a></li>
-    
-    <li><a href="catalogo.php">Catalogo</a></li>
-    <li><a href="bolsa.php">Bolsa de trabajo</a></li>
-    <li><a href="contact.php">Contacto</a></li>
-    <li class="dropdown">
+        <ul class="nav navbar-nav navbar-center">
+            <li><a href="index.php">inicio</a></li>
+            <li><a href="servicios.php">Servicios</a></li>
+            <li><a href="catalogo.php">Catalogo</a></li>
+            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+            <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu">';
     // condicion de que exista una variable de sesion
@@ -57,7 +48,9 @@ class funciones {
     <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
-    </nav>  ';
+    </nav>  <hr>
+    <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
+    <hr>s'; 
     // agrega el modal de seccion
     if(!isset($_SESSION['usuario'])){
       $menu.='<div class="modal fade" id="modal-login" role="dialog">
@@ -65,7 +58,7 @@ class funciones {
       <div class="modal-content">
       <div class="modal-header">
       <button class="close" data-dismiss="modal">&times;</button>
-      <h3>Iniciar sesión</h3>
+      <h2>Iniciar sesión</h2>
       </div>
       <div class="modal-body">
       <form class="login-form" id="login" method="post" action="'.$this->login().'">
@@ -96,7 +89,9 @@ class funciones {
       </div>
       </div>
       </div>
-      </div>';
+      </div>'
+              
+              ;
     }
     echo $menu;
   }
@@ -169,17 +164,30 @@ class funciones {
     $texto='';
     //recorre los datos
     foreach ($con as $datos) {
-      $texto.='<div class="row">
-      <div class="box">
-      <div class="col-lg-12">
-      <hr>
-      <p>'.$datos['Nombre'].'</p>
-      <p>'.$datos['Correo'].'</p>
-      <p>'.$datos['Telefono'].'</p>
-      <p>'.$datos['Mensaje'].'</p>
-      <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
-      </div>
-      </div>';
+    $texto.='<div style="font-family: 
+    Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #189ccf;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #5878ca;">
+    <div class="box">
+    <div class="col-lg-12">
+    <hr>
+    <p>'.$datos['Nombre'].'</p>
+    <p>'.$datos['Correo'].'</p>
+    <p>'.$datos['Telefono'].'</p>
+    <p>'.$datos['Mensaje'].'</p>
+    <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
+    </div>
+    </div>';
     }
     return $texto;
   }
@@ -195,9 +203,9 @@ class funciones {
     foreach ($con as $bolsa) {
       if($bolsa['Fecha_limite'] > $fecha_actual){
       $texto.='<div class="col-sm-4 text-center">
-      <h3>
+      <h2>
       '.$bolsa['Nombre_vacante'].'
-      </h3>
+      </h2>
       <h4 class="text-justify">
       <small>'.$bolsa['Contenido'].'<br> Teléfono:'.$bolsa['Telefono'].'</small>
       </h4>

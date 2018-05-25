@@ -22,6 +22,7 @@ session_start();
   <!-- Custom CSS -->
   <link href="css/business-casual.css" rel="stylesheet">
   <link href="css/Style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estiloAsun.css"> 
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -57,73 +58,48 @@ session_start();
                 <div class="box">
                 <div class="col-md-3">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-               
-                <h1>Categorias</h1>
-                <br><br><br><br>
-                      
                 <ul style="text-align: center">
-                            <h3>CALVIN KLEIN</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Short</a></li>
-                              <br>
-                              <hr>
-                              <br>
-                              <h3>LACOSTE</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Short</a></li>
-                              <br>
-                              <hr>
-                              <br>
-                              <h3>NAUTICA</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Mezclilla</a></li>
-                              <br>
-                              <hr>
-                              <br>
-                              <h3>AEROPOSTALE</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Short</a></li>
-                              <br>
-                              <hr>
-                              <br> 
-                            <h3>PUMA</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Short</a></li>
-                              <br>
-                              <hr>
-                              <br> 
-                          <h3>LEVI'S</h3> 
-                            <li><a href="catalogo.php">Camisa</a></li>
-                              <br>
-                              <li><a href="catalogo2.php">Pantalon</a></li>
-                              <br>
-                              <li><a href="catalogo3.php">Short</a></li>
-                              <br>
-                              <hr>
-                              <br> 
-                        </ul>          
-                
+                    <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="15" style="border: 2px solid #000; height: 800px; padding: 3px; text-align: center; width: 250px;">
+<h3>CALVIN KLEIN</h3> 
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+<h3>LACOSTE</h3>
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+<h3>NAUTICA</h3> 
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+<h3>AEROPOSTALE</h3>
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+<h3>PUMA</h3> 
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+<h3>LEVI'S</h3> 
+<a href="catalogo.php">Camisa</a><br />
+<a href="catalogo2.php">Pantalon</a><br />
+<a href="catalogo3.php">Short</a><br />
+</marquee>
+</ul>                 
                 </div>
-                <div class="col-md-9" style=" background-color: black;">           
+                    <div class="col-md-9" style=" background-color: black">           
                
-                    <br>
-                    
-                    <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
+                    <br> 
+                    <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /> <table  style="width: 350px;
+  border: 1px solid #000;
+  border-collapse: collapse;">
+  <tr>
+  <h1 scope="col">Camisa Azul</h1>
+  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
+  </tr>
+  </table></div></div> 
+  
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -132,16 +108,7 @@ session_start();
   </tr>
   </table></div></div> 
                     
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div> 
- 
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -150,7 +117,7 @@ session_start();
   </tr>
   </table></div></div>
 
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -158,8 +125,8 @@ session_start();
   <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
   </tr>
   </table></div></div>
-
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
+                    
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -167,18 +134,18 @@ session_start();
   <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
   </tr>
   </table></div></div> 
-                    
- <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" alt="" style="width:300px;height:350px"/> <table  style="width: 350px;
+                                     
+ <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
   <h1 scope="col">Camisa Azul</h1>
   <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
   </tr>
-  </table></div></div>                                   
+  </table></div></div>                                    
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
     <!-- /.container -->
 
