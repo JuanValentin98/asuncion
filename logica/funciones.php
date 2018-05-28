@@ -11,7 +11,11 @@ class funciones {
   }
   //funcion para mostrar el mismo menu en todas las paginas
   public function menu() {
+<<<<<<< HEAD
        $menu='
+=======
+    $menu='
+>>>>>>> a2ddbb7b394d1179b342c1d127f914cfb7a97b74
     <!-- Navigation -->
     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
                 <nav class="navbar navbar-default" role="navigation">
@@ -164,6 +168,7 @@ class funciones {
     $texto='';
     //recorre los datos
     foreach ($con as $datos) {
+<<<<<<< HEAD
     $texto.='<div style="font-family: 
     Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     color: #ffffff;
@@ -188,6 +193,20 @@ class funciones {
     <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
     </div>
     </div>';
+=======
+      $texto.='<div class="row">
+      <div class="box">
+      <div class="col-lg-12">
+      <hr>
+      <p>'.$datos['Nombre'].'</p>
+      <p>'.$datos['Correo'].'</p>
+      <p>'.$datos['Telefono'].'</p>
+      <p>'.$datos['Mensaje'].'</p>
+          <p>'.$datos['Curriculum'].'</p>
+      <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
+      </div>
+      </div>';
+>>>>>>> a2ddbb7b394d1179b342c1d127f914cfb7a97b74
     }
     return $texto;
   }
@@ -289,24 +308,30 @@ class funciones {
     }
     
 
-    public function N_empleado(){
-      if (isset($_POST["enviar"])) {
-           $curri = $_FILES['archivo']['name'];
-        $ruta = $_FILES['archivo']['tmp_name'];
-    $destino = "archivos/" . $curri;
-    if ($nombre != "") {
-        if (copy($ruta, $destino)) {
-    
+    public function N_empleado() {
+        
+    if (isset($_POST['enviar'])) {
+        $Curriculum =$_FILES['curri']['name'];
+        $carpeta = "archivos/";
+        opendir($carpeta);
+        $destino = $carpeta.$Curriculum;
+        $ruta = $_FILES['curri']['tmp_name'];
+         if ($Curriculum != "") {
+         if (copy($ruta, $destino)) {
+       
         $id=$_POST['Id_bolsa'];
         $nombre=$_POST['nombre'];
         $telefono=$_POST['telefono'];
         $email=$_POST['email'];
-        $curriculum=$_POST['archivo'];
-        $mensaje=$_POST['comentario'];
-        $this->bd->Empleado($id, $nombre, $telefono, $email , $curriculum, $mensaje);
-          echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
-      }
+        $mensaje=$_POST['comentario'];     
+        $this->bd->Empleado($id, $nombre, $telefono, $email ,$mensaje, $Curriculum);
+        echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
+        }
+          
     }}}
+
+     
+    
 
   public function login(){
     if(isset($_POST['logear'])){

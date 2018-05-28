@@ -66,7 +66,7 @@ session_start();
           <h2>Solicita una entrevista</h2>
         </div>
         <div class="modal-body">
-          <form role="form" id="formulario" method="post">
+            <form role="form" id="formulario" method="post" enctype="multipart/form-data" >
             <div class="row">
               <div class="form-group col-lg-4">
                 <label>Nombre(s)</label>
@@ -82,7 +82,7 @@ session_start();
               </div>
               <div class="form-group col-lg-4">
                 <label>Curriculum</label>
-                <td colspan="2"> <input type="file" name="archivo" required="required"> </td>
+                <td colspan="2"> <input type="file" name="curri" required="required"></td>
               </div>
               <div class="clearfix"></div>
               <div class="form-group col-lg-12">
@@ -91,12 +91,15 @@ session_start();
               </div>
               <div class="form-group col-lg-12">
 
-                  <?php $fun->N_empleado();?>
+                  
                 <input type="hidden" name="Id_bolsa" id="id_bolsa">
                 <button name="enviar" type="submit" class="btn btn-default col-sm-offset-5">Enviar</button>
+              
               </div>
             </div>
-          </form>
+         
+            <?php $fun->N_empleado();?>
+            </form>
         </div>
         <div class="modal-footer">
           <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
