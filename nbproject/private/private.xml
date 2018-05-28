@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/asuncion/logica/funciones.php</file>
             <file>file:/C:/xampp/htdocs/asuncion/css/Style.css</file>
             <file>file:/C:/xampp/htdocs/asuncion/servicios.php</file>
@@ -10,6 +11,15 @@
             <file>file:/C:/xampp/htdocs/asuncion/bolsa.php</file>
             <file>file:/C:/xampp/htdocs/asuncion/perfil.php</file>
             <file>file:/C:/xampp/htdocs/asuncion/css/diseño.css</file>
+=======
+            <file>file:/C:/xampp/htdocs/Asuncion/logica/funciones.php</file>
+<<<<<<< HEAD
+            <file>file:/C:/xampp/htdocs/asuncion/contact.php</file>
+=======
+            <file>file:/C:/xampp/htdocs/Asuncion/logica/database.php</file>
+            <file>file:/C:/xampp/htdocs/asuncion/bolsa.php</file>
+>>>>>>> a2ddbb7b394d1179b342c1d127f914cfb7a97b74
+>>>>>>> 5660774b900ee9e33737f98aacb1d79aa818abb4
         </group>
     </open-files>
 </project-private>

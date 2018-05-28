@@ -63,7 +63,7 @@ session_start();
       <div class="modal-content">
         <div class="modal-header">
           <button class="close" data-dismiss="modal">&times;</button>
-          <h3>Solicita una entrevista</h3>
+          <h2>Solicita una entrevista</h2>
         </div>
         <div class="modal-body">
             <form role="form" id="formulario" method="post" enctype="multipart/form-data" >

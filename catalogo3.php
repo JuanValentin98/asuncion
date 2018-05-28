@@ -57,12 +57,8 @@ session_start();
                 <div class="box">
                 <div class="col-md-3">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-               
-                <h1>Categorias</h1>
-                <br><br><br><br>
-                      
-                <ul style="text-align: center">
-                            <h3>CALVIN KLEIN</h3> 
+                                <ul style="text-align: center">
+                    <h3 style="background-color: #99ffcc;">CALVIN KLEIN</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
@@ -71,7 +67,7 @@ session_start();
                               <br>
                               <hr>
                               <br>
-                              <h3>LACOSTE</h3> 
+                              <h3 style="background-color: #99ffcc;">LACOSTE</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
@@ -80,7 +76,7 @@ session_start();
                               <br>
                               <hr>
                               <br>
-                              <h3>NAUTICA</h3> 
+                              <h3 style="background-color: #99ffcc;">NAUTICA</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
@@ -89,7 +85,7 @@ session_start();
                               <br>
                               <hr>
                               <br>
-                              <h3>AEROPOSTALE</h3> 
+                              <h3 style="background-color: #99ffcc;">AEROPOSTALE</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
@@ -98,7 +94,7 @@ session_start();
                               <br>
                               <hr>
                               <br> 
-                            <h3>PUMA</h3> 
+                            <h3 style="background-color: #99ffcc;">PUMA</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
@@ -107,19 +103,19 @@ session_start();
                               <br>
                               <hr>
                               <br> 
-                          <h3>LEVI'S</h3> 
+                          <h3 style="background-color: #99ffcc;">LEVI'S</h3> 
                             <li><a href="catalogo.php">Camisa</a></li>
                               <br>
                               <li><a href="catalogo2.php">Pantalon</a></li>
                               <br>
-                              <li><a href="catalogo3.php">Short</a></li> 
+                              <li><a href="catalogo3.php">Short</a></li>
                               <br>
                               <hr>
                               <br> 
                         </ul>          
                 
                 </div>
-                <div class="col-md-9" style=" background-color: black;">           
+                <div class="col-md-9" style=" background-color: #333333;">           
                
                     <br>
                     

@@ -71,7 +71,7 @@ $fun->comprobar();
         <hr>
         <h2 class="intro-text text-center">Bolsa de Trabajo</h2>
         <hr>
-        <h3 class="text-center">Ingresa la informacion para las vacantes</h3>
+        <h2 class="text-center">Ingresa la informacion para las vacantes</h2>
       </br>
       <form role="form" method="post">
         <div class="row">
