@@ -56,7 +56,7 @@ session_start();
     </div>
   </div>
                 <div class="box">
-                <div class="col-md-3">
+                <div class="col-md-1">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
                 <ul style="text-align: center">
                     <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="15" style="border: 2px solid #000; height: 800px; padding: 3px; text-align: center; width: 250px;">
@@ -87,6 +87,8 @@ session_start();
 </marquee>
 </ul>                 
                 </div>
+                </div>
+            <div class="box">
                     <div class="col-md-9" style=" background-color: black">           
                
                     <br> 
