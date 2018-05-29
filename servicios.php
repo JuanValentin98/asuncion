@@ -46,10 +46,7 @@ session_start();
     <div class="row">
       <div class="box">
         <div class="col-lg-12 text-center">
-
             <h1 class="brand-name" style="color: #000; font-size: 50px ">S E R V I C I O S</h1>
-
-        
       </div>
     </div>
   </div>
@@ -64,7 +61,8 @@ session_start();
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1 class="section-heading">Nuestros servicios</h1>
+            <h1 class="section-heading"><?php echo $fun->tituloserv(); ?></h1>
+                        
             <hr class="my-4">
           </div>
         </div>

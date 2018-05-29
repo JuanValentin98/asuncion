@@ -42,7 +42,7 @@ session_start();
           
           <h1 class="title"> Bienvenido(a) </h1>
           <a href="../index.php"><img class="boton" src="../img/Botones/back.png"></a>
-          <h3 class="h3">SERCIO</h3>
+          <h3 class="h3">SERVICIO</h3>
           </div>
       <header class="head col-md-4" >
 		<div class="menu_bar">
@@ -60,10 +60,17 @@ session_start();
 		</nav>
 	</header>
       
+      <form role="form" id="formulario" method="post" enctype="multipart/form-data" >
       <div class="form-group col-lg-4">
-                <label>Nombre(s)</label>
-                <input name="nombre" type="text" class="form-control " placeholder="Nombre(s)" required="required" autofocus="autofocus">
+                <label>NUEVO TÍTULO</label>
+                <input name="tituloo" type="text" class="form-control " placeholder="Nombre(s)" required="required" autofocus="autofocus">
               </div>
+      <input type="hidden" name="Id_bolsa" id="id_bolsa">
+                <button name="enviar" type="submit" class="btn btn-default col-sm-offset-5">Enviar</button>
+                 <?php $fun->Edtitle();?>
+      </form>
+      
+       
       
   </div>
 

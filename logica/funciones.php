@@ -136,7 +136,7 @@ class funciones {
     <ul class="list-unstyled">
     <li><a href="index.php">INICIO</a></li>
     <li><a href="servicios.php">SERVICIOS</a></li>
-    <li><a href="cursos.php">CURSOS</a></li>
+    <li><a href="catalogo.php">CATALOGO</a></li>
     <li><a href="bolsa.php">BOLSA DE TRABAJO</a></li>
     <li><a href="contact.php">CONTACTO</a></li>
 
@@ -261,37 +261,15 @@ class funciones {
     return $texto;
   }
 
-   public function N_afiliado(){
-    if (isset($_POST['agregar'])) {
-      $nombre= $_POST['nombre'];
-      $apellidos=$_POST['apellidos'];
-      $email= $_POST['email'];
-      $direccion= $_POST['direccion'];
-      $telefono=$_POST['telefono'];
-      $user= $_POST['user'];
-      $contraseña=$_POST['contraseña'];
-      $confirmar=$_POST['confirmar'];
-      //datos de la empresa
-      $nombre_empresa=$_POST['nombreempresa'];
-      $direccion_empresa=$_POST['direccionempresa'];
-      $telefono_empresa=$_POST['telefonoempresa'];
-      $email_empresa=$_POST['emailempresa'];
-      $descripcion_empresa=$_POST['descripcionempresa'];
-      if ($confirmar == $contraseña) {
-        $this->bd->N_afiliado($nombre, $apellidos, $email, $direccion, $telefono, $user, $contraseña);
-        $afiliado= $this->bd->afilidao_id($user, $contraseña);
-        $id="";
-        foreach ($afiliado as $afi) {
-          $id=$afi['Id_admin'];
-        }
-        $this->bd->N_maquila($id,$nombre_empresa,$direccion_empresa,$telefono_empresa,$email_empresa,$descripcion_empresa);
-        echo '<script type="text/javascript">alert("Usted ha sido afiliado con exito espere la orden de pago");</script>';
-        echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
-      }else{
-        echo '<script type="text/javascript">alert("Verifique su contraseña");</script>';
+   public function Edtitle(){
+   
+      if (isset($_POST["enviar"])) {
+        $titulo=$_POST['tituloo'];
+        
+        $this->bd->title($titulo);
+          echo '<script type="text/javascript">alert("Registro correcto");</script>';
       }
     }
-  }
 
   public function N_bolsa(){
     if (isset($_POST['enviar'])) {
@@ -375,5 +353,22 @@ class funciones {
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
     }
   }
+  
+    public function tituloserv(){
+    //ejecuta la consulta
+    $con= $this->bd->titleservicio();
+    $texto='';
+    //recorre los datos
+    foreach ($con as $tit) {
+      $texto.='<hr>
+        <h2 class="intro-text text-center">'.$tit['tituloserv'].'</h2>      
+              
+         ';
+    }
+    return $texto;
+  }
+  
+  
+  
 }
 

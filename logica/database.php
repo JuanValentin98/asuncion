@@ -75,6 +75,26 @@ class database {
     $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`, `Curriculum`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje, $Curriculum));
   }
+  
+  
+  function title($titulo){
+    //inserta una nuevo titulo
+    $sql = $this->pdo->prepare("UPDATE `titulos` SET `tituloserv`='{$_POST['tituloo']}' WHERE Id_titulo = 1 ");
+    $sql->execute(array($titulo));
+  }
+  
+  function titleservicio(){
+    
+    $sql = $this->pdo->prepare("SELECT `tituloserv` FROM `titulos` WHERE Id_titulo = 1");
+    if ($sql->execute(array(1))) {
+      //retorna los datos obtenidos de la base
+      return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+    $this->CerrarConexion();
+  }
+  
+  
+ 
 
  
 
