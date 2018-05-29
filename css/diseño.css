@@ -1,15 +1,100 @@
 
-.profile {
-    width: 96px;
-    height: 96px;
-margin-left:200px;
+.h3 {
+    font-size:30px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
 
+.title{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 
-.empresa {
-  width: 96px;
-  height: 96px;
-  margin-left: 350px;
 
+.boton {
+    width: 50px;
+}
+ 
+body {
+	background:#FFFFFA;
+        
+}
+  
+header nav {
+    
+	width:auto;
+	max-width:200px;
+	
+	background:#024959;
+}
+ 
+.menu_bar {
+	display:none;
+}
+ 
+header nav ul {
+	overflow:hidden;
+	list-style:none;
+}
+ 
+header nav ul li {
+	float:bottom
+}
+ 
+header nav ul li a {
+	color:#fff;
+	padding:30px;
+	display:block;
+	text-decoration:none;
+}
+ 
+
+ 
+header nav ul li a:hover {
+	background:#037E8C;
+}
+ 
+section {
+	padding:20px;
+}
+ 
+@media screen and (max-width:800px ) {
+	header nav {
+		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		
+	}
+ 
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+ 
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+ 
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#024959;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+ 
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
 }

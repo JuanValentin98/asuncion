@@ -1,6 +1,6 @@
 <?php
 
-include_once 'logica/database.php';
+include_once 'database.php';
 
 class funciones {
 
@@ -11,11 +11,9 @@ class funciones {
   }
   //funcion para mostrar el mismo menu en todas las paginas
   public function menu() {
-<<<<<<< HEAD
-       $menu='
-=======
+
     $menu='
->>>>>>> a2ddbb7b394d1179b342c1d127f914cfb7a97b74
+
     <!-- Navigation -->
     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
                 <nav class="navbar navbar-default" role="navigation">
@@ -39,8 +37,9 @@ class funciones {
     if(isset($_SESSION['usuario'])){
       $menu.='<li><a href="perfil.php">Solicitudes</a></li>
       <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
+      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
       <form accion="'.$this->cerrarSession().'" method="post">
-      <li><input type="submit" class="btn" name="salir" value="cerrar sesión"></li>
+      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
       </form>';
     }else{
       $menu.='<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
@@ -125,7 +124,7 @@ class funciones {
     <div class="row" style="color:white";>
     <br>
     <div class="col-xs-6 col-sm-4 col-md-4 ">
-    <h4>C D D M U </h4>
+    <h4>CONFECCIONES LA ASUNCIÓN </h4>
     <ul class="footer-social">
     <li><a href=""><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
     <li><i class="fa fa-twitter social-icon twitter" style="font-size:50px" aria-hidden="true"></i></li>
@@ -168,7 +167,7 @@ class funciones {
     $texto='';
     //recorre los datos
     foreach ($con as $datos) {
-<<<<<<< HEAD
+
     $texto.='<div style="font-family: 
     Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     color: #ffffff;
@@ -193,7 +192,7 @@ class funciones {
     <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
     </div>
     </div>';
-=======
+
       $texto.='<div class="row">
       <div class="box">
       <div class="col-lg-12">
@@ -206,7 +205,7 @@ class funciones {
       <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
       </div>
       </div>';
->>>>>>> a2ddbb7b394d1179b342c1d127f914cfb7a97b74
+
     }
     return $texto;
   }
@@ -323,7 +322,8 @@ class funciones {
         $nombre=$_POST['nombre'];
         $telefono=$_POST['telefono'];
         $email=$_POST['email'];
-        $mensaje=$_POST['comentario'];     
+        $mensaje=$_POST['comentario'];
+
         $this->bd->Empleado($id, $nombre, $telefono, $email ,$mensaje, $Curriculum);
         echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
         }
