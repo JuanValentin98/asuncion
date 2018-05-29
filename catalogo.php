@@ -51,12 +51,12 @@ session_start();
 
             <h1 class="brand-name" style="color: #000; font-size: 50px ">C A T A L O G O</h1>
 
-        
+          
       </div>
     </div>
-  </div>
-                <div class="box">
-                <div class="col-md-1">
+  </div>  
+               
+            <div class="col-md-3" style="margin-left: -200px; margin-right: 96px; background: rgba(0, 7, 2, 0.5);">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
                 <ul style="text-align: center">
                     <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="15" style="border: 2px solid #000; height: 800px; padding: 3px; text-align: center; width: 250px;">
@@ -87,12 +87,21 @@ session_start();
 </marquee>
 </ul>                 
                 </div>
-                </div>
-            <div class="box">
-                    <div class="col-md-9" style=" background-color: black">           
+             <div class="box1">
+          
+                    <div class="col-md-11" style=" background-color: black">           
                
                     <br> 
                     <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /> <table  style="width: 350px;
+  border: 1px solid #000;
+  border-collapse: collapse;">
+  <tr>
+  <h1 scope="col">Camisa Azul</h1>
+  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
+  </tr>
+  </table></div></div> 
+                    
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /> <table  style="width: 350px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -118,33 +127,7 @@ session_start();
   <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
   </tr>
   </table></div></div>
-
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div>
                     
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div> 
-                                     
- <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div>                                    
                 </div>
             </div>
         </div> 
@@ -161,4 +144,3 @@ session_start();
 </body>
 <?php $fun->footer();  ?>
 </html>
-

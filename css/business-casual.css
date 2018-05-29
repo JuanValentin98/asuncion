@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/Fondo.jpg') no-repeat center center fixed;
+    background: url('../img/fondo112.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -81,7 +81,14 @@ hr {
     margin-bottom: 20px;
     padding: 30px 15px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(0, 7, 2, 0.5);
+}
+.box1 {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    padding: 30px 50px;
+    background: #fff;
+    background: rgba(0, 7, 2, 0.5);
 }
 
 .intro-text {
@@ -123,7 +130,7 @@ footer p {
         font-size: 5em;
         font-weight: 700;
         line-height: normal;
-        color: #fff;
+        color: black;
     }
 
     .top-divider {
@@ -185,6 +192,11 @@ footer p {
 
 @media screen and (min-width:1200px) {
     .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .box1:after {
         content: '';
         display: table;
         clear: both;
