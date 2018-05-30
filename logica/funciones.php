@@ -351,19 +351,32 @@ class funciones {
     $texto='';
     //recorre los datos
     foreach ($con as $tit) {
-      $texto.=''.$tit['tituloserv'].'';
+      $texto.=''.$tit['titulo'].'';
+    }
+    return $texto;
+  }
+  
+  
+  public function subtituloserv(){
+    //ejecuta la consulta
+    $con= $this->bd->titleservicio();
+    $texto='';
+    //recorre los datos
+    foreach ($con as $tit) {
+      $texto.=''.$tit['subtitulo'].'';
     }
     return $texto;
   }
   
      public function Edtitle(){
-   
       if (isset($_POST["enviar"])) {
         $titulo=$_POST['tituloo'];
-        $this->bd->title($titulo);
-          echo '<script type="text/javascript">alert("Registro correcto");</script>';
+        $subtitulo=$_POST['subtituloo'];
+        $this->bd->title($titulo, $subtitulo);
       }
     }
+    
+    
   
   
   

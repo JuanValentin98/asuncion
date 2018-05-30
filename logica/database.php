@@ -77,21 +77,23 @@ class database {
   }
   
   
-  function title($titulo){
+  function title($titulo, $subtitulo){
     //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `titulos` SET `tituloserv`='{$_POST['tituloo']}' WHERE Id_titulo = 1 ");
-    $sql->execute(array($titulo));
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`, `subtitulo`='{$_POST['tituloo']}','{$_POST['subtituloo']}' WHERE Id_servicio = 1");
+    $sql->execute(array($titulo, $subtitulo));
   }
   
   function titleservicio(){
-    
-    $sql = $this->pdo->prepare("SELECT `tituloserv` FROM `titulos` WHERE Id_titulo = 1");
+        $sql = $this->pdo->prepare("SELECT `titulo` ,`subtitulo` FROM `servicios` WHERE Id_servicio = 1 ");
     if ($sql->execute(array(1))) {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
     $this->CerrarConexion();
   }
+  
+  
+
   
   
  
