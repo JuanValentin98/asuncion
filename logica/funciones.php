@@ -261,16 +261,6 @@ class funciones {
     return $texto;
   }
 
-   public function Edtitle(){
-   
-      if (isset($_POST["enviar"])) {
-        $titulo=$_POST['tituloo'];
-        
-        $this->bd->title($titulo);
-          echo '<script type="text/javascript">alert("Registro correcto");</script>';
-      }
-    }
-
   public function N_bolsa(){
     if (isset($_POST['enviar'])) {
         $id= $_SESSION['id_user'];
@@ -360,13 +350,19 @@ class funciones {
     $texto='';
     //recorre los datos
     foreach ($con as $tit) {
-      $texto.='<hr>
-        <h2 class="intro-text text-center">'.$tit['tituloserv'].'</h2>      
-              
-         ';
+      $texto.=''.$tit['tituloserv'].'';
     }
     return $texto;
   }
+  
+     public function Edtitle(){
+   
+      if (isset($_POST["enviar"])) {
+        $titulo=$_POST['tituloo'];
+        $this->bd->title($titulo);
+          echo '<script type="text/javascript">alert("Registro correcto");</script>';
+      }
+    }
   
   
   

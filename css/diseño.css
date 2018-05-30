@@ -1,4 +1,12 @@
 
+
+.container{
+ 
+
+
+    
+    
+}
 .h3 {
     font-size:30px;
     text-align: center;
@@ -17,16 +25,15 @@
 }
  
 body {
-	background:#FFFFFA;
+	background:#FFFF;
         
 }
   
 header nav {
     
 	width:auto;
-	max-width:200px;
-	
-	background:#024959;
+	max-width:auto;
+	background:#FFFFF;
 }
  
 .menu_bar {
@@ -52,7 +59,7 @@ header nav ul li a {
 
  
 header nav ul li a:hover {
-	background:#037E8C;
+	background:#FFFFF;
 }
  
 section {
@@ -83,7 +90,7 @@ section {
 	.menu_bar .bt-menu {
 		display:block;
 		padding:20px;
-		background:#024959;
+		background:#FFFFF;
 		color:#fff;
 		text-decoration:none;
 		font-weight: bold;

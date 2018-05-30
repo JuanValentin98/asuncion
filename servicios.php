@@ -1,6 +1,8 @@
 <?php
 include_once 'logica/funciones.php';
+
 $fun = new funciones();
+
 session_start();
 ?>
 <!DOCTYPE html>
