@@ -3,7 +3,7 @@
 include_once 'database.php';
 
 class funciones {
-
+    
   private $bd;
   //creacion de la conexion y consultas de la base
   function __construct(){
@@ -11,12 +11,12 @@ class funciones {
   }
   //funcion para mostrar el mismo menu en todas las paginas
   public function menu() {
-
+ 
     $menu='
 
     <!-- Navigation -->
     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-                <nav class="navbar navbar-default" role="navigation">
+                <nav class="navbar navbar-default">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -25,14 +25,15 @@ class funciones {
         </button>
     </div>
         <ul class="nav navbar-nav navbar-center">
-            <li><a href="index.php">inicio</a></li>
+             <li class="active"><img src="img/la_asuncion3.png" width="350px" height="200px"/></li>
+             <li><a href="index.php">inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
             <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
             <li><a href="contact.php">Contacto</a></li>
             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
-    <ul class="dropdown-menu">';
+    <ul class="dropdown-menu" style="text-align:center">';
     // condicion de que exista una variable de sesion
     if(isset($_SESSION['usuario'])){
       $menu.='<li><a href="perfil.php">Solicitudes</a></li>
