@@ -42,22 +42,18 @@ session_start();
             <?php $fun->menu();  ?>
             <!-- /.navbar-collapse -->
 
-    <div class="container">
-
+        <div class="container">
         <div class="row">
-                <div class="row">
+  <div class="row">
       <div class="box">
         <div class="col-lg-12 text-center">
-
-            <h1 class="brand-name" style="color: #000; font-size: 50px ">C A T A L O G O</h1>
-
-          
+         <h1 class="brand-name" style="color: #000; font-size: 50px ">C A T A L O G O</h1>
+        </div>
       </div>
-    </div>
-  </div>  
-               
-            <div class="col-md-3" style="margin-left: -200px; margin-right: 96px; background: rgba(0, 7, 2, 0.5);">
-                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+  </div> 
+            <div class="col-lg-3"style="background: rgba(0, 7, 2, 0.5);" >
+                
+                       <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
                 <ul style="text-align: center">
                     <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="15" style="border: 2px solid #000; height: 800px; padding: 3px; text-align: center; width: 250px;">
 <h3>CALVIN KLEIN</h3> 
@@ -87,12 +83,12 @@ session_start();
 </marquee>
 </ul>                 
                 </div>
-             <div class="box1">
+
+            <div class="col-lg-9">
+ <div class="box1">
           
-                    <div class="col-md-11" style=" background-color: black">           
-               
-                    <br> 
-                    <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /> <table  style="width: 350px;
+                  
+                    <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -101,7 +97,7 @@ session_start();
   </tr>
   </table></div></div> 
                     
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /> <table  style="width: 350px;
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -110,7 +106,7 @@ session_start();
   </tr>
   </table></div></div> 
   
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -119,7 +115,7 @@ session_start();
   </tr>
   </table></div></div> 
                     
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=400;this.height=450;" onmouseout="this.width=300;this.height=350;" width="300" height="350" /><table  style="width: 350px;
+  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
   border: 1px solid #000;
   border-collapse: collapse;">
   <tr>
@@ -130,9 +126,14 @@ session_start();
                     
                 </div>
             </div>
-        </div> 
-    </div>
-    <!-- /.container -->
+                                        
+                </div>
+            </div>
+                
+            </div>
+
+      
+       <!-- /.container -->
 
         <!-- jQuery -->
     <script src="js/jquery.js"></script>

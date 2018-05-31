@@ -1,5 +1,5 @@
 h3 {
-    background-color: #189ccf;
+    background-color: #cccccc;
     padding: 20px;
     border-radius: 35px 0px 35px 0px;
 -moz-border-radius: 35px 0px 35px 0px;
@@ -21,4 +21,10 @@ border: 2px solid #5878ca;
     -moz-border-radius: 35px 35px 35px 35px;
     -webkit-border-radius: 35px 35px 35px 35px;
     border: 2px solid #5878ca;
+}
+.col-md-3 a{
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color:#FFFFFA;
+    font-size: 18px;
+    
 }

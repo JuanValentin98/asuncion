@@ -25,7 +25,7 @@ class funciones {
         </button>
     </div>
         <ul class="nav navbar-nav navbar-center">
-             <li class="active"><img src="img/la_asuncion3.png" width="350px" height="200px"/></li>
+             <li class="active"><img src="img/logoasuncion.png" width="360px" height="200px"/></li>
              <li><a href="index.php">inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
@@ -127,7 +127,7 @@ class funciones {
     <div class="col-xs-6 col-sm-4 col-md-4 ">
     <h4>CONFECCIONES LA ASUNCIÓN </h4>
     <ul class="footer-social">
-    <li><a href=""><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
+    <li><a href="https://www.facebook.com/ConfeccionesLaAsuncion/"><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
     <li><i class="fa fa-twitter social-icon twitter" style="font-size:50px" aria-hidden="true"></i></li>
 
     </ul>
