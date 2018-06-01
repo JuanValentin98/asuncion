@@ -70,10 +70,10 @@ class database {
   }
 
 
-  function Empleado ($id, $nombre, $telefono, $email , $mensaje, $Curriculum){
+  function Empleado ($id, $nombre, $telefono, $email , $mensaje){
     //inserta una nueva afiliacion
-    $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`, `Curriculum`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
-    $sql->execute(array($id, $nombre, $telefono, $email , $mensaje, $Curriculum));
+    $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
+    $sql->execute(array($id, $nombre, $telefono, $email , $mensaje));
   }
 
   ///ACTUALIZA DATOS

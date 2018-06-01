@@ -3,16 +3,18 @@
 include_once 'database.php';
 
 class funciones {
-    
-  private $bd;
-  //creacion de la conexion y consultas de la base
-  function __construct(){
-    $this->bd = new database();
-  }
-  //funcion para mostrar el mismo menu en todas las paginas
-  public function menu() {
- 
-    $menu='
+
+    private $bd;
+
+    //creacion de la conexion y consultas de la base
+    function __construct() {
+        $this->bd = new database();
+    }
+
+    //funcion para mostrar el mismo menu en todas las paginas
+    public function menu() {
+
+        $menu = '
 
     <!-- Navigation -->
     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
@@ -34,18 +36,18 @@ class funciones {
             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu" style="text-align:center">';
-    // condicion de que exista una variable de sesion
-    if(isset($_SESSION['usuario'])){
-      $menu.='<li><a href="perfil.php">Solicitudes</a></li>
+        // condicion de que exista una variable de sesion
+        if (isset($_SESSION['usuario'])) {
+            $menu .= '<li><a href="perfil.php">Solicitudes</a></li>
       <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
       <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
-      <form accion="'.$this->cerrarSession().'" method="post">
+      <form accion="' . $this->cerrarSession() . '" method="post">
       <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
       </form>';
-    }else{
-      $menu.='<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
-    }
-    $menu.='</ul>
+        } else {
+            $menu .= '<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
+        }
+        $menu .= '</ul>
     </li>
     </ul>
     </div>
@@ -54,10 +56,10 @@ class funciones {
     <!-- /.container -->
     </nav>  <hr>
     <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
-    <hr>s'; 
-    // agrega el modal de seccion
-    if(!isset($_SESSION['usuario'])){
-      $menu.='<div class="modal fade" id="modal-login" role="dialog">
+    <hr>s';
+        // agrega el modal de seccion
+        if (!isset($_SESSION['usuario'])) {
+            $menu .= '<div class="modal fade" id="modal-login" role="dialog">
       <div class="modal-dialog">
       <div class="modal-content">
       <div class="modal-header">
@@ -65,7 +67,7 @@ class funciones {
       <h2>Iniciar sesión</h2>
       </div>
       <div class="modal-body">
-      <form class="login-form" id="login" method="post" action="'.$this->login().'">
+      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
       <div class="form-group">
       <div class="input-group">
       <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
@@ -94,15 +96,16 @@ class funciones {
       </div>
       </div>
       </div>'
-              
-              ;
+
+            ;
+        }
+        echo $menu;
     }
-    echo $menu;
-  }
-  //muestra el mismo footer
-  
-  public function music() {
-     echo'
+
+    //muestra el mismo footer
+
+    public function music() {
+        echo'
     <footer>
     <div class="container">
     <div class="row" style="color:white";>
@@ -116,10 +119,10 @@ class funciones {
     <!-- /.container --> 
     <!-- /.footer -->
     </footer> ';
-}
-  
-  public function footer() {
-    echo'<footer>
+    }
+
+    public function footer() {
+        echo'<footer>
     <div class="footer">
     <div class="container">
     <div class="row" style="color:white";>
@@ -161,15 +164,16 @@ class funciones {
     </div>
     <!-- /.footer -->
     </footer>';
-  }
-    public function solicitud(){
-    //realiza la consulta
-    $con=$this->bd->solicitud();
-    $texto='';
-    //recorre los datos
-    foreach ($con as $datos) {
+    }
 
-    $texto.='<div style="font-family: 
+    public function solicitud() {
+        //realiza la consulta
+        $con = $this->bd->solicitud();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $datos) {
+
+            $texto .= '<div style="font-family: 
     Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     color: #ffffff;
     font-size: 18px;
@@ -186,207 +190,193 @@ class funciones {
     <div class="box">
     <div class="col-lg-12">
     <hr>
-    <p>'.$datos['Nombre'].'</p>
-    <p>'.$datos['Correo'].'</p>
-    <p>'.$datos['Telefono'].'</p>
-    <p>'.$datos['Mensaje'].'</p>
-    <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
+    <p>' . $datos['Nombre'] . '</p>
+    <p>' . $datos['Correo'] . '</p>
+    <p>' . $datos['Telefono'] . '</p>
+    <p>' . $datos['Mensaje'] . '</p>
+    <a  data-id="' . $datos['Id'] . '" class="btn btn-default btn-lg">' . $datos['Curriculum'] . '</a>
     </div>
     </div>';
 
-      $texto.='<div class="row">
+            $texto .= '<div class="row">
       <div class="box">
       <div class="col-lg-12">
       <hr>
-      <p>'.$datos['Nombre'].'</p>
-      <p>'.$datos['Correo'].'</p>
-      <p>'.$datos['Telefono'].'</p>
-      <p>'.$datos['Mensaje'].'</p>
-          <p>'.$datos['Curriculum'].'</p>
-      <a  data-id="'.$datos['Id'].'" class="btn btn-default btn-lg">'.$datos['Curriculum'].'</a>
+      <p>' . $datos['Nombre'] . '</p>
+      <p>' . $datos['Correo'] . '</p>
+      <p>' . $datos['Telefono'] . '</p>
+      <p>' . $datos['Mensaje'] . '</p>
+          <p>' . $datos['Curriculum'] . '</p>
+      <a  data-id="' . $datos['Id'] . '" class="btn btn-default btn-lg">' . $datos['Curriculum'] . '</a>
       </div>
       </div>';
-
+        }
+        return $texto;
     }
-    return $texto;
-  }
-  
 
-  public function bolsa(){
-    //se usa la caonsulta
-    date_default_timezone_set ("America/Mexico_City");
-    $fecha_actual = date("Y-m-d");
-    $con = $this->bd->bolsa();
-    $texto='';
-    //recorre los datos
-    foreach ($con as $bolsa) {
-      if($bolsa['Fecha_limite'] > $fecha_actual){
-      $texto.='<div class="col-sm-4 text-center">
+    public function bolsa() {
+        //se usa la caonsulta
+        date_default_timezone_set("America/Mexico_City");
+        $fecha_actual = date("Y-m-d");
+        $con = $this->bd->bolsa();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $bolsa) {
+            if ($bolsa['Fecha_limite'] > $fecha_actual) {
+                $texto .= '<div class="col-sm-4 text-center">
       <h2>
-      '.$bolsa['Nombre_vacante'].'
+      ' . $bolsa['Nombre_vacante'] . '
       </h2>
       <h4 class="text-justify">
-      <small>'.$bolsa['Contenido'].'<br> Teléfono:'.$bolsa['Telefono'].'</small>
+      <small>' . $bolsa['Contenido'] . '<br> Teléfono:' . $bolsa['Telefono'] . '</small>
       </h4>
-      <a data-toggle="modal" data-target="#modal-contact-form" data-id="'.$bolsa['Id_bolsa'].'" class="btn btn-default btn-lg">Mandar Información</a>
+      <a data-toggle="modal" data-target="#modal-contact-form" data-id="' . $bolsa['Id_bolsa'] . '" class="btn btn-default btn-lg">Mandar Información</a>
       </div>';
-}
+            }
+        }
+        return $texto;
     }
-    return $texto;
-  }
 
-  public function servicios(){
-    //realiza la consulta
-    $con=$this->bd->servicio();
-    $texto='';
-    //recorre los datos
-    foreach ($con as $serv) {
-      $texto.='<div class="row">
+    public function servicios() {
+        //realiza la consulta
+        $con = $this->bd->servicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $serv) {
+            $texto .= '<div class="row">
       <div class="box">
       <div class="col-lg-12">
       <hr>
-      <h2 class="intro-text text-center">'.$serv['Tipo_serv'].'
+      <h2 class="intro-text text-center">' . $serv['Tipo_serv'] . '
       </h2>
       <hr>
       </div>
       <div class="col-md-6">
-      <img class="img-responsive img-border-left" src="img/'.$serv['imagen'].'" alt="">
+      <img class="img-responsive img-border-left" src="img/' . $serv['imagen'] . '" alt="">
       </div>
       <div>
-      <p>'.$serv['Contenido'].'</p>
+      <p>' . $serv['Contenido'] . '</p>
       </div>
       <div class="clearfix"></div>
       </div>
       </div>';
+        }
+        return $texto;
     }
-    return $texto;
-  }
 
-  public function N_bolsa(){
-    if (isset($_POST['enviar'])) {
-        $id= $_SESSION['id_user'];
-        $nombre= $_POST['vacante'];
-        $contenido=$_POST['contenido'];
-        $telefono= $_POST['telefono'];
-        $fecha=$_POST['fecha'];
-        $fecha_limite= date("Y-m-d",strtotime($fecha));
-        $this->bd->N_bolsa($id, $nombre, $contenido, $telefono,$fecha_limite);
-          echo '<script type="text/javascript">alert("Registro correcto");</script>';
-      }
+    public function N_bolsa() {
+        if (isset($_POST['enviar'])) {
+            $id = $_SESSION['id_user'];
+            $nombre = $_POST['vacante'];
+            $contenido = $_POST['contenido'];
+            $telefono = $_POST['telefono'];
+            $fecha = $_POST['fecha'];
+            $fecha_limite = date("Y-m-d", strtotime($fecha));
+            $this->bd->N_bolsa($id, $nombre, $contenido, $telefono, $fecha_limite);
+            echo '<script type="text/javascript">alert("Registro correcto");</script>';
+        }
     }
-    
 
     public function N_empleado() {
-        
-    if (isset($_POST['enviar'])) {
-        $Curriculum =$_FILES['curri']['name'];
-        $carpeta = "archivos/";
-        opendir($carpeta);
-        $destino = $carpeta.$Curriculum;
-        $ruta = $_FILES['curri']['tmp_name'];
-         if ($Curriculum != "") {
-         if (copy($ruta, $destino)) {
-       
-        $id=$_POST['Id_bolsa'];
-        $nombre=$_POST['nombre'];
-        $telefono=$_POST['telefono'];
-        $email=$_POST['email'];
-        $mensaje=$_POST['comentario'];
 
-        $this->bd->Empleado($id, $nombre, $telefono, $email ,$mensaje, $Curriculum);
-        echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
+        if (isset($_POST['enviar'])) {
+//        $Curriculum =$_FILES['curri']['name'];
+//        $carpeta = "archivos/";
+//        opendir($carpeta);
+//        $destino = $carpeta.$Curriculum;
+//        $ruta = $_FILES['curri']['tmp_name'];
+//         if ($Curriculum != "") {
+//         if (copy($ruta, $destino)) {
+
+
+            $destino = "valentin.dejesus98@gmail.com";
+            $id = $_POST['Id_bolsa'];
+            $nombre = $_POST['nombre'];
+            $telefono = $_POST['telefono'];
+            $email = $_POST['email'];
+            $mensaje = $_POST['comentario'];
+            $this->bd->Empleado($id, $nombre, $telefono, $email, $mensaje);
+            $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "Mensaje: " . $mensaje . "\n" . $curriculum;
+            mail($destino, "Contacto", $contenido);
+            echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
         }
-          
-    }}}
+    }
 
-     
-    
+    public function login() {
+        if (isset($_POST['logear'])) {
+            $user = $_POST['user'];
+            $contraseña = $_POST['contraseña'];
+            $afi = $this->bd->afilidao_id($user, $contraseña);
+            if (empty($afi)) {
+                echo '<script type="text/javascript">alert("No eres administrador.");</script>';
+            } else {
+                foreach ($afi as $v) {
+                    $_SESSION['usuario'] = $v['Nombre'];
+                    $_SESSION['alias'] = $v['Nombre_usuario'];
+                    $_SESSION['id_user'] = $v['Id_admin'];
+                    $_SESSION['contraseña'] = $v['passwors'];
+                    echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+                }
+            }
+        }
+    }
 
-  public function login(){
-    if(isset($_POST['logear'])){
-      $user= $_POST['user'];
-      $contraseña= $_POST['contraseña'];
-      $afi= $this->bd->afilidao_id($user,$contraseña);
-      if (empty($afi)) {
-        echo '<script type="text/javascript">alert("No eres administrador.");</script>';
-      }else {
+    public function cerrarSession() {
+        if (isset($_POST["salir"])) {
+            session_destroy();
+            echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+        }
+    }
+
+    public function activo() {
+        $usuario = $_SESSION['alias'];
+        $contraseña = $_SESSION['contraseña'];
+        $afi = $this->bd->afilidao_id($usuario, $contraseña);
+        $activo = "";
         foreach ($afi as $v) {
-          $_SESSION['usuario'] = $v['Nombre'];
-          $_SESSION['alias'] = $v['Nombre_usuario'];
-          $_SESSION['id_user'] = $v['Id_admin'];
-          $_SESSION['contraseña'] = $v['passwors'];
-          echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+            $activo = $v['activo'];
         }
-      }
+        return $activo;
     }
-  }
 
-  public function cerrarSession(){
-    if (isset($_POST["salir"])) {
-      session_destroy();
-      echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+    public function comprobar() {
+        if (!isset($_SESSION['usuario'])) {
+            echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+        }
     }
-  }
 
-  public function activo(){
-    $usuario=$_SESSION['alias'  ];
-    $contraseña=$_SESSION['contraseña'];
-    $afi= $this->bd->afilidao_id($usuario,$contraseña);
-    $activo = "";
-    foreach ($afi as $v) {
-      $activo = $v['activo'];
+    ////MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
+    public function tituloserv() {
+        //ejecuta la consulta
+        $con = $this->bd->titleservicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['titulo'] . '';
+        }
+        return $texto;
     }
-    return $activo;
-  }
 
-  public function comprobar(){
-    if(!isset($_SESSION['usuario'])){
-        echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
+    public function subtituloserv() {
+        //ejecuta la consulta
+        $con = $this->bd->subtitleservicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['titulo'] . '';
+        }
+        return $texto;
     }
-  }
-  
-  
-  
-  
-  
-  ////MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
-    public function tituloserv(){
-    //ejecuta la consulta
-    $con= $this->bd->titleservicio();
-    $texto='';
-    //recorre los datos
-    foreach ($con as $tit) {
-      $texto.=''.$tit['titulo'].'';
-    }
-    return $texto;
-  }
-    public function subtituloserv(){
-    //ejecuta la consulta
-    $con= $this->bd->subtitleservicio();
-    $texto='';
-    //recorre los datos
-    foreach ($con as $tit) {
-      $texto.=''.$tit['titulo'].'';
-    }
-    return $texto;
-  }
-  //////fin titulo y subtitulo
- 
-     public function Edtitle(){
-      if (isset($_POST["enviar"])) {
-        $titulo=$_POST['tituloo'];
-        $subtitulo = $_POST['sub'];
-        $this->bd->title($titulo);
-        $this->bd->subtitle($subtitulo);
-      
-        
-     }}
-      
-     }
-    
-    
-  
-  
-  
 
+    //////fin titulo y subtitulo
 
+    public function Edtitle() {
+        if (isset($_POST["enviar"])) {
+            $titulo = $_POST['tituloo'];
+            $subtitulo = $_POST['sub'];
+            $this->bd->title($titulo);
+            $this->bd->subtitle($subtitulo);
+        }
+    }
+
+}

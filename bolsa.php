@@ -66,7 +66,7 @@ session_start();
           <h2>Solicita una entrevista</h2>
         </div>
         <div class="modal-body">
-            <form role="form" id="formulario" method="post" enctype="multipart/form-data" >
+            <form role="form" id="formulario"  method="post" enctype="multipart/form-data" >
             <div class="row">
               <div class="form-group col-lg-4">
                 <label>Nombre(s)</label>
