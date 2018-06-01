@@ -75,16 +75,35 @@ class database {
     $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`, `Curriculum`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje, $Curriculum));
   }
-  
-  
-  function title($titulo, $subtitulo){
+
+  ///ACTUALIZA DATOS
+  function title($titulo){
     //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`, `subtitulo`='{$_POST['tituloo']}','{$_POST['subtituloo']}' WHERE Id_servicio = 1");
-    $sql->execute(array($titulo, $subtitulo));
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`='{$_POST['tituloo']}'Where Id_servicio = 1 ");
+    $sql->execute(array($titulo, ));
   }
+
+  
+function subtitle($subtitulo){
+    //inserta una nuevo titulo
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`='{$_POST['sub']}'Where Id_servicio = 2 ");
+    $sql->execute(array($subtitulo ));
+  }
+  ///  FIN ACTUALIZADO
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   function titleservicio(){
-        $sql = $this->pdo->prepare("SELECT `titulo` ,`subtitulo` FROM `servicios` WHERE Id_servicio = 1 ");
+        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` WHERE Id_servicio = 1 ");
     if ($sql->execute(array(1))) {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -92,12 +111,11 @@ class database {
     $this->CerrarConexion();
   }
   
-  
-
-  
-  
- 
-
- 
-
+    function subtitleservicio(){
+        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` WHERE Id_servicio = 2 ");
+    if ($sql->execute(array(1))) {
+      //retorna los datos obtenidos de la base
+      return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+    }
 }

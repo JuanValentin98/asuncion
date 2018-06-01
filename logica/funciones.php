@@ -345,6 +345,11 @@ class funciones {
     }
   }
   
+  
+  
+  
+  
+  ////MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
     public function tituloserv(){
     //ejecuta la consulta
     $con= $this->bd->titleservicio();
@@ -355,30 +360,33 @@ class funciones {
     }
     return $texto;
   }
-  
-  
-  public function subtituloserv(){
+    public function subtituloserv(){
     //ejecuta la consulta
-    $con= $this->bd->titleservicio();
+    $con= $this->bd->subtitleservicio();
     $texto='';
     //recorre los datos
     foreach ($con as $tit) {
-      $texto.=''.$tit['subtitulo'].'';
+      $texto.=''.$tit['titulo'].'';
     }
     return $texto;
   }
-  
+  //////fin titulo y subtitulo
+ 
      public function Edtitle(){
       if (isset($_POST["enviar"])) {
         $titulo=$_POST['tituloo'];
-        $subtitulo=$_POST['subtituloo'];
-        $this->bd->title($titulo, $subtitulo);
-      }
-    }
+        $subtitulo = $_POST['sub'];
+        $this->bd->title($titulo);
+        $this->bd->subtitle($subtitulo);
+      
+        
+     }}
+      
+     }
     
     
   
   
   
-}
+
 

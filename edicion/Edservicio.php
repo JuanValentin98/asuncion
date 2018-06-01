@@ -29,6 +29,8 @@ session_start();
 
     </head>
     <body class="body" >
+
+
         <!-- Collect the nav links, forms, and other content for toggling -->
 
         <!-- /.navbar-collapse -->
@@ -52,67 +54,34 @@ session_start();
                 </nav>
             </header>
 
+            <form role="form" id="formulario"  method="post" enctype="multipart/form-data" >
+                <div class="ser">
 
+                    <div class="form-group col-md-12 " >
+                        <div class="service-box mt-5 mx-auto">
+                            <h1 class="section-heading"><?php echo $fun->tituloserv(); ?></h1>
+                            
+                            <input name="tituloo" id="recargado" type="text" class="form-control " placeholder="Titulo"  autofocus="autofocus">
+                        </div>
 
-
-            <div class="col-md-12 ser">
-                <div class="col-md-12 " style="text-align: center">
-                    <h1 class="section-heading" id="recargado"><?php echo $fun->tituloserv(); ?></h1>
-                    
-                    <div class="col-md-4 col-lg-offset-4"> 
-                        <form role="form" id="formulario" method="post" enctype="multipart/form-data" >
-                            <div class="form-group">
-                                <input name="tituloo" type="text" class="form-control "  placeholder="Título" required="required" autofocus="autofocus">
-                           
-                                
+                        <div class="form-group col-md-12">
+                            <div class="service-box mt-5 mx-auto">
+                                <h1 class="section-heading" id="recargado"><?php echo $fun->subtituloserv(); ?></h1>
+                                <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                                <input name="sub" type="text" class="form-control" placeholder="Subtitulo"  autofocus="autofocus">
                             </div>
-                            <div class="form-group col-lg-4">
-                <label>Nombre(s)</label>
-                <input name="subtituloo" type="text" class="form-control " placeholder="Nombre(s)"  autofocus="autofocus">
-              </div>
-                            
-                        
-                            
-                            
-                            <input type="hidden" name="Id_bolsa" id="id_bolsa" >
+                        </div>
+
+
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
                             <button name="enviar" type="submit" class="btn btn-default">Modificar</button>
                             <?php $fun->Edtitle(); ?>
-                        </form>
+                        </div>
                     </div>
 
-                </div>
-                <div class="col-lg-3 col-md-3 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-                        <h2 class="mb-3"><?php echo $fun->subtituloserv(); ?></h2>
-                        
-                        
-            
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-                        <h2 class="mb-3">GRADUACION</h2>
-                        <p class="text-muted mb-0">-Creacion. <br><br> -Copiado y/o Modificacion de Reglas de Graduacion.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-                        <h2 class="mb-3">TRAZO</h2>
-                        <p class="text-muted mb-0">-Acomodos opticos. <br><br> -Calculos de Consumos. <br><br> -Impresiones de moldes y trazos.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-                        <h2 class="mb-3">CORTE Y FOLEO</h2>
-                        <p class="text-muted mb-0">-Servicio de Corte Automatico. <br><br> -Fudionado y Foleo para todo tipo de prenda.</p>
-                    </div>
-                </div>
-            </div>
+            </form>
+
         </div>
         <!--    </section>-->
 
@@ -120,11 +89,11 @@ session_start();
             function recargar() {
                 var variable_post = "<?php echo $fun->tituloserv(); ?>";
                 $.post("miscript.php", {variable: variable_post}, function (data) {
-                    $("#recargado").html(data);
+                    $("#recargadoo").html(data);
                 });
             }
         </script>
-        <hr><hr><hr><hr>
+
 
         <p align="center">
             <a href="#" onclick="javascript:recargar();">Mostrar Modificaciones</a>
