@@ -265,6 +265,7 @@ class funciones {
     }
 
     public function N_bolsa() {
+
         if (isset($_POST['enviar'])) {
             $id = $_SESSION['id_user'];
             $nombre = $_POST['vacante'];
@@ -279,27 +280,79 @@ class funciones {
 
     public function N_empleado() {
 
-        if (isset($_POST['enviar'])) {
-//        $Curriculum =$_FILES['curri']['name'];
-//        $carpeta = "archivos/";
-//        opendir($carpeta);
-//        $destino = $carpeta.$Curriculum;
-//        $ruta = $_FILES['curri']['tmp_name'];
-//         if ($Curriculum != "") {
-//         if (copy($ruta, $destino)) {
+      if (isset($_POST['enviar'])) {
+        ini_set("SMTP","valentin.dejesus98@gmail.com");
+	ini_set("smtp_port","localhost");
+	ini_set('sendmail_from', 'valentin.dejesus98@gmail.com');
+
+	//variables para los campos de texto
+  $id = $_POST['Id_bolsa'];
+  $nombre = $_POST['nombre'];
+  $telefono = $_POST['telefono'];
+  $email = $_POST['email'];
+  $mensaje = $_POST['comentario'];
+  $this->bd->Empleado($id, $nombre, $telefono, $email, $mensaje);
+
+	//variables para los datos del archivo
+	$nameFile = $_FILES['curri']['name'];
+	$sizeFile = $_FILES['curri']['size'];
+	$typeFile = $_FILES['curri']['type'];
+	$tempFile = $_FILES["curri"]["tmp_name"];
+	$fecha= time();
+	$fechaFormato = date("j/n/Y",$fecha);
+
+	$correoDestino = "valentin.dejesus98@gmail.com";
+
+	//asunto del correo
+	$asunto = "Enviado por " . $nombre ;
 
 
-            $destino = "valentin.dejesus98@gmail.com";
-            $id = $_POST['Id_bolsa'];
-            $nombre = $_POST['nombre'];
-            $telefono = $_POST['telefono'];
-            $email = $_POST['email'];
-            $mensaje = $_POST['comentario'];
-            $this->bd->Empleado($id, $nombre, $telefono, $email, $mensaje);
-            $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "Mensaje: " . $mensaje . "\n" . $curriculum;
-            mail($destino, "Contacto", $contenido);
-            echo '<script type="text/javascript">alert("Solicitud Enviada");</script>';
-        }
+ 	// -> mensaje en formato Multipart MIME
+	$cabecera = "MIME-VERSION: 1.0\r\n";
+	$cabecera .= "Content-type: multipart/mixed;";
+	//$cabecera .="boundary='=P=A=L=A=B=R=A=Q=U=E=G=U=S=T=E=N='"
+	$cabecera .="boundary=\"=C=T=E=C=\"\r\n";
+	$cabecera .= "From: {$email}";
+
+	//Primera parte del cuerpo del mensaje
+    ///$contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "Mensaje: " . $mensaje;
+      $cuerpo = "--=C=T=E=C=\r\n";
+
+    	$cuerpo .= "Content-Transfer-Encoding: 8bit\r\n";
+    	$cuerpo .= "\r\n"; // línea vacía
+    	$cuerpo .= "Correo enviado por: " . $nombre ;
+    	$cuerpo .= " con fecha: " . $fechaFormato . "\r\n";
+    	$cuerpo .= "Email: " . $email . "\r\n";
+    	$cuerpo .= "Mensaje: " . $mensaje . "\r\n";
+
+ 	// -> segunda parte del mensaje (archivo adjunto)
+        //    -> encabezado de la parte
+    $cuerpo .= "--=C=T=E=C=\r\n";
+    $cuerpo .= "Content-Type: application/octet-stream; ";
+    $cuerpo .= "name=" . $nameFile . "\r\n";
+    $cuerpo .= "Content-Transfer-Encoding: base64\r\n";
+    $cuerpo .= "Content-Disposition: attachment; ";
+    $cuerpo .= "filename=" . $nameFile . "\r\n";
+    $cuerpo .= "\r\n"; // línea vacía
+
+    $fp = fopen($tempFile, "rb");
+    $file = fread($fp, $sizeFile);
+	$file = chunk_split(base64_encode($file));
+
+    $cuerpo .= "$file\r\n";
+    $cuerpo .= "\r\n"; // línea vacía
+    // Delimitador de final del mensaje.
+    $cuerpo .= "--=C=T=E=C=--\r\n";
+
+	//Enviar el correo
+	if( mail($correoDestino, $asunto, $cuerpo, $cabecera)){
+  
+    header("Location:bolsa.php");
+
+	}
+
+
+      }
     }
 
     public function login() {
