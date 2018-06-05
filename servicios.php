@@ -63,7 +63,7 @@ session_start();
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1 class="section-heading"><?php echo $fun->tituloserv(); ?></h1>
+              <h1 class="section-heading"><?php echo $fun->tituloserv(); ?></h1> 
                         
             <hr class="my-4">
           </div>
@@ -118,7 +118,8 @@ session_start();
           <a href=""><strong><li><a href="index.php">DISEÑO Y PATRONAJE</a></li></strong></a>
         </h2>
         <hr>
-        <img class="img-responsive img-border img-left" src="img/serv.jpg" alt="">
+<!--        <img class="img-responsive img-border img-left" src="../img/serv.jpg" alt="">-->
+       
         <hr class="visible-xs">
         <br><br> <p>-Patronaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
       </div>
@@ -129,7 +130,7 @@ session_start();
       <div class="col-lg-12">
         <hr>
         <h2 class="intro-text text-center">
-          <a href=""><strong><a href="index.php">GRADUACION</a></li></strong></a>
+            <strong><a href="index.php">GRADUACION</a></strong>
         </h2>
         <hr>
         <img class="img-responsive img-border img-left" src="img/cur.jpg" alt="">

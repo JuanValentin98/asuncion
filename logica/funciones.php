@@ -26,8 +26,14 @@ class funciones {
             <span class="icon-bar"></span>
         </button>
     </div>
+    <div class="col-md-12">
+    <div class="col-md-1">
+     <img class="img" src="./img/logo.jpeg"/>
+     </div>
+     <div class="brand">CONFECCIONES LA ASUNCIÓN S.A DE C.V</div>
+     </div>
         <ul class="nav navbar-nav navbar-center">
-             <li class="active"><img src="img/logoasuncion.png" width="360px" height="200px"/></li>
+            
              <li><a href="index.php">inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
@@ -54,9 +60,7 @@ class funciones {
     <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
-    </nav>  <hr>
-    <div class="brand">CONFECCIONES LA ASUNCIÓN </div> <div class="brand">S.A DE C.V</div>
-    <hr>s';
+    </nav>';
         // agrega el modal de seccion
         if (!isset($_SESSION['usuario'])) {
             $menu .= '<div class="modal fade" id="modal-login" role="dialog">
@@ -350,8 +354,6 @@ class funciones {
     header("Location:bolsa.php");
 
 	}
-
-
       }
     }
 
