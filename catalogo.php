@@ -23,6 +23,7 @@ session_start();
   <link href="css/business-casual.css" rel="stylesheet">
   <link href="css/Style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/estiloAsun.css"> 
+  <link rel="stylesheet" href="css/estilos.css">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -34,7 +35,9 @@ session_start();
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
+        
 </head>
 
 <body>
@@ -42,95 +45,72 @@ session_start();
             <?php $fun->menu();  ?>
             <!-- /.navbar-collapse -->
 
-        <div class="container">
-        <div class="row">
-  <div class="row">
-      <div class="box">
-        <div class="col-lg-12 text-center">
-         <h1 class="brand-name" style="color: #000; font-size: 50px ">C A T A L O G O</h1>
-        </div>
-      </div>
-  </div> 
-            <div class="col-lg-3"style="background: rgba(0, 7, 2, 0.5);" >
-                
-                       <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                <ul style="text-align: center">
-                    <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="15" style="border: 2px solid #000; height: 800px; padding: 3px; text-align: center; width: 250px;">
-<h3>CALVIN KLEIN</h3> 
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-<h3>LACOSTE</h3>
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-<h3>NAUTICA</h3> 
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-<h3>AEROPOSTALE</h3>
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-<h3>PUMA</h3> 
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-<h3>LEVI'S</h3> 
-<a href="catalogo.php">Camisa</a><br />
-<a href="catalogo2.php">Pantalon</a><br />
-<a href="catalogo3.php">Short</a><br />
-</marquee>
-</ul>                 
-                </div>
-
-            <div class="col-lg-9">
- <div class="box1">
-          
-                  
-                    <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div> 
-                    
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div> 
-  
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div> 
-                    
-  <div class="col-md-6" style="text-align: center"> <div class="box"><img src="img/ropa/CK.png" onmouseover="this.width=320;this.height=380;" onmouseout="this.width=220;this.height=270;" width="300" height="350" /> <table  style="width: 300px;
-  border: 1px solid #000;
-  border-collapse: collapse;">
-  <tr>
-  <h1 scope="col">Camisa Azul</h1>
-  <th scope="col" style="text-align: center">Marca: <p style="color: red">Calvin Klein</p>Corte:<p style="color: blue">Regular Fit</p>Color: <p style="color: gray">Gris</p></th>
-  </tr>
-  </table></div></div>
-                    
-                </div>
-            </div>
-                                        
-                </div>
-            </div>
-                
-            </div>
+<div class="wrap">
+		<h1>Nuestros Productos</h1>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="camisas">Camisas</a>
+                                <a href="#" class="category_item" category="pantalones">Pantalones</a>
+                                <a href="#" class="category_item" category="shorts">Shorts</a>
+			</div>
+			<section class="products-list">
+                                       <!--Camisas-->
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa1.png" alt="" >
+					<a href="#">CALVIN KLEIN</a>
+				</div>
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa2.png" alt="" >
+					<a href="#">LACOSTE</a>
+				</div>
+                            <div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa3.jpg" alt="" >
+					<a href="#">NAUTICA</a>
+				</div>
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa4.jpg" alt="" >
+					<a href="#">AEROPOSTALE</a>
+				</div>
+                            
+                                   <!--Pantalones-->
+				<div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon5.jpg" alt="" >
+					<a href="#">LEVI'S</a>
+				</div>
+				<div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon1.png" alt="" >
+					<a href="#">AEROPOSTALE</a>
+				</div>
+                                   <div class="product-item" category="pantalones">
+                                       <img src="img/ropa/pantalon2.jpg" alt="" >
+					<a href="#">CALVIN KLEIN</a>
+				</div>
+				<div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon5.jpg" alt="" >
+					<a href="#">LACOSTE</a>
+				</div>
+                                   
+                                   <!--Shorts-->
+				<div class="product-item" category="shorts">
+                                    <img src="img/ropa/short.jpg" alt="" >
+					<a href="#">LACOSTE</a>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">AEROPOSTALE</a>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">CALVIN KLEIN</a>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">LEVI'S</a>
+				</div>
+			</section>
+		</div>
+	</div>
 
       
        <!-- /.container -->

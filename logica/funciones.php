@@ -101,6 +101,97 @@ class funciones {
         }
         echo $menu;
     }
+    
+    
+    
+    
+    public function menu2() {
+
+        $menu = '
+
+    <!-- Navigation -->
+    <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
+                <nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+        <ul class="nav navbar-nav navbar-center">
+             <li class="active"><img src="img/logoasuncion.png" width="360px" height="200px"/></li>
+             <li><a href="index.php">inicio</a></li>
+            <li><a href="servicios.php">Servicios</a></li>
+            <li><a href="catalogo.php">Catalogo</a></li>
+            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+            <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
+    <ul class="dropdown-menu" style="text-align:center">';
+        // condicion de que exista una variable de sesion
+        if (isset($_SESSION['usuario'])) {
+            $menu .= '<li><a href="perfil.php">Solicitudes</a></li>
+      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
+      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
+      <form accion="' . $this->cerrarSession() . '" method="post">
+      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
+      </form>';
+        } else {
+            $menu .= '<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
+        }
+        $menu .= '</ul>
+    </li>
+    </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+    </nav>';
+        // agrega el modal de seccion
+        if (!isset($_SESSION['usuario'])) {
+            $menu .= '<div class="modal fade" id="modal-login" role="dialog">
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+      <button class="close" data-dismiss="modal">&times;</button>
+      <h2>Iniciar sesión</h2>
+      </div>
+      <div class="modal-body">
+      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
+      <div class="form-group">
+      <div class="input-group">
+      <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
+      <span class="input-group-addon">
+      <i class="glyphicon glyphicon-user"></i>
+      </span>
+      </div> <br>
+      </div>
+      <div class="form-group">
+      <div class="input-group">
+      <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
+      <span class="input-group-addon">
+      <i class="glyphicon glyphicon-lock"></i>
+      </span>
+      </div>
+      </div>
+      <div class="form-group sign-btn">
+      <input type="submit" class="btn" name="logear" value="Entrar"> <br><br>
+      
+      </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+      <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+      </div>
+      </div>
+      </div>'
+
+            ;
+        }
+        echo $menu;
+    }
 
     //muestra el mismo footer
 
