@@ -2,6 +2,7 @@
 include_once '../logica/funciones.php';
 $fun = new funciones();
 session_start();
+$fun->comprobar();
 ?>
 <!DOCTYPE html>
 <html lang="en">

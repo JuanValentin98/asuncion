@@ -80,39 +80,51 @@ class database {
   function title($titulo){
     //inserta una nuevo titulo
     $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`='{$_POST['tituloo']}'Where Id_servicio = 1 ");
-    $sql->execute(array($titulo, ));
+    $sql->execute(array($titulo ));
   }
 
   
-function subtitle($subtitulo){
+function sub1($subtitulo){
     //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`='{$_POST['sub']}'Where Id_servicio = 2 ");
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub1`='{$_POST['sub1']}'Where Id_servicio = 1 ");
     $sql->execute(array($subtitulo ));
   }
+  
+  function sub2($subtitulo){
+    //inserta una nuevo titulo
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub2`='{$_POST['sub2']}'Where Id_servicio = 1 ");
+    $sql->execute(array($subtitulo ));
+  }
+  
+  function sub3($subtitulo){
+    //inserta una nuevo titulo
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub3`='{$_POST['sub3']}'Where Id_servicio = 1 ");
+    $sql->execute(array($subtitulo ));
+  }
+  
+  function sub4($subtitulo){
+    //inserta una nuevo titulo
+    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub4`='{$_POST['sub4']}'Where Id_servicio = 1 ");
+    $sql->execute(array($subtitulo ));
+  }
+  
+  
+  
   ///  FIN ACTUALIZADO
         
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   function titleservicio(){
-        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` WHERE Id_servicio = 1 ");
+        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` ");
     if ($sql->execute(array(1))) {
       //retorna los datos obtenidos de la base
+        
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
     $this->CerrarConexion();
   }
   
     function subtitleservicio(){
-        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` WHERE Id_servicio = 2 ");
+        $sql = $this->pdo->prepare("SELECT * FROM `servicios` WHERE Id_servicio = 1 ");
     if ($sql->execute(array(1))) {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);

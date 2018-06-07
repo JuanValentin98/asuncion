@@ -218,28 +218,7 @@ class funciones {
         return $texto;
     }
 
-    public function bolsa() {
-        //se usa la caonsulta
-        date_default_timezone_set("America/Mexico_City");
-        $fecha_actual = date("Y-m-d");
-        $con = $this->bd->bolsa();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $bolsa) {
-            if ($bolsa['Fecha_limite'] > $fecha_actual) {
-                $texto .= '<div class="col-sm-4 text-center">
-      <h2>
-      ' . $bolsa['Nombre_vacante'] . '
-      </h2>
-      <h4 class="text-justify">
-      <small>' . $bolsa['Contenido'] . '<br> Teléfono:' . $bolsa['Telefono'] . '</small>
-      </h4>
-      <a data-toggle="modal" data-target="#modal-contact-form" data-id="' . $bolsa['Id_bolsa'] . '" class="btn btn-default btn-lg">Mandar Información</a>
-      </div>';
-            }
-        }
-        return $texto;
-    }
+
 
     public function servicios() {
         //realiza la consulta
@@ -399,39 +378,127 @@ class funciones {
             echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
         }
     }
-
-    ////MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
-    public function tituloserv() {
-        //ejecuta la consulta
-        $con = $this->bd->titleservicio();
+        public function bolsa() {
+        //se usa la caonsulta
+        date_default_timezone_set("America/Mexico_City");
+        $fecha_actual = date("Y-m-d");
+        $con = $this->bd->bolsa();
         $texto = '';
         //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['titulo'] . '';
+        foreach ($con as $bolsa) {
+            if ($bolsa['Fecha_limite'] > $fecha_actual) {
+                $texto .= '<div class="col-sm-4 text-center">
+      <h2>
+      ' . $bolsa['Nombre_vacante'] . '
+      </h2>
+      <h4 class="text-justify">
+      <small>' . $bolsa['Contenido'] . '<br> Teléfono:' . $bolsa['Telefono'] . '</small>
+      </h4>
+      <a data-toggle="modal" data-target="#modal-contact-form" data-id="' . $bolsa['Id_bolsa'] . '" class="btn btn-default btn-lg">Mandar Información</a>
+      </div>';
+            }
         }
         return $texto;
     }
 
-    public function subtituloserv() {
+    //MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
+    public function tituloserv() {
+        //ejecuta la consulta
+        
+    }
+
+    public function sub1serv() {
         //ejecuta la consulta
         $con = $this->bd->subtitleservicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '' . $tit['titulo'] . '';
+            $texto .= '' . $tit['sub1'] . '';
+        }
+        return $texto;
+    }
+    
+        public function sub2serv() {
+        //ejecuta la consulta
+        $con = $this->bd->subtitleservicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['sub2'] . '';
+        }
+        return $texto;
+    }
+    
+        public function sub3serv() {
+        //ejecuta la consulta
+        $con = $this->bd->subtitleservicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['sub3'] . '';
+        }
+        return $texto;
+    }
+            public function sub4serv() {
+        //ejecuta la consulta
+        $con = $this->bd->subtitleservicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['sub4'] . '';
         }
         return $texto;
     }
 
     //////fin titulo y subtitulo
+    
+    
+      //////ACTUALIZA TITULO Y SUBTITULOS
 
     public function Edtitle() {
         if (isset($_POST["enviar"])) {
             $titulo = $_POST['tituloo'];
-            $subtitulo = $_POST['sub'];
-            $this->bd->title($titulo);
-            $this->bd->subtitle($subtitulo);
+            $subtitulo = $_POST['sub1'];
+            $this->bd->title($titulo,$subtitulo);
+            
+        }
+    }
+    public function sub1ser() {
+        if (isset($_POST["enviar"])) {
+            $subtitulo = $_POST['sub1'];
+            $this->bd->sub1($subtitulo);
+        }
+    }
+    
+        public function sub2ser() {
+        if (isset($_POST["enviar"])) {
+            $subtitulo = $_POST['sub2'];
+            $this->bd->sub2($subtitulo);
+        }
+    }
+    
+        public function sub3ser() {
+        if (isset($_POST["enviar"])) {
+            $subtitulo = $_POST['sub3'];
+            $this->bd->sub3($subtitulo);
+        }
+    }
+    
+        public function sub4ser() {
+        if (isset($_POST["enviar"])) {
+            $subtitulo = $_POST['sub4'];
+            $this->bd->sub4($subtitulo);
         }
     }
 
+    
+    
+    
+    
+      //////FIN DE ACTUALIZA TITULO Y SUBTITULOS
+
+    
+    
+    
+    
 }
