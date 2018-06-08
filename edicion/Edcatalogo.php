@@ -74,7 +74,7 @@ $resServicio = $conexion->query($servicio);
             
             
             <section>
-            <form method="post">
+                <form method="post" class="">
                 
 <?php
 while ($registroSer = $resServicio->fetch_array(MYSQLI_BOTH)) {
@@ -87,8 +87,8 @@ echo'<tr>
                     <section id="services">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    <h1 class="section-heading">     <td><input name="nom[' . $registroSer['Id_servicio'] . ']" value="' . $registroSer['titulo'] . '" /></td>
+                                <div class="col-md-4 col-lg-offset-4 text-center">
+                                    <h1 class="section-heading"><input name="nom[' . $registroSer['Id_servicio'] . ']" value="' . $registroSer['titulo'] . '" />
 </h1>
                                     <hr class="my-4">
                                 </div>
@@ -96,7 +96,7 @@ echo'<tr>
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 text-center">
+                                <div class="col-md-3  text-center">
                                     <div class="service-box mt-5 mx-auto">
                                         <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
                                         <h2 class="mb-3">     <td><input name="carr[' . $registroSer['Id_servicio'] . ']" value="' . $registroSer['sub1'] . '" /></td>
@@ -104,7 +104,7 @@ echo'<tr>
                                         <p class="text-muted mb-0">-Patrocinaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 text-center">
+                                <div class="col-md-3 col-md-6 text-center">
                                     <div class="service-box mt-5 mx-auto">
                                         <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                         <h2 class="mb-3">     <td><input name="gru[' . $registroSer['Id_servicio'] . ']" value="' . $registroSer['sub2'] . '"/></td>

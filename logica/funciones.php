@@ -404,12 +404,18 @@ class funciones {
     //MUESTRA LOS TITULOS Y SUBTITULOS DE SERVICIOS//
     public function tituloserv() {
         //ejecuta la consulta
-        
+        $con = $this->bd->servicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) { 
+            $texto .= '' . $tit['titulo'] . '';
+            }
+        return $texto;
     }
 
     public function sub1serv() {
         //ejecuta la consulta
-        $con = $this->bd->subtitleservicio();
+        $con = $this->bd->servicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
@@ -420,7 +426,7 @@ class funciones {
     
         public function sub2serv() {
         //ejecuta la consulta
-        $con = $this->bd->subtitleservicio();
+        $con = $this->bd->servicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
@@ -431,7 +437,7 @@ class funciones {
     
         public function sub3serv() {
         //ejecuta la consulta
-        $con = $this->bd->subtitleservicio();
+        $con = $this->bd->servicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
@@ -441,7 +447,7 @@ class funciones {
     }
             public function sub4serv() {
         //ejecuta la consulta
-        $con = $this->bd->subtitleservicio();
+        $con = $this->bd->servicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
@@ -455,41 +461,43 @@ class funciones {
     
       //////ACTUALIZA TITULO Y SUBTITULOS
 
-    public function Edtitle() {
-        if (isset($_POST["enviar"])) {
-            $titulo = $_POST['tituloo'];
-            $subtitulo = $_POST['sub1'];
-            $this->bd->title($titulo,$subtitulo);
-            
+    public function Edicion() {
+        if (isset($_POST['actualizar'])) {
+            $editNom = $_POST['nom'];
+            $editCarr = $_POST['carr'];
+            $editGru = $_POST['gru'];
+             $SUB3 = $_POST['sub3'];
+              $SUB4 = $_POST['sub4'];
+             $this->bd->edicionservicio($editNom, $editCarr, $editGru, $SUB3, $SUB4);
         }
     }
-    public function sub1ser() {
-        if (isset($_POST["enviar"])) {
-            $subtitulo = $_POST['sub1'];
-            $this->bd->sub1($subtitulo);
-        }
-    }
-    
-        public function sub2ser() {
-        if (isset($_POST["enviar"])) {
-            $subtitulo = $_POST['sub2'];
-            $this->bd->sub2($subtitulo);
-        }
-    }
-    
-        public function sub3ser() {
-        if (isset($_POST["enviar"])) {
-            $subtitulo = $_POST['sub3'];
-            $this->bd->sub3($subtitulo);
-        }
-    }
-    
-        public function sub4ser() {
-        if (isset($_POST["enviar"])) {
-            $subtitulo = $_POST['sub4'];
-            $this->bd->sub4($subtitulo);
-        }
-    }
+//    public function sub1ser() {
+//        if (isset($_POST["enviar"])) {
+//            $subtitulo = $_POST['sub1'];
+//            $this->bd->sub1($subtitulo);
+//        }
+//    }
+//    
+//        public function sub2ser() {
+//        if (isset($_POST["enviar"])) {
+//            $subtitulo = $_POST['sub2'];
+//            $this->bd->sub2($subtitulo);
+//        }
+//    }
+//    
+//        public function sub3ser() {
+//        if (isset($_POST["enviar"])) {
+//            $subtitulo = $_POST['sub3'];
+//            $this->bd->sub3($subtitulo);
+//        }
+//    }
+//    
+//        public function sub4ser() {
+//        if (isset($_POST["enviar"])) {
+//            $subtitulo = $_POST['sub4'];
+//            $this->bd->sub4($subtitulo);
+//        }
+//    }
 
     
     

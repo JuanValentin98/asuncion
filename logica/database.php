@@ -76,58 +76,30 @@ class database {
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje));
   }
 
-  ///ACTUALIZA DATOS
-  function title($titulo){
+    
+  function edicionservicio($editNom, $editCarr, $editGru, $SUB3, $SUB4){
     //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `titulo`='{$_POST['tituloo']}'Where Id_servicio = 1 ");
-    $sql->execute(array($titulo ));
-  }
-
-  
-function sub1($subtitulo){
-    //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub1`='{$_POST['sub1']}'Where Id_servicio = 1 ");
-    $sql->execute(array($subtitulo ));
+    $sql = $this->pdo->prepare("UPDATE `servicios` SET `titulo`='{$_POST['nom']}', `sub1`='{$_POST['carr']}', `sub2`='{$_POST['gru']}', `sub3`='{$_POST['sub3']}', `sub4`='{$_POST['sub4']}' WHERE Id_servicio= 1");
+    $sql->execute(array($editNom, $editCarr, $editGru, $SUB3, $SUB4 ));
   }
   
-  function sub2($subtitulo){
-    //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub2`='{$_POST['sub2']}'Where Id_servicio = 1 ");
-    $sql->execute(array($subtitulo ));
-  }
   
-  function sub3($subtitulo){
-    //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub3`='{$_POST['sub3']}'Where Id_servicio = 1 ");
-    $sql->execute(array($subtitulo ));
-  }
-  
-  function sub4($subtitulo){
-    //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios`  SET `sub4`='{$_POST['sub4']}'Where Id_servicio = 1 ");
-    $sql->execute(array($subtitulo ));
-  }
+//  function sub4($editNom, $editCarr, $editGru, $SUB3, $SUB4 ){
+//      
+//      if (isset($_POST['actualizar'])) {
+//                        foreach ($_POST['Id_ser'] as $ids) {
+//                            
+//                            $editNom = mysqli_real_escape_string($conexion, $_POST['nom'][$ids]);
+//                            $editCarr = mysqli_real_escape_string($conexion, $_POST['carr'][$ids]);
+//                            $editGru = mysqli_real_escape_string($conexion, $_POST['gru'][$ids]);
+//                             $SUB3 = mysqli_real_escape_string($conexion, $_POST['sub3'][$ids]);
+//                              $SUB4 = mysqli_real_escape_string($conexion, $_POST['sub4'][$ids]);
+//                            $actualizar = $conexion->query("UPDATE servicios SET titulo='$editNom', sub1='$editCarr', sub2='$editGru', sub3='$SUB3', sub4='$SUB4' WHERE Id_servicio='$ids'");
+//                        }
   
   
   
   ///  FIN ACTUALIZADO
         
   
-  function titleservicio(){
-        $sql = $this->pdo->prepare("SELECT `titulo` FROM `servicios` ");
-    if ($sql->execute(array(1))) {
-      //retorna los datos obtenidos de la base
-        
-      return $sql->fetchAll(PDO::FETCH_ASSOC);
-    }
-    $this->CerrarConexion();
-  }
-  
-    function subtitleservicio(){
-        $sql = $this->pdo->prepare("SELECT * FROM `servicios` WHERE Id_servicio = 1 ");
-    if ($sql->execute(array(1))) {
-      //retorna los datos obtenidos de la base
-      return $sql->fetchAll(PDO::FETCH_ASSOC);
-    }
-    }
 }
