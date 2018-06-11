@@ -10,6 +10,7 @@ class funciones {
     function __construct() {
         $this->bd = new database();
     }
+    
 
     //funcion para mostrar el mismo menu en todas las paginas
     public function menu() {
@@ -17,7 +18,39 @@ class funciones {
         $menu = '
 
     <!-- Navigation -->
-    <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
+     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
+     
+    <div class= "user col-md-12">
+    
+      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
+      <div class= "col-md-2 col-md-offset-7">
+      <div class="input-group">
+      <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
+      <span class="input-group-addon">
+      <i class="glyphicon glyphicon-user"></i>
+      </span>
+      </div>
+      </div>
+      
+      <div class= "col-md-2">
+      <div class="input-group">
+      <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
+      <span class="input-group-addon">
+      <i class="glyphicon glyphicon-lock"></i>
+      </span>
+      </div>
+      </div>
+      <div >
+      <input type="submit" class="btn col-md-1" name="logear" value="Sign in">   
+      </div>
+      
+      </form>
+      </div>
+      <br><br><br>
+     
+      
+    
+
                 <nav class="navbar navbar-default">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,12 +59,13 @@ class funciones {
             <span class="icon-bar"></span>
         </button>
     </div>
-    <div class="col-md-12">
-    <div class="col-md-1">
-     <img class="img" src="./img/logo.jpeg"/>
+    <div class="col-md-1 col-md-offset-1">
+     <img class="img1" src="img/log.png" alt="">
      </div>
-     <div class="brand">CONFECCIONES LA ASUNCIÓN S.A DE C.V</div>
-     </div>
+    
+    
+      <div class="col-md-9 col-md-offset-3">
+       
         <ul class="nav navbar-nav navbar-center">
             
              <li><a href="index.php">inicio</a></li>
@@ -39,70 +73,30 @@ class funciones {
             <li><a href="catalogo.php">Catalogo</a></li>
             <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
             <li><a href="contact.php">Contacto</a></li>
-            <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
-    <ul class="dropdown-menu" style="text-align:center">';
+            <li class="dropdown">';
         // condicion de que exista una variable de sesion
         if (isset($_SESSION['usuario'])) {
-            $menu .= '<li><a href="perfil.php">Solicitudes</a></li>
+            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
+    <ul class="dropdown-menu u" style="text-align:center">
+                <li><a href="perfil.php">Solicitudes</a></li>
       <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
       <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
       <form accion="' . $this->cerrarSession() . '" method="post">
       <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
-      </form>';
-        } else {
-            $menu .= '<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
-        }
-        $menu .= '</ul>
+      </form></ul>';
+        } 
+        $menu .= '
     </li>
     </ul>
-    </div>
+    
     <!-- /.navbar-collapse -->
-    </div>
+    
     <!-- /.container -->
-    </nav>';
+    </div>
+    </nav>
+    ';
         // agrega el modal de seccion
-        if (!isset($_SESSION['usuario'])) {
-            $menu .= '<div class="modal fade" id="modal-login" role="dialog">
-      <div class="modal-dialog">
-      <div class="modal-content">
-      <div class="modal-header">
-      <button class="close" data-dismiss="modal">&times;</button>
-      <h2>Iniciar sesión</h2>
-      </div>
-      <div class="modal-body">
-      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
-      <div class="form-group">
-      <div class="input-group">
-      <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-user"></i>
-      </span>
-      </div> <br>
-      </div>
-      <div class="form-group">
-      <div class="input-group">
-      <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-lock"></i>
-      </span>
-      </div>
-      </div>
-      <div class="form-group sign-btn">
-      <input type="submit" class="btn" name="logear" value="Entrar"> <br><br>
-      
-      </div>
-      </form>
-      </div>
-      <div class="modal-footer">
-      <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
-      </div>
-      </div>
-      </div>
-      </div>'
-
-            ;
-        }
+        
         echo $menu;
     }
 
@@ -408,7 +402,7 @@ class funciones {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) { 
-            $texto .= '' . $tit['titulo'] . '';
+            $texto .= '' . $tit['Titulo'] . '';
             }
         return $texto;
     }
@@ -419,7 +413,39 @@ class funciones {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '' . $tit['sub1'] . '';
+            $texto .= '' . $tit['Sub1'] . '';
+        }
+        return $texto;
+    }
+        public function sub11serv() {
+        //ejecuta la consulta
+        $con = $this->bd->servicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['Sub1.1'] . '';
+        }
+        return $texto;
+    }
+    
+    public function sub111serv() {
+        //ejecuta la consulta
+        $con = $this->bd->servicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['Sub1.2'] . '';
+        }
+        return $texto;
+    }
+    
+        public function sub1111serv() {
+        //ejecuta la consulta
+        $con = $this->bd->servicio();
+        $texto = '';
+        //recorre los datos
+        foreach ($con as $tit) {
+            $texto .= '' . $tit['Sub1.3'] . '';
         }
         return $texto;
     }
@@ -430,7 +456,7 @@ class funciones {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '' . $tit['sub2'] . '';
+            $texto .= '' . $tit['Sub2'] . '';
         }
         return $texto;
     }
@@ -441,7 +467,7 @@ class funciones {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '' . $tit['sub3'] . '';
+            $texto .= '' . $tit['Sub3'] . '';
         }
         return $texto;
     }
@@ -451,7 +477,7 @@ class funciones {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '' . $tit['sub4'] . '';
+            $texto .= '' . $tit['Sub4'] . '';
         }
         return $texto;
     }
@@ -463,12 +489,15 @@ class funciones {
 
     public function Edicion() {
         if (isset($_POST['actualizar'])) {
-            $editNom = $_POST['nom'];
-            $editCarr = $_POST['carr'];
-            $editGru = $_POST['gru'];
-             $SUB3 = $_POST['sub3'];
-              $SUB4 = $_POST['sub4'];
-             $this->bd->edicionservicio($editNom, $editCarr, $editGru, $SUB3, $SUB4);
+            $titulo = $_POST['titulo'];
+            $sub1 = $_POST['sub1'];
+            $sub11 = $_POST['sub11'];
+            $sub111 = $_POST['sub111'];
+              $sub111 = $_POST['sub1111'];
+            $sub2 = $_POST['sub2'];
+             $sub3 = $_POST['sub3'];
+              $sub4= $_POST['sub4'];
+        $this->bd->edicionservicio($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4);
         }
     }
 //    public function sub1ser() {

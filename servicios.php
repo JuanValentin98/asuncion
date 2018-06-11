@@ -75,7 +75,10 @@ session_start();
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
               <h2 class="mb-3"><?php echo $fun->sub1serv(); ?></h2>
-              <p class="text-muted mb-0">-Patrocinaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
+              <p>* <?php echo $fun->sub11serv(); ?></p>
+              <p>* <?php echo $fun->sub111serv(); ?></p>
+              <p>* <?php echo $fun->sub1111serv(); ?></p>
+             
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -83,6 +86,7 @@ session_start();
               <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
               <h2 class="mb-3"><?php echo $fun->sub2serv(); ?></h2>
               <p class="text-muted mb-0">-Creacion. <br><br> -Copiado y/o Modificacion de Reglas de Graduacion.</p>
+              
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">

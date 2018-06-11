@@ -29,8 +29,15 @@ class database {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
-    $this->CerrarConexion();
-  }
+    }
+      function subservicio(){
+    //prepara la consulta de servicios
+    $sql = $this->pdo->prepare("select Sub1.1 from servicios Where Id_servicios=1");
+    if ($sql->execute(array(1))) {
+      //retorna los datos obtenidos de la base
+      return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+    }
   
   function solicitud(){
     //prepara la consulta de solicitud
@@ -53,7 +60,7 @@ class database {
   }
 
 
- 
+ /////SELECCIONA
   function afilidao_id($user, $contraseña){
     $sql = $this->pdo->prepare("SELECT * FROM `administrador` WHERE `Nombre_usuario` = ? AND `passwors`= ?");
     if ($sql->execute(array($user, $contraseña))) {
@@ -61,7 +68,15 @@ class database {
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
   }
- 
+  
+  
+  
+  
+  
+ //////FIN SELECCION
+  
+  
+  //////ACTUALIZA
   function N_bolsa($id, $nombre, $contenido, $telefono,$fecha_limite){
     //inserta una nueva afiliacion
     $sql = $this->pdo->prepare("INSERT INTO bolsa_trabajo(`Id_admin`,`Nombre_vacante`, `Contenido`, `Telefono`,  `Fecha_limite`) VALUES ('{$id}','{$_POST['vacante']}','{$_POST['contenido']}','{$_POST['telefono']}
@@ -77,10 +92,10 @@ class database {
   }
 
     
-  function edicionservicio($editNom, $editCarr, $editGru, $SUB3, $SUB4){
+  function edicionservicio($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4){
     //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios` SET `titulo`='{$_POST['nom']}', `sub1`='{$_POST['carr']}', `sub2`='{$_POST['gru']}', `sub3`='{$_POST['sub3']}', `sub4`='{$_POST['sub4']}' WHERE Id_servicio= 1");
-    $sql->execute(array($editNom, $editCarr, $editGru, $SUB3, $SUB4 ));
+    $sql = $this->pdo->prepare("UPDATE `servicios` SET `Titulo`='{$_POST['titulo']}', `Sub1`='{$_POST['sub1']}',`Sub1.1`='{$_POST['sub11']}', `Sub1.2`='{$_POST['sub111']}',`Sub1.3`='{$_POST['sub1111']}', `Sub2`='{$_POST['sub2']}', `Sub3`='{$_POST['sub3']}', `Sub4`='{$_POST['sub4']}' WHERE Id_servicios= 1");
+    $sql->execute(array($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4 ));
   }
   
   

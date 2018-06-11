@@ -42,15 +42,15 @@ session_start();
     <div class="row">
       <div class="box">
         <div class="col-lg-12 text-center">
-          <div id="carousel-example-generic" class="carousel slide">
-            <!-- Indicators -->
+<!--          <div id="carousel-example-generic" class="carousel slide">
+             Indicators 
             <ol class="carousel-indicators hidden-xs">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
 
-            <!-- Wrapper for slides -->
+             Wrapper for slides 
             <div class="carousel-inner">
               <div class="item active">
                 <img class="img-responsive img-full" src="img/sli2.jpg" alt="">
@@ -63,14 +63,14 @@ session_start();
               </div>
             </div>
 
-            <!-- Controls -->
+             Controls 
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
               <span class="icon-prev"></span>
             </a>
             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
               <span class="icon-next"></span>
             </a>
-          </div>
+          </div>-->
           <h2 class="brand-before">
             <small>Bienvenidos a </small>
           </h2>

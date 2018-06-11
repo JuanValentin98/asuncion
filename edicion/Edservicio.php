@@ -76,7 +76,8 @@ $fun->comprobar();
                     
                     <div class="col-lg-4 col-lg-offset-4  text-center">
                         <br class="my-4">
-                       <input class="form-control" style="text-align: center" name="nom"  value="<?php echo $fun->tituloserv(); ?>" />
+                        <label>Titulo</label>
+                       <input class="form-control" style="text-align: center" name="titulo"  value="<?php echo $fun->tituloserv(); ?>" />
                     <hr class="my-4">
                 </div>
 
@@ -84,14 +85,18 @@ $fun->comprobar();
                     <div class="col-md-3  text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i><br>
-                       <input class="form-control" style="text-align: center" name="carr"  value="<?php echo $fun->sub1serv(); ?>" />
-                        <p class="text-muted mb-0">-Patrocinaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
+                        <label>Titulo</label>
+                        <input class="form-control" style="text-align: center" name="sub1"  value="<?php echo $fun->sub1serv(); ?>" /> <hr>
+                        <label>Subtitulo</label>
+        <input class="form-control" style="text-align: center" name="sub11"  value="<?php echo $fun->sub11serv(); ?>" />
+        <input class="form-control" style="text-align: center" name="sub111"  value="<?php echo $fun->sub111serv(); ?>" />
+        <input class="form-control" style="text-align: center" name="sub1111"  value="<?php echo $fun->sub1111serv(); ?>" />
                     </div>
                 </div>
                 <div class="col-md-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i><br>
-                        <input class="form-control" style="text-align: center" name="gru" value=<?php echo $fun->sub2serv(); ?> />
+                        <input class="form-control" style="text-align: center" name="sub2" value=<?php echo $fun->sub2serv(); ?> />
                         <p class="text-muted mb-0">-Creacion. <br><br> -Copiado y/o Modificacion de Reglas de Graduacion.</p>
                     </div>
                 </div>
