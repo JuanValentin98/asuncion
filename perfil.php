@@ -79,5 +79,5 @@ $fun->comprobar();
     <script src="js/modals.js"></script>
 
 </body>
-<?php $fun->footer();  ?>
+<?php $fun->footer();  ?> 
 </html>

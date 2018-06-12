@@ -62,8 +62,7 @@ class funciones {
     <div class="col-md-1 col-md-offset-1">
      <img class="img1" src="img/log.png" alt="">
      </div>
-    
-    
+
       <div class="col-md-9 col-md-offset-3">
        
         <ul class="nav navbar-nav navbar-center">

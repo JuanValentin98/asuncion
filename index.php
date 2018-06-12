@@ -89,7 +89,7 @@ session_start();
             <a href="servicios.php"><strong>SERVICIOS</strong></a>
         </h2>
         <hr>
-        <img class="img-responsive img-border img-left" src="img/serv.jpg" alt="">
+        <img class="img-responsive img-border img-left" src="img/servi.jpg" alt="">
         <hr class="visible-xs">
           <p>Los servicios se basan en el contexto operativo de la solicitud y las políticas establecidas para satisfacer las necesidades de los clientes .</p>
         <p>Se ofrecen servicios a los usuarios con el fin de que puedan conocer o encontrar las posibilidades de trabajo, saber  los beneficios que da la empresa hacia ellos.  </p>
