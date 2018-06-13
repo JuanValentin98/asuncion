@@ -90,31 +90,19 @@ class database {
     $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje));
   }
-
-    
-  function edicionservicio($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4){
-    //inserta una nuevo titulo
-    $sql = $this->pdo->prepare("UPDATE `servicios` SET `Titulo`='{$_POST['titulo']}', `Sub1`='{$_POST['sub1']}',`Sub1.1`='{$_POST['sub11']}', `Sub1.2`='{$_POST['sub111']}',`Sub1.3`='{$_POST['sub1111']}', `Sub2`='{$_POST['sub2']}', `Sub3`='{$_POST['sub3']}', `Sub4`='{$_POST['sub4']}' WHERE Id_servicios= 1");
-    $sql->execute(array($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4 ));
+  Function EdiServicio($editCarr,$editGru, $Sub3, $Sub4 ){
+      $sql = $this->pdo->prepare("UPDATE servicio SET Sub1='$editCarr', Sub2='$editGru', Sub3='$Sub3', Sub4='$Sub4'");
+       $sql->execute(array($editCarr,$editGru, $Sub3, $Sub4));
   }
   
-  
-//  function sub4($editNom, $editCarr, $editGru, $SUB3, $SUB4 ){
-//      
-//      if (isset($_POST['actualizar'])) {
-//                        foreach ($_POST['Id_ser'] as $ids) {
-//                            
-//                            $editNom = mysqli_real_escape_string($conexion, $_POST['nom'][$ids]);
-//                            $editCarr = mysqli_real_escape_string($conexion, $_POST['carr'][$ids]);
-//                            $editGru = mysqli_real_escape_string($conexion, $_POST['gru'][$ids]);
-//                             $SUB3 = mysqli_real_escape_string($conexion, $_POST['sub3'][$ids]);
-//                              $SUB4 = mysqli_real_escape_string($conexion, $_POST['sub4'][$ids]);
-//                            $actualizar = $conexion->query("UPDATE servicios SET titulo='$editNom', sub1='$editCarr', sub2='$editGru', sub3='$SUB3', sub4='$SUB4' WHERE Id_servicio='$ids'");
-//                        }
-  
-  
-  
-  ///  FIN ACTUALIZADO
-        
+  function Ediservicio1(){
+    //prepara la consulta de bolsa de trabajo
+    $sql = $this->pdo->prepare("select * from servicio");
+    if ($sql->execute(array(1))) {
+      //retorna los datos obtenidos de la base
+      return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+    $this->CerrarConexion();
+  }
   
 }

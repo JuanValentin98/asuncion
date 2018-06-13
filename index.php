@@ -37,20 +37,20 @@ session_start();
 <body>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <?php $fun->menu();  ?>
-  <div class="container">
+      
+      
+        
+        <div class="box">
+        <div class="col-lg-12 text-center tit">
+          <div id="carousel-example-generic" class="carousel slide">
 
-    <div class="row">
-      <div class="box">
-        <div class="col-lg-12 text-center">
-<!--          <div id="carousel-example-generic" class="carousel slide">
-             Indicators 
             <ol class="carousel-indicators hidden-xs">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
 
-             Wrapper for slides 
+             
             <div class="carousel-inner">
               <div class="item active">
                 <img class="img-responsive img-full" src="img/sli2.jpg" alt="">
@@ -63,23 +63,24 @@ session_start();
               </div>
             </div>
 
-             Controls 
+
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
               <span class="icon-prev"></span>
             </a>
             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
               <span class="icon-next"></span>
             </a>
-          </div>-->
-          <h2 class="brand-before">
-            <small>Bienvenidos a </small>
-          </h2>
+          </div>
+            <hr>
             <h1 class="brand-name">CONFECCIONES LA ASUNCIÓN <br> S.A DE C.V</h1>
 
         
       </div>
     </div>
-  </div> 
+  
+  <div class="container">
+
+      
 
   <div class="row">
     <div class="box">
@@ -191,7 +192,7 @@ $('.carousel').carousel({
 </script>
 
   <?php $fun->footer();  ?>
- <?php $fun->music();  ?>
+ 
 
 
 </html>

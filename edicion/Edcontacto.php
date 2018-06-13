@@ -1,133 +1,185 @@
 <?php
 include_once '../logica/funciones.php';
+include_once '../logica/FunEdicion.php';
 $fun = new funciones();
+$funEd = new FunEdicion();
 session_start();
 $fun->comprobar();
+
+$host = "localhost";
+$usuario = "root";
+$contraseña = "";
+$base = "asuncion";
+
+$conexion = new mysqli($host, $usuario, $contraseña, $base);
+if ($conexion->connect_errno) {
+    die("Fallo la conexion:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_error());
+}
+
+/////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
+
+$alumnos = "SELECT * FROM servicio";
+$resAlumnos = $conexion->query($alumnos);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Confecciones La Asunción S.A DE C.V</title>
+        <title>Confecciones La Asunción S.A DE C.V</title>
 
-    <!-- Bootstrap Core CSS -->
-   
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->  
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-   
-    <link href="../css/diseño.css" rel="stylesheet">
-  
-
-   
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-   
-
-</head>
-<body>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            
-            <!-- /.navbar-collapse -->
-  <div class="container">
-        <div>
-          
-          <h1 class="title"> Bienvenido(a) </h1>
-          <a href="../index.php"><img class="boton" src="../img/Botones/back.png"></a>
-          <h3 class="h3">CONTACTO</h3>
-          </div>
-      <header class="head col-md-4" >
-		<div class="menu_bar">
-			<a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
-		</div>
+        <!-- Custom CSS -->
+        <link href="../css/diseño.css" rel="stylesheet">
+        <link href="../css/Style.css" rel="stylesheet">
+        <link href="../css/loader.css" rel="stylesheet">
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
  
-		<nav>
-			<ul>
-                            <li><a href="edicion.php"><span class="icon-house"></span>Inicio</a></li>
-                            <li><a href="Edservicio.php"><span class="icon-suitcase"></span>Servicios</a></li>
-                            <li><a href="Edcatalogo.php"><span class="icon-rocket"></span>Catalogo</a></li>
-                            <li><a href="Edbolsa.php"><span class="icon-earth"></span>Bolsa de trabajo</a></li>
-                            <li><a href="Edcontacto.php"><span class="icon-mail"></span>Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
-      <p>Provided by <a href="http://www.graphicdesk.ro" target="_blank">www.GraphicDesk.ro</a></p>
-<a href="#contactModal" role="button" data-toggle="modal" class="btn btn-default btn-lg"><i class="fa fa-contact "></i> <span class="network-name">Contact</span></a>
-  <!-- Modal -->
-            <div id="contactModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Contact</h4>
+    </head>
+    <script>
+      window.onload = detectarCarga;
+      function detectarCarga(){
+         document.getElementById("carga").style.display="none";
+      }
+    </script>
+    
+<div id="carga">
+    <img src="../img/loader/carga.gif" />
+</div>
+    <body class="bod">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <!-- /.navbar-collapse -->
+        <div class="container">
+            <div class="col-md-12 ">
+                <a href="../index.php"><img class="boton"  src="../img/Botones/back.png"></a>
+                <h1 class="title"> Bienvenido a SERVICIOS</h1>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-2 col-md-pull-1">
+<?php $funEd->menuEd();  ?>
+                </div>
+                
+                <section >
+                <form method="post">
+                        <div class="col-md-4 col-lg-offset-2 text-center">
+                       <label>Titulo</label>
+                       <input class="form-control" style="text-align: center" name="titulo"  value="" />
+                    <hr class="my-4">
+                </div>
+
+                   <div class="col-lg-10 col-lg-pull-1">
+                           
+                  <div class=" col-md-3 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                        
                     </div>
-                    <div class="modal-body">
-                        <div class="containter">
-                            <div class="row">
-                                <form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
-                                    <div class="col-xs-8">
-                                        <div class="form-group">
-                                            <label for="InputName" class="col-lg-4 control-label">Name</label>
-                                            <div class="col-lg-8">
-                                                <input type="text" class="form-control" name="first_name" id="first_name"  required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="InputEmail" class="col-lg-4 control-label">Email</label>
-                                            <div class="col-lg-8">
-                                                <input type="email" class="form-control" id="email" name="email"  required  >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="InputMessage" class="col-lg-4 control-label">Message</label>
-                                            <div class="col-lg-8">
-                                                <textarea name="comments" id="comments" class="form-control" rows="5" required></textarea>
-                                            </div>
-                                        </div>
-                                        
-                                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-                                    </div>
-                                </form>
-                                <hr class="featurette-divider hidden-lg">
-                                <div class="col-xs-4 text-right ">
-                                    <address>
-                                        <h3>Locatie</h3>
-                                        <p class="lead"><a href="https://goo.gl/maps/7ryTz">City<br>
-                                            </a><br>
-                                            Phone: xxx<br>
-                                            E-mail: xxxxx</p>
-                                    </address>
-                                </div>
+                    </div>
+             
+                <div class=" col-md-3 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i><br>
+                        
+                    </div>
+                </div>
+                
+                <div class=" col-md-3 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i><br>
+                   
+                    </div>
+                </div>
+                <div class=" col-md-3 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i><br>
+                      
+                    </div>
+                </div>
+                       </div>
+                    
+                            
+                  
+                   
+                </form>
+            </section>
+                
+                <section>
+            <form method="post">
+                <table class="table">
 
-                            </div>
+                    
 
-                        </div>
-                    </div><!-- End of Modal body -->
-                </div><!-- End of Modal content -->
-            </div><!-- End of Modal dialog -->
-        </div><!-- End of Modal -->
-      
-  </div>
+<?php
+while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH)) {
+
+    echo'<tr>
+<td hidden><input name="idalu[]" value="' . $registroAlumnos['Id_servicio'] . '" /></td>
+    
+
+     <td><input name="carr[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub1'] . '" /></td>
+     <td><input name="gru[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub2'] . '"/></td>
+         <td><input name="sub3[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub3'] . '"/></td>
+             <td><input name="sub4[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub4'] . '"/></td>
+     </tr>';
+}
+?>
+
+                </table>
+                <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />
+            </form>
+
+                    <?php
+                    if (isset($_POST['actualizar'])) {
+                        foreach ($_POST['idalu'] as $ids) {
+                            $editCarr = mysqli_real_escape_string($conexion, $_POST['carr'][$ids]);
+                            $editGru = mysqli_real_escape_string($conexion, $_POST['gru'][$ids]);
+                            $Sub3 = mysqli_real_escape_string($conexion, $_POST['sub3'][$ids]);
+                            $Sub4 = mysqli_real_escape_string($conexion, $_POST['sub4'][$ids]);
+$actualizar = $conexion->query("UPDATE servicio SET Sub1='$editCarr', Sub2='$editGru', Sub3='$Sub3', Sub4='$Sub4' WHERE Id_servicio='$ids'");
+                        }
+
+                        if ($actualizar == true) {
+                            echo "FUNCIONA! <a href='Edcontacto.php'>CLICK AQUÍ</a>";
+                        } else {
+                            echo "NO FUNIONA!";
+                        }
+                    }
+                    ?>
 
 
-    <!-- /.container -->
+
+        </section>
+           
+            </div>
+        </div>
+
+
+        <!-- /.container -->
 
         <!-- jQuery -->
         <script src="../js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/modals.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/modals.js"></script>
+        <script language="javascript" src="js/jquery-1.2.6.min.js"></script>
 
-</body>
+
+
+
+    </body>
 
 </html>
 

@@ -10,7 +10,6 @@ class funciones {
     function __construct() {
         $this->bd = new database();
     }
-    
 
     //funcion para mostrar el mismo menu en todas las paginas
     public function menu() {
@@ -20,10 +19,26 @@ class funciones {
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
      
+    
+                <nav class="navbar navbar-default" >
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
     <div class= "user col-md-12">
     
+    
+    <div class="col-xs-1 col-sm-1 col-md-1 ">
+    <audio controls="controls">
+  <source src="music/Synthetic.mp3" type="audio/ogg" />
+  
+</audio>
+    </div>
       <form class="login-form" id="login" method="post" action="' . $this->login() . '">
-      <div class= "col-md-2 col-md-offset-7">
+      <div class= "col-md-2 col-md-offset-6">
       <div class="input-group">
       <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
       <span class="input-group-addon">
@@ -46,27 +61,15 @@ class funciones {
       
       </form>
       </div>
-      <br><br><br>
-     
-      
+      </div>
     
-
-                <nav class="navbar navbar-default">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class="col-md-1 col-md-offset-1">
+    
+   <div class="col-md-12" id="borderimg">
+      <div class="col-md-9 col-md-offset-3" id="border">
+       <div class="col-md-1 col-md-pull-3 img2">
      <img class="img1" src="img/log.png" alt="">
      </div>
-    
-    
-      <div class="col-md-9 col-md-offset-3">
-       
-        <ul class="nav navbar-nav navbar-center">
+        <ul class="nav navbar-nav navbar-center let" id="button">
             
              <li><a href="index.php">inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
@@ -84,7 +87,7 @@ class funciones {
       <form accion="' . $this->cerrarSession() . '" method="post">
       <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
       </form></ul>';
-        } 
+        }
         $menu .= '
     </li>
     </ul>
@@ -96,7 +99,7 @@ class funciones {
     </nav>
     ';
         // agrega el modal de seccion
-        
+
         echo $menu;
     }
 
@@ -212,8 +215,6 @@ class funciones {
         return $texto;
     }
 
-
-
     public function servicios() {
         //realiza la consulta
         $con = $this->bd->servicio();
@@ -257,77 +258,76 @@ class funciones {
 
     public function N_empleado() {
 
-      if (isset($_POST['enviar'])) {
-        ini_set("SMTP","valentin.dejesus98@gmail.com");
-	ini_set("smtp_port","localhost");
-	ini_set('sendmail_from', 'valentin.dejesus98@gmail.com');
+        if (isset($_POST['enviar'])) {
+            ini_set("SMTP", "valentin.dejesus98@gmail.com");
+            ini_set("smtp_port", "localhost");
+            ini_set('sendmail_from', 'valentin.dejesus98@gmail.com');
 
-	//variables para los campos de texto
-  $id = $_POST['Id_bolsa'];
-  $nombre = $_POST['nombre'];
-  $telefono = $_POST['telefono'];
-  $email = $_POST['email'];
-  $mensaje = $_POST['comentario'];
-  $this->bd->Empleado($id, $nombre, $telefono, $email, $mensaje);
+            //variables para los campos de texto
+            $id = $_POST['Id_bolsa'];
+            $nombre = $_POST['nombre'];
+            $telefono = $_POST['telefono'];
+            $email = $_POST['email'];
+            $mensaje = $_POST['comentario'];
+            $this->bd->Empleado($id, $nombre, $telefono, $email, $mensaje);
 
-	//variables para los datos del archivo
-	$nameFile = $_FILES['curri']['name'];
-	$sizeFile = $_FILES['curri']['size'];
-	$typeFile = $_FILES['curri']['type'];
-	$tempFile = $_FILES["curri"]["tmp_name"];
-	$fecha= time();
-	$fechaFormato = date("j/n/Y",$fecha);
+            //variables para los datos del archivo
+            $nameFile = $_FILES['curri']['name'];
+            $sizeFile = $_FILES['curri']['size'];
+            $typeFile = $_FILES['curri']['type'];
+            $tempFile = $_FILES["curri"]["tmp_name"];
+            $fecha = time();
+            $fechaFormato = date("j/n/Y", $fecha);
 
-	$correoDestino = "valentin.dejesus98@gmail.com";
+            $correoDestino = "valentin.dejesus98@gmail.com";
 
-	//asunto del correo
-	$asunto = "Enviado por " . $nombre ;
+            //asunto del correo
+            $asunto = "Enviado por " . $nombre;
 
 
- 	// -> mensaje en formato Multipart MIME
-	$cabecera = "MIME-VERSION: 1.0\r\n";
-	$cabecera .= "Content-type: multipart/mixed;";
-	//$cabecera .="boundary='=P=A=L=A=B=R=A=Q=U=E=G=U=S=T=E=N='"
-	$cabecera .="boundary=\"=C=T=E=C=\"\r\n";
-	$cabecera .= "From: {$email}";
+            // -> mensaje en formato Multipart MIME
+            $cabecera = "MIME-VERSION: 1.0\r\n";
+            $cabecera .= "Content-type: multipart/mixed;";
+            //$cabecera .="boundary='=P=A=L=A=B=R=A=Q=U=E=G=U=S=T=E=N='"
+            $cabecera .= "boundary=\"=C=T=E=C=\"\r\n";
+            $cabecera .= "From: {$email}";
 
-	//Primera parte del cuerpo del mensaje
-    ///$contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "Mensaje: " . $mensaje;
-      $cuerpo = "--=C=T=E=C=\r\n";
+            //Primera parte del cuerpo del mensaje
+            ///$contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "Mensaje: " . $mensaje;
+            $cuerpo = "--=C=T=E=C=\r\n";
 
-    	$cuerpo .= "Content-Transfer-Encoding: 8bit\r\n";
-    	$cuerpo .= "\r\n"; // línea vacía
-    	$cuerpo .= "Correo enviado por: " . $nombre ;
-    	$cuerpo .= " con fecha: " . $fechaFormato . "\r\n";
-    	$cuerpo .= "Email: " . $email . "\r\n";
-    	$cuerpo .= "Mensaje: " . $mensaje . "\r\n";
+            $cuerpo .= "Content-Transfer-Encoding: 8bit\r\n";
+            $cuerpo .= "\r\n"; // línea vacía
+            $cuerpo .= "Correo enviado por: " . $nombre;
+            $cuerpo .= " con fecha: " . $fechaFormato . "\r\n";
+            $cuerpo .= "Email: " . $email . "\r\n";
+            $cuerpo .= "Mensaje: " . $mensaje . "\r\n";
 
- 	// -> segunda parte del mensaje (archivo adjunto)
-        //    -> encabezado de la parte
-    $cuerpo .= "--=C=T=E=C=\r\n";
-    $cuerpo .= "Content-Type: application/octet-stream; ";
-    $cuerpo .= "name=" . $nameFile . "\r\n";
-    $cuerpo .= "Content-Transfer-Encoding: base64\r\n";
-    $cuerpo .= "Content-Disposition: attachment; ";
-    $cuerpo .= "filename=" . $nameFile . "\r\n";
-    $cuerpo .= "\r\n"; // línea vacía
+            // -> segunda parte del mensaje (archivo adjunto)
+            //    -> encabezado de la parte
+            $cuerpo .= "--=C=T=E=C=\r\n";
+            $cuerpo .= "Content-Type: application/octet-stream; ";
+            $cuerpo .= "name=" . $nameFile . "\r\n";
+            $cuerpo .= "Content-Transfer-Encoding: base64\r\n";
+            $cuerpo .= "Content-Disposition: attachment; ";
+            $cuerpo .= "filename=" . $nameFile . "\r\n";
+            $cuerpo .= "\r\n"; // línea vacía
 
-    $fp = fopen($tempFile, "rb");
-    $file = fread($fp, $sizeFile);
-	$file = chunk_split(base64_encode($file));
+            $fp = fopen($tempFile, "rb");
+            $file = fread($fp, $sizeFile);
+            $file = chunk_split(base64_encode($file));
 
-    $cuerpo .= "$file\r\n";
-    $cuerpo .= "\r\n"; // línea vacía
-    // Delimitador de final del mensaje.
-    $cuerpo .= "--=C=T=E=C=--\r\n";
+            $cuerpo .= "$file\r\n";
+            $cuerpo .= "\r\n"; // línea vacía
+            // Delimitador de final del mensaje.
+            $cuerpo .= "--=C=T=E=C=--\r\n";
 
-	//Enviar el correo
-	if( mail($correoDestino, $asunto, $cuerpo, $cabecera)){
-  
-    header("Location:bolsa.php");
+            //Enviar el correo
+            if (mail($correoDestino, $asunto, $cuerpo, $cabecera)) {
 
-	}
-      }
+                header("Location:bolsa.php");
+            }
+        }
     }
 
     public function login() {
@@ -372,7 +372,8 @@ class funciones {
             echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=index.php">';
         }
     }
-        public function bolsa() {
+
+    public function bolsa() {
         //se usa la caonsulta
         date_default_timezone_set("America/Mexico_City");
         $fecha_actual = date("Y-m-d");
@@ -401,141 +402,27 @@ class funciones {
         $con = $this->bd->servicio();
         $texto = '';
         //recorre los datos
-        foreach ($con as $tit) { 
+        foreach ($con as $tit) {
             $texto .= '' . $tit['Titulo'] . '';
-            }
-        return $texto;
-    }
-
-    public function sub1serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub1'] . '';
-        }
-        return $texto;
-    }
-        public function sub11serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub1.1'] . '';
-        }
-        return $texto;
-    }
-    
-    public function sub111serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub1.2'] . '';
-        }
-        return $texto;
-    }
-    
-        public function sub1111serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub1.3'] . '';
-        }
-        return $texto;
-    }
-    
-        public function sub2serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub2'] . '';
-        }
-        return $texto;
-    }
-    
-        public function sub3serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub3'] . '';
-        }
-        return $texto;
-    }
-            public function sub4serv() {
-        //ejecuta la consulta
-        $con = $this->bd->servicio();
-        $texto = '';
-        //recorre los datos
-        foreach ($con as $tit) {
-            $texto .= '' . $tit['Sub4'] . '';
         }
         return $texto;
     }
 
     //////fin titulo y subtitulo
-    
-    
-      //////ACTUALIZA TITULO Y SUBTITULOS
 
-    public function Edicion() {
+
+
+
+
+    public function EdiServicio() {
+
         if (isset($_POST['actualizar'])) {
-            $titulo = $_POST['titulo'];
-            $sub1 = $_POST['sub1'];
-            $sub11 = $_POST['sub11'];
-            $sub111 = $_POST['sub111'];
-              $sub111 = $_POST['sub1111'];
-            $sub2 = $_POST['sub2'];
-             $sub3 = $_POST['sub3'];
-              $sub4= $_POST['sub4'];
-        $this->bd->edicionservicio($titulo, $sub1, $sub11, $sub111, $sub1111, $sub2, $sub3, $sub4);
+            $editCarr = $_POST['sub1'];
+            $editGru = $_POST['sub2'];
+            $Sub3 = $_POST['sub3'];
+            $Sub4 = $_POST['sub4'];
+            $this->bd->EdiServicio($editCarr, $editGru, $Sub3, $Sub4);
         }
     }
-//    public function sub1ser() {
-//        if (isset($_POST["enviar"])) {
-//            $subtitulo = $_POST['sub1'];
-//            $this->bd->sub1($subtitulo);
-//        }
-//    }
-//    
-//        public function sub2ser() {
-//        if (isset($_POST["enviar"])) {
-//            $subtitulo = $_POST['sub2'];
-//            $this->bd->sub2($subtitulo);
-//        }
-//    }
-//    
-//        public function sub3ser() {
-//        if (isset($_POST["enviar"])) {
-//            $subtitulo = $_POST['sub3'];
-//            $this->bd->sub3($subtitulo);
-//        }
-//    }
-//    
-//        public function sub4ser() {
-//        if (isset($_POST["enviar"])) {
-//            $subtitulo = $_POST['sub4'];
-//            $this->bd->sub4($subtitulo);
-//        }
-//    }
 
-    
-    
-    
-    
-      //////FIN DE ACTUALIZA TITULO Y SUBTITULOS
-
-    
-    
-    
-    
 }

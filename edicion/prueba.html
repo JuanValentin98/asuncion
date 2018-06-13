@@ -22,85 +22,11 @@ and open the template in the editor.
     </script>
 <body>
 
-<div id="carga">
-    <img src="../img/loader/carga.gif" />
-</div>
+
+    <div id="border"><p >HOLA</p></div>
     
-    {
-
-        $menu = '
-
-    <!-- Navigation -->
-     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-  
-    <div class= "user col-md-12">
-      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
-      <div class= "col-md-2 col-md-offset-7">
-      <div class="input-group">
-      <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-user"></i>
-      </span>
-      </div>
-      </div>
-      
-      <div class= "col-md-2">
-      <div class="input-group">
-      <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-lock"></i>
-      </span>
-      </div>
-      </div>
-      <div >
-      <input type="submit" class="btn col-md-1" name="logear" value="Sign in">   
-      </div>
-      
-      </form>
-      </div>
-     
-      
     
    
-                <nav class="navbar navbar-default">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class="col-md-12">
-    
-     
-     
-        <ul class="nav navbar-nav navbar-center">
-            
-             <li><a href="index.php">inicio</a></li>
-            <li><a href="servicios.php">Servicios</a></li>
-            <li><a href="catalogo.php">Catalogo</a></li>
-            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
-            <li><a href="contact.php">Contacto</a></li>
-            <li class="dropdown">';
-        // condicion de que exista una variable de sesion
-        if (isset($_SESSION['usuario'])) {
-            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
-    <ul class="dropdown-menu" style="text-align:center">
-                <li><a href="perfil.php">Solicitudes</a></li>
-      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
-      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
-      <form accion="' . $this->cerrarSession() . '" method="post">
-      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
-      </form></ul>';
-        } 
-        $menu .= '
-    </li>
-    </ul>
-    
-    <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-    </nav>';
         
 
 
