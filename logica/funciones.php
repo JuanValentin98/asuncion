@@ -64,16 +64,13 @@ class funciones {
       
     
    <div class="col-md-12" id="borderimg">
-      <div class="col-md-9 col-md-offset-3" id="border">
-       <div class="col-md-1 col-md-pull-3 img2">
-     <img class="img1" src="img/log.png" alt="">
-     </div>
-
-        
-
-
-      <div class="col-md-9 col-md-offset-3">
-       
+   
+     
+     <div class="col-md-1 col-md-push-1">
+    <img class="img1" src="img/log.png" alt="">
+       </div>
+      <div class="col-md-8 col-md-offset-2" id="button">
+      
         <ul class="nav navbar-nav navbar-center">
 
             
@@ -101,7 +98,7 @@ class funciones {
     <!-- /.navbar-collapse -->
     
     <!-- /.container -->
-    </div>
+    
     </div>
     </div>
     </nav>

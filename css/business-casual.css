@@ -142,9 +142,8 @@ footer p {
 
 .img1 {
    border-radius: 8px;
-   width: 120px;
-   position: absolute
-   
+   width: 120px;   
+   position: absolute;
    } 
    
    .img2 {
@@ -192,7 +191,7 @@ footer p {
     }
 
     .navbar {
-              
+             
     }
 
     .navbar-header {
@@ -210,18 +209,12 @@ footer p {
         box-shadow: 7px 6px 20px #000000;
         background-size: 500px;
         background-position: center;
-        background-color: white;
+        background-color:  white;
 
-        
-       
     }
 
     .nav>li>a {
-        padding: 10px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      
-        
+
     }
     
 
