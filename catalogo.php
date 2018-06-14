@@ -58,55 +58,177 @@ session_start();
                                        <!--Camisas-->
 				<div class="product-item" category="camisas">
                                     <img src="img/ropa/camisa1.png" alt="" >
-					<a href="#">CALVIN KLEIN</a>
-				</div>
+                                    <a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+ 				</div>
+                                       
 				<div class="product-item" category="camisas">
                                     <img src="img/ropa/camisa2.png" alt="" >
-					<a href="#">LACOSTE</a>
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
                             <div class="product-item" category="camisas">
                                     <img src="img/ropa/camisa3.jpg" alt="" >
-					<a href="#">NAUTICA</a>
+					<a href="#">NAUTICA</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="camisas">
                                     <img src="img/ropa/camisa4.jpg" alt="" >
-					<a href="#">AEROPOSTALE</a>
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
+				
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa2.png" alt="" >
+					<a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa8.jpeg" alt="" >
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="camisas">
+                                    <img src="img/ropa/camisa9.jpg" alt="" >
+					<a href="#">NAUTICA</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div> 
+                               <div class="product-item" category="camisas">
+                                   <img src="img/ropa/camisa3.jpg" alt="" >
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				 </div>
                             
                                    <!--Pantalones-->
 				<div class="product-item" category="pantalones">
                                     <img src="img/ropa/pantalon5.jpg" alt="" >
-					<a href="#">LEVI'S</a>
+					<a href="#">LEVI'S</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="pantalones">
                                     <img src="img/ropa/pantalon1.png" alt="" >
-					<a href="#">AEROPOSTALE</a>
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
                                    <div class="product-item" category="pantalones">
                                        <img src="img/ropa/pantalon2.jpg" alt="" >
-					<a href="#">CALVIN KLEIN</a>
+					<a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="pantalones">
                                     <img src="img/ropa/pantalon5.jpg" alt="" >
-					<a href="#">LACOSTE</a>
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+                                <div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon5.jpg" alt="" >
+					<a href="#">LEVI'S</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon1.png" alt="" >
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+                                   <div class="product-item" category="pantalones">
+                                       <img src="img/ropa/pantalon2.jpg" alt="" >
+					<a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="pantalones">
+                                    <img src="img/ropa/pantalon5.jpg" alt="" >
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
                                    
                                    <!--Shorts-->
 				<div class="product-item" category="shorts">
                                     <img src="img/ropa/short.jpg" alt="" >
-					<a href="#">LACOSTE</a>
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="shorts">
 					<img src="img/ropa/short.jpg" alt="" >
-					<a href="#">AEROPOSTALE</a>
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="shorts">
 					<img src="img/ropa/short.jpg" alt="" >
-					<a href="#">CALVIN KLEIN</a>
+					<a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 				<div class="product-item" category="shorts">
 					<img src="img/ropa/short.jpg" alt="" >
-					<a href="#">LEVI'S</a>
+					<a href="#">LEVI'S</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+                                <div class="product-item" category="shorts">
+                                    <img src="img/ropa/short.jpg" alt="" >
+					<a href="#">LACOSTE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">AEROPOSTALE</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">CALVIN KLEIN</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
+				</div>
+				<div class="product-item" category="shorts">
+					<img src="img/ropa/short.jpg" alt="" >
+					<a href="#">LEVI'S</a><br>    
+                                    Marca: <p style="color: red">Calvin Klein</p>
+                                    Corte:<p style="color: blue">Regular Fit</p>
+                                    Color: <p style="color: gray">Gris</p>
 				</div>
 			</section>
 		</div>
