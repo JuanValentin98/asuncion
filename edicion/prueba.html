@@ -1,127 +1,37 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../css/loader.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../js/menu.js"></script>
 
-<title>Actualizar</title>
+<link href="../css/menu.css" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
 
-</head>
-     <script>
-      window.onload = detectarCarga;
-      function detectarCarga(){
-         document.getElementById("carga").style.display="none";
-      }
-    </script>
-<body>
-
-    public function menu() {
-
-        $menu = '
-
-    <!-- Navigation -->
-     <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-     
-    
-                <nav class="navbar navbar-default" >
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class= "user col-md-12">
-    
-    
-    <div class="col-xs-1 col-sm-1 col-md-1 ">
-    <audio controls="controls">
-  <source src="music/Synthetic.mp3" type="audio/ogg" />
-  
-</audio>
-    </div>
-      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
-      <div class= "col-md-2 col-md-offset-6">
-      <div class="input-group">
-      <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-user"></i>
-      </span>
-      </div>
-      </div>
-      
-      <div class= "col-md-2">
-      <div class="input-group">
-      <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
-      <span class="input-group-addon">
-      <i class="glyphicon glyphicon-lock"></i>
-      </span>
-      </div>
-      </div>
-      <div >
-      <input type="submit" class="btn col-md-1" name="logear" value="Sign in">   
-      </div>
-      
-      </form>
-      </div>
-      
-    
-    
-   <div class="col-md-12" id="borderimg">
-      <div class="col-md-9 col-md-offset-3" id="border">
-       <div class="col-md-1 col-md-pull-3 img2">
-     <img class="img1" src="img/log.png" alt="">
-     </div>
-
+<div class="navigation">
+    <nav>
+    	<div class="visible-xs menu_header">
+	        <span class="mobile_logo">Menu</span>
+			<button class="btn menu_btn baars"> 
+				<span class="icon_bar"></span>
+				<span class="icon_bar"></span>
+				<span class="icon_bar"></span>
+			</button>    	
+            <div class="clear"></div>
+        </div>
         
-
-
-      <div class="col-md-9 col-md-offset-3">
-       
-        <ul class="nav navbar-nav navbar-center">
-
-            
-             <li><a href="index.php">inicio</a></li>
+        <ul class="nav-ul">
+			<li><a href="index.php" class="men">inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
             <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
             <li><a href="contact.php">Contacto</a></li>
-            <li class="dropdown">';
-        // condicion de que exista una variable de sesion
-        if (isset($_SESSION['usuario'])) {
-            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
-    <ul class="dropdown-menu u" style="text-align:center">
-                <li><a href="perfil.php">Solicitudes</a></li>
-      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
-      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
-      <form accion="' . $this->cerrarSession() . '" method="post">
-      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
-      </form></ul>';
-        }
-        $menu .= '
-    </li>
-    </ul>
-    
-    <!-- /.navbar-collapse -->
-    
-    <!-- /.container -->
-    </div>
+            <li class="dropdown"><a href="#" class="dropdownlink">Link6</a>
+            	<ul class="dropdownmenu">
+                	<li><a href="#">dropdown link1</a></li>
+                	<li><a href="#">dropdown link2</a>
+                    </li>
+                </ul>
+            
+            </li>    
+        </ul>
     </nav>
-    
-    ';
-        // agrega el modal de seccion
-
-        echo $menu;
-    }
-
-
-
-</body>
-</html>
+</div>

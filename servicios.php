@@ -42,6 +42,9 @@ session_start();
       <!-- Collect the nav links, forms, and other content for toggling -->
       <?php $fun->menu();  ?>
 
+      <audio  id="audio" autoplay="true">
+  <source src="music/Synthetic.mp3" type="audio/ogg"  />
+  </audio>
 
   <div class="container">
 
@@ -206,6 +209,7 @@ session_start();
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modals.js"></script>
+<script src="js/audio.js" ></script>
 
 
 

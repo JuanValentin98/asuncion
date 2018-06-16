@@ -13,41 +13,77 @@ class funciones {
 
     //funcion para mostrar el mismo menu en todas las paginas
     public function menu() {
-
         $menu = '
-
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-     
-    
-                <nav class="navbar navbar-default" >
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class= "user col-md-12">
-    
-    
-    <div class="col-xs-1 col-sm-1 col-md-1 ">
-    <audio controls="controls">
-  <source src="music/Synthetic.mp3" type="audio/ogg" />
+     <nav class="navbar navbar-inverse back" id="button">
   
-</audio>
-    </div>
-      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
-      <div class= "col-md-2 col-md-offset-6">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <div  class="col-md-1 col-md-offset-6">
+        <img class="img1" src="img/log.png" alt="img">
+        </div>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            <li><a href="index.php" class="men">inicio</a></li>
+            <li><a href="servicios.php">Servicios</a></li>
+            <li><a href="catalogo.php">Catalogo</a></li>
+            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+            
+             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Administrador<span class="caret"></span></a>
+    <ul class="dropdown-menu">';
+    // condicion de que exista una variable de sesion
+    if(isset($_SESSION['usuario'])){
+      $menu.='<li><a href="perfil.php">Solicitudes</a></li>
+      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
+      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
+      <form accion="' . $this->cerrarSession() . '" method="post">
+      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
+      </form>';
+    }else{
+      $menu.='<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
+    }
+    $menu.='</ul>
+    </li>
+    
+    </ul>
+      
+      
+    </div><!-- /.navbar-collapse -->
+    
+</nav>';
+    // agrega el modal de seccion
+    if(!isset($_SESSION['usuario'])){
+      $menu.='<div class="modal fade" id="modal-login" role="dialog">
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+      <button class="close" data-dismiss="modal">&times;</button>
+      <p  style="text-align: center">CONFECCIONES LA ASUNCIÓN</p>
+      </div>
+      <div class="modal-body">
+      <form class="login-form" id="login" method="post" action="'.$this->login().'">
+      <div class="form-group">
       <div class="input-group">
       <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
       <span class="input-group-addon">
       <i class="glyphicon glyphicon-user"></i>
       </span>
+      </div> <br>
       </div>
-      </div>
-      
-      <div class= "col-md-2">
+      <div class="form-group">
       <div class="input-group">
       <input name="contraseña" type="password" class="form-control" placeholder="Escribe tu contraseña">
       <span class="input-group-addon">
@@ -55,57 +91,20 @@ class funciones {
       </span>
       </div>
       </div>
-      <div >
-      <input type="submit" class="btn col-md-1" name="logear" value="Sign in">   
-      </div>
+      <div class="form-group sign-btn">
+      <input type="submit" class="btn" name="logear" value="Entrar"> <br><br>
       
+      </div>
       </form>
       </div>
-      
-    
-   <div class="col-md-12" id="borderimg">
-   
-     
-     <div class="col-md-1 col-md-push-1">
-    <img class="img1" src="img/log.png" alt="">
-       </div>
-      <div class="col-md-8 col-md-offset-2" id="button">
-      
-        <ul class="nav navbar-nav navbar-center">
-
-            
-             <li><a href="index.php">inicio</a></li>
-            <li><a href="servicios.php">Servicios</a></li>
-            <li><a href="catalogo.php">Catalogo</a></li>
-            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
-            <li><a href="contact.php">Contacto</a></li>
-            <li class="dropdown">';
-        // condicion de que exista una variable de sesion
-        if (isset($_SESSION['usuario'])) {
-            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
-    <ul class="dropdown-menu u" style="text-align:center">
-                <li><a href="perfil.php">Solicitudes</a></li>
-      <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
-      <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
-      <form accion="' . $this->cerrarSession() . '" method="post">
-      <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
-      </form></ul>';
-        }
-        $menu .= '
-    </li>
-    </ul>
-    
-    <!-- /.navbar-collapse -->
-    
-    <!-- /.container -->
-    
-    </div>
-    </div>
-    </nav>
+      <div class="modal-footer">
+      <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+      </div>
+      </div>
+      </div>
     ';
-        // agrega el modal de seccion
-
-        echo $menu;
+    }echo $menu;
     }
 
     //muestra el mismo footer

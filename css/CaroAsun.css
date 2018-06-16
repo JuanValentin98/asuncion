@@ -1,0 +1,45 @@
+h3 {
+  display: inline-block;
+  padding: 10px;
+  font-size: 70px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Shrikhand', cursive;
+
+}
+ 
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  
+  
+  
+}
+
+
+
+.cas{
+    margin-bottom: 180px;    
+}
+
+
+.colorear {
+position: relative;
+/* Estas dos propiedades sólo sirven para centrar */
+display: table;
+margin:0 auto;
+}
+/* Y esta para evitar el margin automático de Blogger en los enlaces */
+
+.colorear:before {
+content: "";
+display: block;
+position: absolute;
+/* Todas las posiciones a cero */
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(11, 12, 19, 0.6);
+
+}
