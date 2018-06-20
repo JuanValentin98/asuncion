@@ -1,8 +1,10 @@
-/*!
- * Start Bootstrap - Business Casual (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
+
+.men {
+font-family: 'Arbutus Slab', serif;
+
+    font-size:15px;
+}
 .user {
         padding-top:  10px;  
         padding-bottom: 10px;
@@ -10,7 +12,7 @@
 }
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/Fondos/fondo3.jpg') no-repeat center center fixed;
+    background-color: #ededed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -27,16 +29,22 @@ h6 {
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+    
+   
 }
 
-
+.style13 {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
 
 p {
     font-size: 1.25em;
     line-height: 1.6;
     color: #000;
+    font-family: 'Arbutus Slab', serif;
+
 }
 
 a {
@@ -44,8 +52,8 @@ a {
 }
 
 hr {
-    max-width: 400px;
-    border-color: #999999;
+    max-width: 700px;
+    border-color: #000000;
 }
 
 .brand,
@@ -79,19 +87,21 @@ hr {
     border-color: #999999;
 }
 
-.box {
+/*.box {
     margin-bottom: 20px;
     border-radius: 20px;
     padding: 30px 15px;
-    background: #fff;
-    background: rgba(24, 25, 25, 0.2);
+background-color: rgba(103, 186, 255, 0.4);
+    -moz-box-shadow: 6px 9px 20px #000000;
+-webkit-box-shadow: 6px 9px 20px #000000;
+box-shadow: 6px 9px 20px #000000;    
 }
 .box1 {
     margin-bottom: 20px;
     padding: 30px 50px;
     background: #fff;
     background: rgba(0, 7, 2, 0.5);
-}
+}*/
 
 .intro-text {
     text-transform: uppercase;
@@ -130,9 +140,10 @@ footer p {
    
 
 .back {
-    background:  #fff;
+    background:  #000;
    margin-bottom:  0px;
    border: none;
+   padding-top:  10px;
 
 }
    
@@ -196,9 +207,9 @@ footer p {
 }
  
  #button li a:hover {
- background-color: #0B615E;
+ background-color: #ffff;
  border-radius: 10px;
- color: #fff
+ color: black
  }
 
  
@@ -206,3 +217,41 @@ footer p {
 .let{
          color:red;
     }
+    
+    
+    .title{
+        @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+        font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    
+    
+    }
+    
+   #logo {
+  transition: all 0.8s ease-in-out;
+}
+#logo:hover {
+  transform: rotate(-360deg);
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    
+}
+
+pad {
+   
+width:800px;
+height:180px;
+padding:40px;
+
+}

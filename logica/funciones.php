@@ -27,15 +27,15 @@ class funciones {
         <span class="icon-bar"></span>
       </button>
       
-      <div  class="col-md-1 col-md-offset-6">
-        <img class="img1" src="img/log.png" alt="img">
-        </div>
+      
+        <a href="index.php" ><img class="col-md-offset-6 img1" src="img/log1.png" alt="img"></a>
+        
       </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-            <li><a href="index.php" class="men">inicio</a></li>
+      <ul class="nav navbar-nav men">
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
             <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
@@ -391,8 +391,13 @@ class funciones {
       ' . $bolsa['Nombre_vacante'] . '
       </h2>
       <h4 class="text-justify">
-      <small>' . $bolsa['Contenido'] . '<br> Teléfono:' . $bolsa['Telefono'] . '</small>
+      <small>' . $bolsa['Contenido'] .'</small>
       </h4>
+      
+      <h4 class="text-justify">
+      <small>Teléfono:' . $bolsa['Telefono'] . '</small>
+      </h4>
+     
       <a data-toggle="modal" data-target="#modal-contact-form" data-id="' . $bolsa['Id_bolsa'] . '" class="btn btn-default btn-lg">Mandar Información</a>
       </div>';
             }

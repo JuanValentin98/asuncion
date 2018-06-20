@@ -43,3 +43,16 @@ right: 0;
 background-color: rgba(11, 12, 19, 0.6);
 
 }
+
+.colorear1:before {
+content: "";
+display: block;
+
+/* Todas las posiciones a cero */
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(11, 12, 19, 0.6);
+
+}
