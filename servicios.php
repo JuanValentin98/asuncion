@@ -9,6 +9,7 @@ session_start();
 <html lang="en">
 
 <head>
+    <link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,9 +45,6 @@ session_start();
       <!-- Collect the nav links, forms, and other content for toggling -->
       <?php $fun->menu();  ?>
 
-      <audio  id="audio" autoplay="true">
-  <source src="music/Synthetic.mp3" type="audio/ogg"  />
-  </audio>
 
   <div class="container">
 
@@ -68,7 +66,7 @@ session_start();
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-              <h1 class="section-heading"><?php echo $fun->tituloserv(); ?></h1> 
+              <h1 class="section-heading">Nuestros servicios</h1> 
                         
             <hr class="my-4">
           </div>
@@ -216,6 +214,6 @@ session_start();
 
 
   <?php $fun->footer();  ?>
- <?php $fun->music();  ?>
+
 
 </html>

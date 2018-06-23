@@ -8,7 +8,7 @@ $fun->comprobar();
 <html lang="en">
 
 <head>
-
+<link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,7 +93,7 @@ $fun->comprobar();
             <label>Fecha limite</label>
             <input name="fecha" type="date" class="form-control input-sm" placeholder="AAAA\MM\DD">
           </div>
-        </div>
+        
       <div class="clearfix"></div>
 
       <div class="form-group col-lg-12">
@@ -102,10 +102,13 @@ $fun->comprobar();
         <button name="enviar" type="submit" class="btn btn-default">Enviar</button>
       </div>
     </div>
+          
   </form>
+      </div>
 </div>
 </div>
 </div>
+ 
 
 
 <!--/Formulario--->

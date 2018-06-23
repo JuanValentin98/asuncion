@@ -6,6 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,33 +113,56 @@ session_start();
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                         </p>
                     </div>
-                    <hr>
+                    
                 </div>
-                jj
+               
                 <div class="col-md-12">
-            <br><hr>
+                    
+                    <br><br><br><br>
+                    <hr class="style13">
             <p style="text-align: center ; font-size: 50px; font-family: 'Oswald', sans-serif; ">Conoce nuestras secciones</p> 
         
             <br>
                 </div>
                 
-<hr>
-<div class="container">
-  <div class="row vdivide">
-      <div class="col-sm-6 text-center zoom"><a href="servicios.php"><img  class="img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10"></a></div>
-      <div class="col-sm-6 text-center zoom"><a href="catalogo.php"><img  class="img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10"></a></div>
-      <div class="col-sm-6 text-center zoom"><a href="bolsa.php"><img  class="img-responsive" src="img/Index/2.png" title="Foto10" alt="Foto10"></a></div>
-      <div class="col-sm-6 text-center zoom"><a href="contact.php"><img  class="img-responsive" src="img/Index/3.png" title="Foto10" alt="Foto10"></a></div>
-  </div>
+
+
+<div class="col-lg-12 ima">
+         <div class="col-lg-6 col-sm-12">
+             <a href="servicios.php">
+        <div class="colorear zoom">
+            <img  class="  img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10">
+        </div></a><br>
+    </div>
+    
+    <div class="col-lg-6 col-sm-12">
+        <a href="catalogo.php">
+        <div class="colorear zoom">
+        <img  class="  img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10">
+        </div></a>
+    </div>
+</div>
+<br>
+<div class="col-lg-12 ima">
+         <div class="col-lg-6 col-sm-12">
+             <a href="bolsa.php">
+        <div class="colorear zoom">
+         <img  class="  img-responsive" src="img/Index/2.png" title="Foto10" alt="Foto10">
+        </div></a><br>
+    </div>
+    
+    <div class="col-lg-6 col-sm-12">
+        <a href="contact.php">
+        <div class="colorear zoom">
+        <img  class="  img-responsive" src="img/Index/3.png" title="Foto10" alt="Foto10">
+        </div></a>
+    </div>
 </div>
 
-                <br>
-                    
-            </div>
-            <hr>      
+
+</div><hr class="style13">
+    </div>
             
-        </div>
-        
         
         <!-- /.container -->
     </body>
@@ -181,7 +205,7 @@ session_start();
         });
     </script>
 
-    <?php $fun->footer(); ?>
+    <?php $fun->footerindex(); ?>
 
 
 

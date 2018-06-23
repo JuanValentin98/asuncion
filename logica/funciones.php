@@ -40,8 +40,7 @@ class funciones {
             <li><a href="catalogo.php">Catalogo</a></li>
             <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
             <li><a href="contact.php">Contacto</a></li>
-            
-             <li class="dropdown">
+            <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu">';
     // condicion de que exista una variable de sesion
@@ -109,64 +108,86 @@ class funciones {
 
     //muestra el mismo footer
 
-    public function music() {
-        echo'
-    <footer>
-    <div class="container">
-    <div class="row" style="color:white";>
-    <div class="col-xs-1 col-sm-1 col-md-1 ">
-    <h4>REPRODUCTOR</h4>
-    <embed src="music/lilly wood" width="300px" height="60px" console="true" autostart="true" autoplay="true" >
-    </div>
-    </div>
-    <!-- /.row --> 
-    </div>
-    <!-- /.container --> 
-    <!-- /.footer -->
-    </footer> ';
-    }
 
-    public function footer() {
+    public function footerindex() {
         echo'<footer>
     <div class="footer">
     <div class="container">
-    <div class="row" style="color:white";>
+    <div class="row" style="color:white">
     <br>
-    <div class="col-xs-6 col-sm-4 col-md-4 ">
-    <h4>CONFECCIONES LA ASUNCIÓN </h4>
+    <div class="col-xs-7 col-xs-offset-5  ">
+    
     <ul class="footer-social">
     <li><a href="https://www.facebook.com/ConfeccionesLaAsuncion/"><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
     <li><i class="fa fa-twitter social-icon twitter" style="font-size:50px" aria-hidden="true"></i></li>
 
-    </ul>
+    </ul> 
     </div>
-    <div class="col-xs-6 col-sm-2 col-md-4 ">
-    <h4>SECCIONES</h4>
-    <ul class="list-unstyled">
-    <li><a href="index.php">INICIO</a></li>
-    <li><a href="servicios.php">SERVICIOS</a></li>
-    <li><a href="catalogo.php">CATALOGO</a></li>
-    <li><a href="bolsa.php">BOLSA DE TRABAJO</a></li>
-    <li><a href="contact.php">CONTACTO</a></li>
+    
+    <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;">
+    <hr class="hr1">
+    <h2 style="word-spacing: 20px;">VISITANOS</h2>
+   
+    
 
-    </ul>
+    
     </div>
     <div class="clearfix visible-xs"></div>
 
-    <div class="col-xs-12 col-sm-4 col-md-4 ">
-    <h4>Contáctanos</h4>
-    <ul class="list-unstyled">
-    <li><i class="glyphicon glyphicon-globe"></i> Calle Emiliano Zapata #4004 Colonia La Huizachera, Tehuacán Puebla.</li>
-    <li><i class="glyphicon glyphicon-earphone"></i> (238) 383 3131</li>
-    <li><i class="glyphicon glyphicon-earphone"></i> (238) 380 2754</li>
-    
-    </ul>
-    </div>
     </div> <br>
+    
     <!-- /.row -->
     </div>
     <!-- /.container -->
+    <div class="fiit">
+    <h4 class="fiit1">CONFECCIONES LA ASUNCIÓN S.A DE C.V</h4>
     </div>
+    </div>
+    
+    
+    <!-- /.footer -->
+    </footer>';
+    }
+    public function footer() {
+        echo'<footer>
+    <div class="footer">
+    <div class="container">
+    <div class="row" style="color:white">
+    <br>
+    <div class="col-xs-7 col-xs-offset-5  ">
+    
+    <ul class="footer-social">
+    <li><a href="https://www.facebook.com/ConfeccionesLaAsuncion/"><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
+    <li><i class="fa fa-twitter social-icon twitter" style="font-size:50px" aria-hidden="true"></i></li>
+
+    </ul> 
+    </div>
+    
+    <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;">
+    <hr class="hr1">
+    <h2 style="word-spacing: 20px;">VISITA NUESTRAS SECCIONES</h2>
+   
+    <a href="index.php">INICIO</a>|
+    <a href="servicios.php">SERVICIOS</a> |
+    <a href="catalogo.php">CATALOGO</a> |
+    <a href="bolsa.php">BOLSA DE TRABAJO</a> |
+    <a href="contact.php">CONTACTO</a> 
+
+    
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    </div> <br>
+    
+    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <div class="fiit">
+    <h4 class="fiit1">CONFECCIONES LA ASUNCIÓN S.A DE C.V</h4>
+    </div>
+    </div>
+    
+    
     <!-- /.footer -->
     </footer>';
     }

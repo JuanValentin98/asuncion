@@ -2,17 +2,31 @@
 include_once '../logica/funciones.php';
 include_once '../logica/FunEdicion.php';
 $fun = new funciones();
-$edi = new FunEdicion();
+$funEd = new FunEdicion();
 session_start();
 $fun->comprobar();
 
-////////////////// CONEXION A LA BASE DE DATOS ////////////////////////////////////
+$host = "localhost";
+$usuario = "root";
+$contraseña = "";
+$base = "asuncion";
+
+$conexion = new mysqli($host, $usuario, $contraseña, $base);
+if ($conexion->connect_errno) {
+    die("Fallo la conexion:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_error());
+}
+
+/////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
+
+$alumnos = "SELECT * FROM servicio";
+$resAlumnos = $conexion->query($alumnos);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-
+<link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -45,10 +59,6 @@ $fun->comprobar();
     <img src="../img/loader/carga.gif" />
 </div>
     <body class="bod">
-
-
-
-
         <!-- Collect the nav links, forms, and other content for toggling -->
 
         <!-- /.navbar-collapse -->
@@ -57,54 +67,99 @@ $fun->comprobar();
                 <a href="../index.php"><img class="boton"  src="../img/Botones/back.png"></a>
                 <h1 class="title"> Bienvenido a SERVICIOS</h1>
             </div>
-<?php $edi->menuEd();  ?>
-            <section class="col-lg-10">
-                <form method="post" class="">
-                    <div class="col-lg-4 col-lg-offset-3  text-center">
-                       <label>Titulo</label>
-                       <input class="form-control" style="text-align: center" name="titulo"  ?>" />
-                    <hr class="my-4">
+            <div class="col-md-12 ">
+                <div class="col-md-2 col-md-pull-1">
+<?php $funEd->menuEd();  ?>
+                </div>
+                
+                <section >
+                <form method="post">
+                        <div class="col-md-4 col-lg-offset-2 text-center">
+                            <h3>NUESTROS SERVICIOS</h3>
+                       <hr class="my-4">
                 </div>
 
-                    <div class="col-lg-12 text-center">
-                    <div class="col-lg-3  text-center">
+                   <div class="col-lg-10 col-lg-pull-1">
+                           
+                  <div class=" col-md-3 text-center">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i><br>
-                        <label>Titulo</label>
-                        <input class="form-control" style="text-align: center" name="sub1"  " /> <hr>
-                        <label>Subtitulo</label>
-        
+                        <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                        
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                    </div>
+             
+                <div class=" col-md-3 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i><br>
-                        <input class="form-control" style="text-align: center" name="sub2"  />
-                        <p class="text-muted mb-0">-Creacion. <br><br> -Copiado y/o Modificacion de Reglas de Graduacion.</p>
+                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                
+                <div class=" col-md-3 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i><br>
-                   <input class="form-control" style="text-align: center" name="sub3" 
-                        <p class="text-muted mb-0">-Acomodos opticos. <br><br> -Calculos de Consumos. <br><br> -Impresiones de moldes y trazos.</p>
+                   
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class=" col-md-3 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i><br>
-                      <input class="form-control" style="text-align: center" name="sub4"  /> 
-                        <p class="text-muted mb-0">-Servicio de Corte Automatico. <br><br> -Fudionado y Foleo para todo tipo de prenda.</p>
+                      
                     </div>
                 </div>
-                    </div>
-                            
-                    <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-5" />
+                       </div>
                     
-                   
                 </form>
             </section>
+                
+                <section>
+            <form method="post">
+                <table class="table">
 
+                    
+
+<?php
+while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH)) {
+
+    echo'<tr>
+<td hidden><input name="idalu[]" value="' . $registroAlumnos['Id_servicio'] . '" /></td>
+    
+
+     <td><input name="carr[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub1'] . '" /></td>
+     <td><input name="gru[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub2'] . '"/></td>
+         <td><input name="sub3[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub3'] . '"/></td>
+             <td><input name="sub4[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub4'] . '"/></td>
+     </tr>';
+}
+?>
+
+                </table>
+                <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />
+            </form>
+
+                    <?php
+                    if (isset($_POST['actualizar'])) {
+                        foreach ($_POST['idalu'] as $ids) {
+                            $editCarr = mysqli_real_escape_string($conexion, $_POST['carr'][$ids]);
+                            $editGru = mysqli_real_escape_string($conexion, $_POST['gru'][$ids]);
+                            $Sub3 = mysqli_real_escape_string($conexion, $_POST['sub3'][$ids]);
+                            $Sub4 = mysqli_real_escape_string($conexion, $_POST['sub4'][$ids]);
+$actualizar = $conexion->query("UPDATE servicio SET Sub1='$editCarr', Sub2='$editGru', Sub3='$Sub3', Sub4='$Sub4' WHERE Id_servicio='$ids'");
+                        }
+
+                        if ($actualizar == true) {
+                            echo "FUNCIONA! <a href='Edcontacto.php'>CLICK AQUÍ</a>";
+                        } else {
+                            echo "NO FUNIONA!";
+                        }
+                    }
+                    ?>
+
+
+
+        </section>
+           
+            </div>
         </div>
 
 

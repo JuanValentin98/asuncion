@@ -24,7 +24,7 @@ class database {
 
   function servicio(){
     //prepara la consulta de servicios
-    $sql = $this->pdo->prepare("select * from servicios");
+    $sql = $this->pdo->prepare("select * from servicio");
     if ($sql->execute(array(1))) {
       //retorna los datos obtenidos de la base
       return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -68,11 +68,7 @@ class database {
       return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
   }
-  
-  
-  
-  
-  
+
  //////FIN SELECCION
   
   
@@ -83,6 +79,25 @@ class database {
       ','{$_POST['fecha']}')");
     $sql->execute(array($id, $nombre,$contenido, $telefono,$fecha_limite));
   }
+  
+    function Sub1($sub1){
+    //inserta una nueva afiliacion
+    $sql = $this->pdo->prepare("INSERT INTO `servicio`(`Sub1`) VALUES ('{$_POST['sub1']}')");
+    $sql->execute(array($sub1));
+  }
+  
+      function EdiServ($Subtitulo1){
+    //inserta una nueva afiliacion
+    $sql = $this->pdo->prepare("UPDATE servicio Sub1='{$_POST['sub1']}'");    
+    $sql->execute(array($Subtitulo1));
+  }
+  
+    function N_maquila($id,$nombre_empresa,$direccion_empresa,$telefono_empresa,$email_empresa,$descripcion_empresa){
+    //inserta una nueva maquila
+    $sql = $this->pdo->prepare("INSERT INTO `maquila`( `Id_afiliado`, `Nombre_maqui`, `Direccion`, `Telefono`, `Email`, `Descripcion`) VALUES ('{$id}','{$_POST['nombreempresa']}','{$_POST['direccionempresa']}','{$_POST['telefonoempresa']}
+      ','{$_POST['emailempresa']}','{$_POST['descripcionempresa']}')");
+    $sql->execute(array($id,$nombre_empresa,$direccion_empresa,$telefono_empresa,$email_empresa,$descripcion_empresa));
+  }
 
 
   function Empleado ($id, $nombre, $telefono, $email , $mensaje){
@@ -90,12 +105,8 @@ class database {
     $sql = $this->pdo->prepare("INSERT INTO `bolsa_formulario`(`Id_bolsa`, `Nombre`,`Correo`, `Telefono`, `Mensaje`) VALUES ('{$_POST['Id_bolsa']}','{$_POST['nombre']}','{$_POST['email']}','{$_POST['telefono']}','{$_POST['comentario']}')");
     $sql->execute(array($id, $nombre, $telefono, $email , $mensaje));
   }
-  Function EdiServicio($editCarr,$editGru, $Sub3, $Sub4 ){
-      $sql = $this->pdo->prepare("UPDATE servicio SET Sub1='$editCarr', Sub2='$editGru', Sub3='$Sub3', Sub4='$Sub4'");
-       $sql->execute(array($editCarr,$editGru, $Sub3, $Sub4));
-  }
   
-  function Ediservicio1(){
+  function Ediservicio(){
     //prepara la consulta de bolsa de trabajo
     $sql = $this->pdo->prepare("select * from servicio");
     if ($sql->execute(array(1))) {

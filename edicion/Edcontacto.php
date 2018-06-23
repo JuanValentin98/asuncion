@@ -6,27 +6,13 @@ $funEd = new FunEdicion();
 session_start();
 $fun->comprobar();
 
-$host = "localhost";
-$usuario = "root";
-$contraseña = "";
-$base = "asuncion";
-
-$conexion = new mysqli($host, $usuario, $contraseña, $base);
-if ($conexion->connect_errno) {
-    die("Fallo la conexion:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_error());
-}
-
-/////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
-
-$alumnos = "SELECT * FROM servicio";
-$resAlumnos = $conexion->query($alumnos);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-
+<link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -66,6 +52,7 @@ $resAlumnos = $conexion->query($alumnos);
             <div class="col-md-12 ">
                 <a href="../index.php"><img class="boton"  src="../img/Botones/back.png"></a>
                 <h1 class="title"> Bienvenido a SERVICIOS</h1>
+                
             </div>
             <div class="col-md-12 ">
                 <div class="col-md-2 col-md-pull-1">
@@ -75,9 +62,8 @@ $resAlumnos = $conexion->query($alumnos);
                 <section >
                 <form method="post">
                         <div class="col-md-4 col-lg-offset-2 text-center">
-                       <label>Titulo</label>
-                       <input class="form-control" style="text-align: center" name="titulo"  value="" />
-                    <hr class="my-4">
+                            <h3>NUESTROS SERVICIOS</h3>
+                            <hr class="my-4">
                 </div>
 
                    <div class="col-lg-10 col-lg-pull-1">
@@ -88,8 +74,14 @@ $resAlumnos = $conexion->query($alumnos);
                         
                     </div>
                     </div>
+                       <div class="col-md-3">
+                           
+        <?php echo $funEd->sub1serv(); ?>
+                    </div>
+                       <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />
+                     <?php $funEd->EdiServ();?>
              
-                <div class=" col-md-3 text-center">
+<!--                <div class=" col-md-3 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i><br>
                         
@@ -107,63 +99,38 @@ $resAlumnos = $conexion->query($alumnos);
                         <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i><br>
                       
                     </div>
-                </div>
+                </div>-->
                        </div>
                     
-                            
-                  
-                   
+                    
                 </form>
             </section>
-                
+                ddd
                 <section>
-            <form method="post">
-                <table class="table">
-
+<!--            <form method="post">
+                
                     
 
-<?php
-while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH)) {
-
-    echo'<tr>
-<td hidden><input name="idalu[]" value="' . $registroAlumnos['Id_servicio'] . '" /></td>
-    
-
-     <td><input name="carr[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub1'] . '" /></td>
-     <td><input name="gru[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub2'] . '"/></td>
-         <td><input name="sub3[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub3'] . '"/></td>
-             <td><input name="sub4[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub4'] . '"/></td>
-     </tr>';
-}
-?>
-
-                </table>
+            
+                <div class="row">
+          <div class="form-group col-lg-6">
+            <label>Aregar Subtítulo</label>
+            <input name="sub1" type="text" class="form-control " placeholder="Subtítulo">
+          </div>
+          
+      <div class="form-group col-lg-12">
+        <?php $funEd->Sub1();?>
+        <button name="enviar" type="submit" class="btn btn-default">Agregar</button>
+      </div>
+    </div>
+                
                 <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />
-            </form>
-
-                    <?php
-                    if (isset($_POST['actualizar'])) {
-                        foreach ($_POST['idalu'] as $ids) {
-                            $editCarr = mysqli_real_escape_string($conexion, $_POST['carr'][$ids]);
-                            $editGru = mysqli_real_escape_string($conexion, $_POST['gru'][$ids]);
-                            $Sub3 = mysqli_real_escape_string($conexion, $_POST['sub3'][$ids]);
-                            $Sub4 = mysqli_real_escape_string($conexion, $_POST['sub4'][$ids]);
-$actualizar = $conexion->query("UPDATE servicio SET Sub1='$editCarr', Sub2='$editGru', Sub3='$Sub3', Sub4='$Sub4' WHERE Id_servicio='$ids'");
-                        }
-
-                        if ($actualizar == true) {
-                            echo "FUNCIONA! <a href='Edcontacto.php'>CLICK AQUÍ</a>";
-                        } else {
-                            echo "NO FUNIONA!";
-                        }
-                    }
-                    ?>
-
-
+            </form>-->
 
         </section>
            
             </div>
+            <?php $funEd->sub1serv();  ?>
         </div>
 
 

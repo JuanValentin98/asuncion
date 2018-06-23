@@ -45,6 +45,7 @@ footer {
     padding-top: 7px;
     padding-left: 3px;
     border-radius: 50%;
+    box-shadow: 0px 0px 10px #ffffff;
 }
  .footer-social li{
      float:left;

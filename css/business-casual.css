@@ -34,6 +34,7 @@ h6 {
 }
 
 .style13 {
+    max-width: 900px;
     height: 10px;
     border: 0;
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
@@ -48,12 +49,18 @@ p {
 }
 
 a {
-    color:black;
+    color:white;
 }
 
 hr {
     max-width: 700px;
     border-color: #000000;
+}
+
+.hr1 {
+    max-width: 500px;
+    border-color: #fff;
+    box-shadow: 0px 0px 15px #000000;
 }
 
 .brand,
@@ -122,9 +129,27 @@ box-shadow: 6px 9px 20px #000000;
     margin: 0 auto 0;
 }
 
-footer {
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+.footer {
+    background-color: #00aeff;
+}
+
+.fiit {
+    background-color: #03567d;
+    padding-bottom:15px;
+    text-align: center;
+    
+
+    
+}
+
+.fiit1 {
+    padding-top:20px;
+    font-family: 'Arbutus Slab', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-shadow:1px 2px 5px #000000;
+
+    
 }
 
 footer p {
@@ -248,10 +273,9 @@ footer p {
     
 }
 
-pad {
-   
-width:800px;
-height:180px;
-padding:40px;
-
+.ima {
+    
+    padding: 10px;
 }
+
+

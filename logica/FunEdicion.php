@@ -24,19 +24,44 @@ class FunEdicion {
             </header>';
          echo $menu;
         }
+            public function Sub1() {
+
+        if (isset($_POST['enviar'])) {
+            $sub1 = $_POST['sub1'];
+            
+            $this->bd->Sub1($sub1);
+            echo '<script type="text/javascript">alert("Registro correcto");</script>';
+        }
+    }
+    
+    public function EdiServ(){
         
-        /////EDICION SUBTITULOS
+//               <input name="idalu[]" value="' . $registroAlumnos['Id_servicio'] . '" />
+
+                            if (isset($_POST['actualizar'])) {
+                            $Subtitulo1 =$_POST['sub1'];
+                            
+                            $this->bd->EdiServ($Subtitulo1);
+
+                        }
+                    }
+        
+    
+
+
+/////EDICION SUBTITULOS
     public function sub1serv() {
         //ejecuta la consulta
-        $con = $this->bd->Ediservicio1();
+        $con = $this->bd->Ediservicio();
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= '<td><input class="form-control"  style="text-align: center" name="sub1"  value="'  . $tit['Sub1'] . '" /></td>'
+            $texto .= ' <td><input class="form-control"  style="text-align: center" name="sub1"  value="'  . $tit['Sub1'] . '" /></td>'
                     . '';           
-        }
+        }           
         return $texto;
     }
+
     
         public function sub2serv() {
         //ejecuta la consulta
