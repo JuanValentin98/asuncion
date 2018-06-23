@@ -232,7 +232,7 @@ footer p {
 }
  
  #button li a:hover {
- background-color: #ffff;
+ background-color:#ffff;
  border-radius: 10px;
  color: black
  }
@@ -245,8 +245,8 @@ footer p {
     
     
     .title{
-        @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
-        font-family: 'Encode Sans Condensed', sans-serif;
+    @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+    font-family:'Encode Sans Condensed', sans-serif;
     font-size: 50px;
     text-align: center;
     text-transform: uppercase;
@@ -278,4 +278,4 @@ footer p {
     padding: 10px;
 }
 
-
+}

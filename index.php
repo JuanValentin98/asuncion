@@ -5,90 +5,99 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content=""> 
-        <meta name="author" content="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""> 
+  <meta name="author" content="">
 
-        <title>Confecciones La Asunción S.A DE C.V</title>
+  <title>Confecciones La Asunción S.A DE C.V</title>
+  <!-- Load Roboto font -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!-- Load css styles -->
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+ 
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/business-casual.css" rel="stylesheet">
+  <link href="css/Style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/CaroAsun.css" type="text/css"/>
 
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Teko" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <!--  codigo de play sin botones :  <audio src="music/lilly wood" autoplay="true" loop="true"></audio> -->
+</head>
+<body>
+  
 
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link href="css/business-casual.css" rel="stylesheet">
-        <link href="css/Style.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/CaroAsun.css" type="text/css"/>
-
-
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel|Teko" rel="stylesheet">  
-        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <!--  codigo de play sin botones :  <audio src="music/lilly wood" autoplay="true" loop="true"></audio> -->
-    </head>
-    <body>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
-        <?php $fun->menu(); ?>
-        <div id="mycarousel" class="carousel slide cs" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#mycarousel" data-slide-to="1"></li>
-                <li data-target="#mycarousel" data-slide-to="2"></li>
-                <li data-target="#mycarousel" data-slide-to="3"></li>
-
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner " role="listbox">
-                <div class="item colorear">
-                    <img src="img/Carousel/sli1.jpg"  alt="First Image">
-                    <div class="carousel-caption cas">
-                        <h3>CONFECCIONES LA ASUNCION</h3>
+        <?php $fun->menu();  ?> 
+        <!-- Start home section -->
+        <div id="home">
+            <!-- Start cSlider -->
+            <div id="da-slider" class="da-slider">
+                <div class="triangle"></div>
+                <!-- mask elemet use for masking background image -->
+                <div class="mask"></div>
+                <!-- All slides centred in container element -->
+                <div class="container">
+                    <!-- Start first slide -->
+                    <div class="da-slide">
+                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
+                        <h4>Limpieza & Responsabilidad</h4>
+                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                        <a href="#" class="da-link button">Read more</a>
+                        <div class="da-img">
+                            <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
+                        </div>
                     </div>
-                </div>
-                <div class="item colorear">
-                    <img src="img/Carousel/sli2.jpg" data-color="firebrick" alt="Second Image">
-                    <div class="carousel-caption cas">
-                        <h3>CONFECCIONES LA ASUNCION</h3>
+                    <!-- End first slide -->
+                    <!-- Start second slide -->
+                    <div class="da-slide">
+                        <h2>Easy management</h2>
+                        <h4>Easy to use</h4>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <a href="#" class="da-link button">Read more</a>
+                        <div class="da-img">
+                            <img src="img/Carousel/maquina.png" width="320" alt="image02">
+                        </div>
                     </div>
-                </div>
-                <div class="item colorear">
-                    <img src="img/Carousel/sli3.jpg" data-color="violet" alt="Third Image">
-                    <div class="carousel-caption cas">
-                        <h3>CONFECCIONES LA ASUNCION</h3>
+                    <!-- End second slide -->
+                    <!-- Start third slide -->
+                    <div class="da-slide">
+                        <h2>Revolution</h2>
+                        <h4>Customizable</h4>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <a href="#" class="da-link button">Read more</a>
+                        <div class="da-img">
+                            <img src="img/Carousel/hilos.png" width="320" alt="image03">
+                        </div>
                     </div>
-                </div>
-                <div class="item colorear">
-                    <img src="img/Carousel/sili4.jpg" data-color="lightgreen" alt="Fourth Image">
-                    <div class="carousel-caption cas">
-                        <h3>CONFECCIONES LA ASUNCION</h3>
+                    <!-- Start third slide -->
+                    <!-- Start cSlide navigation arrows -->
+                    <div class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
                     </div>
+                    <!-- End cSlide navigation arrows -->
                 </div>
-
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
+        
+        <br>
+    
+        
         <br><hr class="style13">
 
 
@@ -162,51 +171,57 @@ session_start();
 
 </div><hr class="style13">
     </div>
-            
-        
-        <!-- /.container -->
-    </body>
-    <!--footer start from here-->
+
+        <script src="js/jquery_1.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/jquery.cslider.js"></script>
+        <!-- css3-mediaqueries.js for IE8 or older -->
+        <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/app.js"></script>
+</body>
+<!--footer start from here-->
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/modals.js"></script>
-    <script src="js/audio.js" ></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modals.js"></script>
+<script src="js/audio.js" ></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-        var $item = $('.carousel .item');
-        var $wHeight = $(window).height();
-        $item.eq(0).addClass('active');
-        $item.height($wHeight);
-        $item.addClass('full-screen');
+<!-- Script to Activate the Carousel -->
+<script>  
+var $item = $('.carousel .item'); 
+var $wHeight = $(window).height();
+$item.eq(0).addClass('active');
+$item.height($wHeight); 
+$item.addClass('full-screen');
+ 
+$('.carousel img').each(function() {
+  var $src = $(this).attr('src');
+  var $color = $(this).attr('data-color');
+  $(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  $(this).remove();
+});
+ 
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
+ 
+$('.carousel').carousel({
+  interval: 6000,
+  pause: "false"
+});
+</script>
 
-        $('.carousel img').each(function () {
-            var $src = $(this).attr('src');
-            var $color = $(this).attr('data-color');
-            $(this).parent().css({
-                'background-image': 'url(' + $src + ')',
-                'background-color': $color
-            });
-            $(this).remove();
-        });
-
-        $(window).on('resize', function () {
-            $wHeight = $(window).height();
-            $item.height($wHeight);
-        });
-
-        $('.carousel').carousel({
-            interval: 6000,
-            pause: "false"
-        });
-    </script>
-
-    <?php $fun->footerindex(); ?>
-
+  <?php $fun->footer();  ?>
+ 
 
 
 </html>
