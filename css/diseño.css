@@ -4,13 +4,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-
-
-
-.bod{
-    background:-webkit-gradient(linear, 40% 20%, 10% 21%, from(#DCE4E4), to(#869C9B))
-}
-
 .title{
     text-align: center;
     font-family: 'Oswald', sans-serif;
@@ -22,13 +15,7 @@
 }
 
 .ser {
-   
-    border-style: groove;
-}
-
-.menu {
-    padding-top:20px; 
-    
+   border-style: groove;
 }
 
 body {
@@ -36,12 +23,11 @@ body {
 }
 
 header nav {
-    padding-top: 10px;
-    border-radius: 10px;
-    background:#024959;
-    width: 180px;
-
     
+    background:black;
+    width: 200px;
+    position: fixed;
+    margin-top: 100px;
     
     
 }
@@ -58,10 +44,8 @@ header nav ul {
 
 header nav ul li {
     float: bottom;
-     margin-bottom: 30px;
-     
-     
-    
+    margin-bottom: 30px;
+ 
 
 }
 
