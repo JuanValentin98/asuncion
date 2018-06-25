@@ -109,10 +109,16 @@ session_start();
 
                     <p style="font-size: 20px;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<<<<<<< HEAD
                     </p> 
                     <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
 <!--                    <div class="col-md-4 col-md-offset-2" >
                         <img  class="col-md-offset-2" id="logo"width="250px" src="img/Index/mision1.png">
+=======
+                    </p> <br> <br>
+                    <div class="col-md-4 col-md-offset-2" >
+                        <img  class="col-md-offset-2" id="logo" width="250px" src="img/Index/mision1.png">
+>>>>>>> cbcf95b8cabe2ba4a7ac25282ec1d547e3746586
                         <p style="text-align: center">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                         </p> <br>
