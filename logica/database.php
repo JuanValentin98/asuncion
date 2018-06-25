@@ -43,13 +43,15 @@ class database {
         }
     }
 
-    function bolsa() {
-        //prepara la consulta de bolsa de trabajo
-                
-        $sql = "select * from bolsa_trabajo";
-        $result = $conexion->query($sql);
-        
+  function bolsa(){
+    //prepara la consulta de bolsa de trabajo
+    $sql = $this->pdo->prepare("select * from bolsa_trabajo");
+    if ($sql->execute(array(1))) {
+      //retorna los datos obtenidos de la base
+      return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
+    $this->CerrarConexion();
+  }
 
     function afilidao_id($user, $contraseña) {
         $sql = $this->pdo->prepare("SELECT * FROM `administrador` WHERE `Nombre_usuario` = ? AND `passwors`= ?");
