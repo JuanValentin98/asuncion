@@ -56,9 +56,7 @@ class FunEdicion {
         $texto = '';
         //recorre los datos
         foreach ($con as $tit) {
-            $texto .= ' <td><input class="form-control"  style="text-align: center" name="sub1"  value="'  . $tit['Sub1'] . '" /></td>'
-                    . '';           
-        }           
+            }           
         return $texto;
     }
 
