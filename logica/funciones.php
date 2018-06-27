@@ -26,16 +26,7 @@ class funciones {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
-      
-<<<<<<< HEAD
-        <a href="index.php" ><img class="col-md-offset-6 img1" src="img/log.png" alt="img"></a>
-=======
-                <div id="menubar-logo">
-          <a href="index.html"><img src="images/logoasuncion2.png" style="height: 200px; width: 290px;
-  margin-left: 150px;" class="img-responsive" alt="Triple Luck IT Service Logo"></a>
-        </div>
->>>>>>> cbcf95b8cabe2ba4a7ac25282ec1d547e3746586
+
         
       </div>
 
