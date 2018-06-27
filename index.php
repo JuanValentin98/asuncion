@@ -11,9 +11,9 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content=""> 
   <meta name="author" content="">
-
+ 
   <title>Confecciones La Asunción S.A DE C.V</title>
-  <!-- Load Roboto font -->
+  <!-- Load Roboto font --> 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
 
@@ -56,7 +56,7 @@ session_start();
                     <div class="da-slide">
                         <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
                         <h4>Limpieza & Responsabilidad</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                        <p>When sheached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
                         <a href="#" class="da-link button">Read more</a>
                         <div class="da-img">
                             <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
@@ -95,11 +95,9 @@ session_start();
             </div>
         </div>
         
-        <br>
-    
+        <br> 
         
         <br><hr class="style13">
-
 
         <div class="container">
             <div class="row">
@@ -117,8 +115,12 @@ session_start();
 =======
                     </p> <br> <br>
                     <div class="col-md-4 col-md-offset-2" >
+<<<<<<< HEAD
+                        <img  class="col-md-offset-2" id="logo"width="250px" src="img/Index/mision1.png">
+=======
                         <img  class="col-md-offset-2" id="logo" width="250px" src="img/Index/mision1.png">
 >>>>>>> cbcf95b8cabe2ba4a7ac25282ec1d547e3746586
+>>>>>>> ba0cf8947476adc7b271a8d90f45791885394b05
                         <p style="text-align: center">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                         </p> <br>
