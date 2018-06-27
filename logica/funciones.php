@@ -28,10 +28,14 @@ class funciones {
       </button>
       
       
+<<<<<<< HEAD
+        <a href="index.php" ><img class="col-md-offset-6 img1" src="img/log.png" alt="img"></a>
+=======
                 <div id="menubar-logo">
           <a href="index.html"><img src="images/logoasuncion2.png" style="height: 200px; width: 290px;
   margin-left: 150px;" class="img-responsive" alt="Triple Luck IT Service Logo"></a>
         </div>
+>>>>>>> cbcf95b8cabe2ba4a7ac25282ec1d547e3746586
         
       </div>
 
@@ -39,25 +43,32 @@ class funciones {
     <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1" style="margin-left: 10px;margin-top: 130px;">
       <ul class="nav navbar-nav men">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="servicios.php">Servicios</a></li>
-            <li><a href="catalogo.php">Catalogo</a></li>
-            <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
+            
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Servicios<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="servicios.php">Elaboración</a></li>
+        <li><a href="catalogo.php">Catalogo</a></li>
+        <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
+        </ul>
+    </li>
+            <li><a href="nosotros.php">Nosotros</a></li>
             <li><a href="contact.php">Contacto</a></li>
             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu">';
-    // condicion de que exista una variable de sesion
-    if(isset($_SESSION['usuario'])){
-      $menu.='<li><a href="perfil.php">Solicitudes</a></li>
+        // condicion de que exista una variable de sesion
+        if (isset($_SESSION['usuario'])) {
+            $menu .= '<li><a href="perfil.php">Solicitudes</a></li>
       <li><a href="oportunidad.php">Oportunidad de trabajo</a></li>
       <li><a href="edicion/edicion.php">Editar Sitio Web</a></li>
       <form accion="' . $this->cerrarSession() . '" method="post">
       <li><input type="submit" class="btn" name="salir" value="Cerrar Sesión"></li>
       </form>';
-    }else{
-      $menu.='<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
-    }
-    $menu.='</ul>
+        } else {
+            $menu .= '<li><a href="#" data-toggle="modal" data-target="#modal-login">Iniciar Sesión</a></li>';
+        }
+        $menu .= '</ul>
     </li>
     
     </ul>
@@ -66,9 +77,9 @@ class funciones {
     </div><!-- /.navbar-collapse -->
     
 </nav>';
-    // agrega el modal de seccion
-    if(!isset($_SESSION['usuario'])){
-      $menu.='<div class="modal fade" id="modal-login" role="dialog">
+        // agrega el modal de seccion
+        if (!isset($_SESSION['usuario'])) {
+            $menu .= '<div class="modal fade" id="modal-login" role="dialog">
       <div class="modal-dialog">
       <div class="modal-content">
       <div class="modal-header">
@@ -76,7 +87,7 @@ class funciones {
       <p  style="text-align: center">CONFECCIONES LA ASUNCIÓN</p>
       </div>
       <div class="modal-body">
-      <form class="login-form" id="login" method="post" action="'.$this->login().'">
+      <form class="login-form" id="login" method="post" action="' . $this->login() . '">
       <div class="form-group">
       <div class="input-group">
       <input name="user" type="text" id="focus-login" class="form-control" placeholder="Nombre de usuario">
@@ -106,51 +117,14 @@ class funciones {
       </div>
       </div>
     ';
-    }echo $menu;
+        }echo $menu;
     }
 
     //muestra el mismo footer
 
 
-    public function footerindex() {
-        echo'<footer>
-    <div class="footer">
-    <div class="container">
-    <div class="row" style="color:white">
-    <br>
-    <div class="col-xs-7 col-xs-offset-5  ">
-    
-    <ul class="footer-social">
-    <li><a href="https://www.facebook.com/ConfeccionesLaAsuncion/"><i class="fa fa-facebook social-icon facebook" style="font-size:50px" aria-hidden="true"></a></i></li>
-    <li><i class="fa fa-twitter social-icon twitter" style="font-size:50px" aria-hidden="true"></i></li>
+  
 
-    </ul> 
-    </div>
-    
-    <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;">
-    <hr class="hr1">
-    <h2 style="word-spacing: 20px;">VISITANOS</h2>
-   
-    
-
-    
-    </div>
-    <div class="clearfix visible-xs"></div>
-
-    </div> <br>
-    
-    <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    <div class="fiit">
-    <h4 class="fiit1">CONFECCIONES LA ASUNCIÓN S.A DE C.V</h4>
-    </div>
-    </div>
-    
-    
-    <!-- /.footer -->
-    </footer>';
-    }
     public function footer() {
         echo'<footer>
     <div class="footer">
@@ -168,19 +142,14 @@ class funciones {
     
     <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;">
     <hr class="hr1">
-    <h2 style="word-spacing: 20px;">VISITA NUESTRAS SECCIONES</h2>
+    <h2 style="word-spacing: 5px;">VISITA NUESTRAS INSTALACIONES</h2>
    
-    <a href="index.php">INICIO</a>|
-    <a href="servicios.php">SERVICIOS</a> |
-    <a href="catalogo.php">CATALOGO</a> |
-    <a href="bolsa.php">BOLSA DE TRABAJO</a> |
-    <a href="contact.php">CONTACTO</a> 
-
+ 
     
     </div>
     <div class="clearfix visible-xs"></div>
 
-    </div> <br>
+    </div> 
     
     <!-- /.row -->
     </div>
@@ -415,7 +384,7 @@ class funciones {
       ' . $bolsa['Nombre_vacante'] . '
       </h2>
       <h4 class="text-justify">
-      <small>' . $bolsa['Contenido'] .'</small>
+      <small>' . $bolsa['Contenido'] . '</small>
       </h4>
       
       <h4 class="text-justify">

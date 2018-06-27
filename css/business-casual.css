@@ -12,12 +12,13 @@ font-family: 'Arbutus Slab', serif;
 }
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #ededed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 } 
+
 
 h1,
 h2,
@@ -278,4 +279,5 @@ footer p {
     padding: 10px;
 }
 
-}
+
+

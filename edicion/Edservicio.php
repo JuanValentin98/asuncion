@@ -1,12 +1,13 @@
 <?php
 include_once '../logica/funciones.php';
 include_once '../logica/FunEdicion.php';
-$funEd = new FunEdicion;
+include '../logica/databaseEd.php';
 $fun = new funciones();
+$funEd = new FunEdicion();
 session_start();
 $fun->comprobar();
-/////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
 ?>
+
 
 <html lang="es">
 
@@ -16,43 +17,55 @@ $fun->comprobar();
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-        <link href="css/estilos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Bootstrap Core CSS -->  
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../css/diseño.css" rel="stylesheet">
+        <link href="../css/Style.css" rel="stylesheet">
+        <link href="../css/loader.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 
     </head>
 
     <body>
-        <header>
-            <div class="alert alert-info">
-                <h2>Actualizar Registros de la BD con PHP</h2>
-            </div>
-        </header>
+        <div class="col-md-12 ">
+<!--                <a href="../index.php"><img class="boton"  src="../img/Botones/back.png"></a>-->
+            <hr>
+            <h1 class="title"> Bienvenido a SERVICIOS</h1>
+            <hr>
+        </div>
+
+        <?php $funEd->menuEd(); ?>    
         
-
-        <section>
-            <form method="post">
-                
-            <?php echo $funEd->sub1serv(); ?>
-            <?php echo $funEd->sub2serv(); ?>
-            <?php echo $funEd->sub3serv(); ?> 
-            <?php echo $funEd->sub4serv(); ?>    
-                       
+                            <div class="col-md-10 col-md-offset-2">
+                        <hr>
                         
-
+                            <h3 class="text-center">DISEÑO Y PATRONAJE</h3>
                         
+                        <hr>
+                        <img class="img-responsive img-border img-left" src="../img/corte_textil.jpg" width="300px"alt="">
 
+                        <hr class="visible-xs">
+                        <br><br> <p>-Patronaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
+                    </div>
+        
+        <div class="col-md-10 col-md-offset-2">
+                        <hr>
+                        <h2 class="intro-text text-center">
+                            <h3 class="text-center">DISEÑO Y PATRONAJE</h3>
+                        </h2>
+                        <hr>
+                        <img class="img-responsive img-border img-left" src="../img/corte_textil.jpg" width="300px"alt="">
 
-
-                    
-                <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />
-                 <?php $fun->EdiServicio(); ?>
-            </form>
-
-                    
-
-
-
-        </section>
+                        <hr class="visible-xs">
+                        <br><br> <p>-Patronaje. <br><br> -Fichas Tecnicas. <br><br> -Elaboracion de Muestras.</p>
+                    </div>
+     
 
         <footer>
         </footer>

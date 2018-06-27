@@ -96,17 +96,30 @@ if (isset($_POST['actualizar'])) {
                     <?php 
                     while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH)) {
 
-                        echo'<tr> 
+                        echo'
+                            
+<tr> 
         
 <td hidden><input name="idalu[]" value="' . $registroAlumnos['Id_servicio'] . '" /></td>
-    First name:<br>
+    
     <td><input name="carr[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub1'] . '" /></td>
-     <td><input name="gru[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub2'] . '"/></td>
-         <td><input name="sub3[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub3'] . '"/></td>
-             <td><input name="sub4[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub4'] . '"/></td>
-     </tr>';
+     
+         </tr>
+         <td><input name="gru[' . $registroAlumnos['Id_servicio'] . ']" value="' . $registroAlumnos['Sub2'] . '"/></td>
+     <tr>
+     
+
+</tr>
+
+
+';
+                    
+                        
+                        
                     }
                     ?>
+                    
+                    
 
                 </table>
                 <input type="submit" name="actualizar" value="Actualizar Registros" class="btn btn-info col-md-offset-9" />

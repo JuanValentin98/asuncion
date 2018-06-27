@@ -3,9 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/asuncion/logica/funciones.php</file>
             <file>file:/C:/xampp/htdocs/asuncion/index.php</file>
             <file>file:/C:/xampp/htdocs/asuncion/css/jquery.cslider.css</file>
+=======
+            <file>file:/C:/xampp/htdocs/asuncion/edicion/Edservicio.php</file>
+            <file>file:/C:/xampp/htdocs/asuncion/logica/FunEdicion.php</file>
+            <file>file:/C:/xampp/htdocs/asuncion/servicios.php</file>
+            <file>file:/C:/xampp/htdocs/asuncion/logica/database.php</file>
+            <file>file:/C:/xampp/htdocs/asuncion/css/diseño.css</file>
+            <file>file:/C:/xampp/htdocs/asuncion/edicion/Edcatalogo.php</file>
+>>>>>>> ba0cf8947476adc7b271a8d90f45791885394b05
         </group>
     </open-files>
 </project-private>
