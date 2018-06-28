@@ -22,8 +22,6 @@ class funciones {
   padding: 10px;
   font-size: 30px;
   color: #00aeff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; 
   font-family: Shrikhand, cursive;">Confecciones la Asuncion</h4>
         
     <!-- Brand and toggle get grouped for better mobile display -->

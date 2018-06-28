@@ -47,9 +47,6 @@ session_start();
       
 <header>
     <div class="container">
-        
-        
-        
                     <div class="row">
 
                 <div class="col-md-12" >
@@ -60,35 +57,25 @@ session_start();
                     </p> 
                     <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
                 </div>
- 
 </div>
         <br><br>
-        
              <div class="row">
                 <div class="col-sm-6 col-md-7">
                     <div class="thumbnail" style="background-color: black">
                         <img src="img/Index/trazo.jpg" alt="" height="500px" width="980px"/>
 
                     </div>
-                    
-                    
+          
                 </div>
                  <div class="col-sm-6 col-md-5">
                      <div class="thumbnail" style="background-color: black"><br><br><br>
                         
              <iframe width="450" height="300" src="https://www.youtube.com/embed/2dJUdcbWAJ8"
-                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br><br><br>
-
-                                
+                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br><br><br>                              
         </div>
 </div>
                  
-                 
-                 
-                 
-                 
-                 
-                 
+                         
                  
                   <div class="container">
         <div class="row">
