@@ -44,182 +44,168 @@ session_start();
 
         <?php $fun->menu();  ?> 
         <!-- Start home section -->
-        <div id="home">
-            <!-- Start cSlider -->
-            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-                <!-- mask elemet use for masking background image -->
-                <div class="mask"></div>
-                <!-- All slides centred in container element -->
-                <div class="container">
-                    <!-- Start first slide -->
-                    <div class="da-slide">
-                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                        <h4>Limpieza & Responsabilidad</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
-                        </div>
-                    </div>
-                    <!-- End first slide -->
-                    <!-- Start second slide -->
-                    <div class="da-slide">
-                        <h2>Easy management</h2>
-                        <h4>Easy to use</h4>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="img/Carousel/maquina.png" width="320" alt="image02">
-                        </div>
-                    </div>
-                    <!-- End second slide -->
-                    <!-- Start third slide -->
-                    <div class="da-slide">
-                        <h2>Revolution</h2>
-                        <h4>Customizable</h4>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="img/Carousel/hilos.png" width="320" alt="image03">
-                        </div>
-                    </div>
-                    <!-- Start third slide -->
-                    <!-- Start cSlide navigation arrows -->
-                    <div class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </div>
-                    <!-- End cSlide navigation arrows -->
-                </div>
-            </div>
-        </div>
+      
+<header>
+    <div class="container">
         
-        <br>
-    
         
-        <br><hr class="style13">
-
-
-        <div class="container">
-            <div class="row">
+        
+                    <div class="row">
 
                 <div class="col-md-12" >
                     <p style="text-align: center ; font-size: 50px; font-family: 'Oswald', sans-serif; ">Acerca de nosotros</p>     
 
                     <p style="font-size: 20px;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p> <br> <br>
-                    <button type="button" class="btn btn-info"><a href=""></a></button>
-<!--                    <div class="col-md-4 col-md-offset-2" >
-                        <img  class="col-md-offset-2" id="logo"width="250px" src="img/Index/mision1.png">
-                        <p style="text-align: center">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                        </p> <br>
-                    </div>
-                    <div class="col-md-4 ">
-                        <img class="col-md-offset-2" id="logo" width="250px" src="img/Index/Vision.png">
-                        <p style="text-align: center">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                        </p>
-                    </div>-->
-                    
+                    </p> 
+                    <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
                 </div>
-               
-                <div class="col-md-12">
-                    
-                    <br><br><br><br>
-                    <hr class="style13">
-            <p style="text-align: center ; font-size: 50px; font-family: 'Oswald', sans-serif; ">Conoce nuestras secciones</p> 
+ 
+</div>
+        <br><br>
         
-            <br>
+             <div class="row">
+                <div class="col-sm-6 col-md-7">
+                    <div class="thumbnail" style="background-color: black">
+                        <img src="img/Index/trazo.jpg" alt="" height="500px" width="980px"/>
+
+                    </div>
+                    
+                    
                 </div>
-                
+                 <div class="col-sm-6 col-md-5">
+                     <div class="thumbnail" style="background-color: black"><br><br><br>
+                        
+             <iframe width="450" height="300" src="https://www.youtube.com/embed/2dJUdcbWAJ8"
+                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br><br><br>
 
-
-<div class="col-lg-12 ima">
-         <div class="col-lg-6 col-sm-12">
-             <a href="servicios.php">
-        <div class="colorear zoom">
-            <img  class="  img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10">
-        </div></a><br>
-    </div>
-    
-    <div class="col-lg-6 col-sm-12">
-        <a href="catalogo.php">
-        <div class="colorear zoom">
-        <img  class="  img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10">
-        </div></a>
-    </div>
+                                
+        </div>
 </div>
-<br>
-<div class="col-lg-12 ima">
-         <div class="col-lg-6 col-sm-12">
-             <a href="bolsa.php">
-        <div class="colorear zoom">
-         <img  class="  img-responsive" src="img/Index/2.png" title="Foto10" alt="Foto10">
-        </div></a><br>
-    </div>
-    
-    <div class="col-lg-6 col-sm-12">
-        <a href="contact.php">
-        <div class="colorear zoom">
-        <img  class="  img-responsive" src="img/Index/3.png" title="Foto10" alt="Foto10">
-        </div></a>
-    </div>
-</div>
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                  <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Areas de la Empresa</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+        
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Recepcion de Area</h1>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Supervicion</h1>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Recursos Humanos</h1>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Area de Produccion</h1>
+              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+            </div>
+          </div>
+        </div>
+          
+           <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Gerencia de materiales</h1>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Bodega de Accesorios</h1>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Cuarto de Desperdicios</h1>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h1 class="mb-3">Mantenimiento</h1>
+              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+            </div>
+          </div>
+        </div>
+      </div><br><br><br>
+        
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                                  <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        
+                        <h1 style="text-align: center ; font-size: 50px; font-family: 'Oswald', sans-serif; ">Mision</h1>
+                                <p style="font-size: 20px;text-align: center;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>  
 
-
-</div><hr class="style13">
+                                
+        </div>
+</div>                     
+                 <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        
+                        <h1 style="text-align: center ; font-size: 50px; font-family: 'Oswald', sans-serif; ">Vision</h1>
+                                <p style="font-size: 20px;text-align: center;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>                         
+      </div>
+   </div>      
     </div>
-
-        <script src="js/jquery_1.js"></script>
-        <script type="text/javascript" src="js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="js/jquery.cslider.js"></script>
-        <!-- css3-mediaqueries.js for IE8 or older -->
-        <!--[if lt IE 9]>
-            <script src="js/respond.min.js"></script>
-        <![endif]-->
-        <script type="text/javascript" src="js/app.js"></script>
+        
+        
+        
+             
+        
+        
+         
+        </div>
 </body>
-<!--footer start from here-->
 
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/modals.js"></script>
-<script src="js/audio.js" ></script>
-
-<!-- Script to Activate the Carousel -->
-<script>  
-var $item = $('.carousel .item'); 
-var $wHeight = $(window).height();
-$item.eq(0).addClass('active');
-$item.height($wHeight); 
-$item.addClass('full-screen');
- 
-$('.carousel img').each(function() {
-  var $src = $(this).attr('src');
-  var $color = $(this).attr('data-color');
-  $(this).parent().css({
-    'background-image' : 'url(' + $src + ')',
-    'background-color' : $color
-  });
-  $(this).remove();
-});
- 
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
- 
-$('.carousel').carousel({
-  interval: 6000,
-  pause: "false"
-});
-</script>
 
   <?php $fun->footer();  ?>
  

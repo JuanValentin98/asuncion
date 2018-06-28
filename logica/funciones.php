@@ -17,7 +17,15 @@ class funciones {
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
      <nav class="navbar navbar-inverse back" id="button">
-  
+   <div class="container">
+        <h4 class="navbar-brand" style=" display: inline-block;
+  padding: 10px;
+  font-size: 30px;
+  color: #00aeff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; 
+  font-family: Shrikhand, cursive;">Confecciones la Asuncion</h4>
+        
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -31,7 +39,7 @@ class funciones {
       </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1" style="margin-left: 10px;margin-top: 130px;">
+    <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1" >
       <ul class="nav navbar-nav men">
             <li><a href="index.php">Inicio</a></li>
             
@@ -66,6 +74,7 @@ class funciones {
       
       
     </div><!-- /.navbar-collapse -->
+    </div>
     
 </nav>';
         // agrega el modal de seccion
