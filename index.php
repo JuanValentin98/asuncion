@@ -107,7 +107,7 @@ session_start();
 
                     <p style="font-size: 20px;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
                     </p> 
                     <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
 <!--                    <div class="col-md-4 col-md-offset-2" >
@@ -156,12 +156,12 @@ session_start();
     <div class="col-lg-6 col-sm-12">
         <a href="catalogo.php">
         <div class="colorear zoom">
-        <img  class="  img-responsive" src="img/Index/1.png" title="Foto10" alt="Foto10">
+            <img  class="  img-responsive" src="img/Index/4.png" title="Foto10" alt="Foto10">
         </div></a>
     </div>
 </div>
 <br>
-<div class="col-lg-12 ima">
+<div class="col-lg-12 ima"> 
          <div class="col-lg-6 col-sm-12">
              <a href="bolsa.php">
         <div class="colorear zoom">

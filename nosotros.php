@@ -55,8 +55,7 @@ session_start();
                     <p style="font-size: 20px;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p> 
-                    <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
-                </div>
+                  </div>
 </div>
         <br><br>
              <div class="row">
@@ -80,7 +79,7 @@ session_start();
                   <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Areas de la Empresa</h2>
+            <h1 class="section-heading">Areas de la Empresa</h1>
             <hr class="my-4">
           </div>
         </div>
@@ -90,30 +89,30 @@ session_start();
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Recepcion de Area</h1>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                <i><img src="img/Areas/recepcion.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Recepcion de Area</h2>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Supervicion</h1>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                <i><img src="img/Areas/supervision.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Supervicion</h2>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Recursos Humanos</h1>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                <i><img src="img/Areas/recursos.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Recursos Humanos</h2>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Area de Produccion</h1>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+                <i><img src="img/Areas/produccion.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Area de Produccion</h2>
+              <p class="text-muted mb-0">You have to make your websites with love these days!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
         </div>
@@ -121,30 +120,30 @@ session_start();
            <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Gerencia de materiales</h1>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                <i><img src="img/Areas/gerencia.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Gerencia de materiales</h2>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Bodega de Accesorios</h1>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                <i><img src="img/Areas/bodega.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Bodega de Accesorios</h2>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Cuarto de Desperdicios</h1>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                <i><img src="img/Areas/desperdicios.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Cuarto de Desperdicios</h2>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h1 class="mb-3">Mantenimiento</h1>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+                <i><img src="img/Areas/mantenimiento.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
+              <h2 class="mb-3">Mantenimiento</h2>
+              <p class="text-muted mb-0">You have to make your websites with love these days!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
         </div>
