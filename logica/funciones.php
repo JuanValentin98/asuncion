@@ -16,7 +16,7 @@ class funciones {
         $menu = '
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-     <nav class="navbar " id="button">
+     <nav class="navbar " id="button"style="background:-webkit-gradient(linear, 80% 20%, 25% 28%, from(#000F15), to(#A6AEAC))">
    <div class="container">
         
         
@@ -36,7 +36,7 @@ class funciones {
       </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse col-md-12 barra " id="bs-example-navbar-collapse-1" >
+    <div class="collapse navbar-collapse col-md-12 barra" id="bs-example-navbar-collapse-1"  >
       <ul class="nav navbar-nav men">
       <li><a href="index.php"><i class="fa fa-home"></i> Inicio</a></li>
     <li class="dropdown">
