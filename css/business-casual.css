@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
 
 .men {
-font-family: 'Arbutus Slab', serif;
+    font-family: 'Arbutus Slab', serif;
 
     font-size:15px;
 }
 .user {
-        padding-top:  10px;  
-        padding-bottom: 10px;
-        background-color: red;
+    padding-top:  10px;  
+    padding-bottom: 10px;
+    background-color: red;
 }
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #fff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    
 } 
 
 
@@ -25,12 +22,13 @@ h2,
 h3,
 h5,
 h6 {
+
     text-transform: uppercase;
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
-    
-   
+
+
 }
 
 .style13 {
@@ -38,6 +36,12 @@ h6 {
     height: 10px;
     border: 0;
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.style12 {
+    height: 50px;
+    padding: 30px;
+    background: #fff url(../img/divisor.png) ;
 }
 
 p {
@@ -49,7 +53,7 @@ p {
 }
 
 a {
-    color:white;
+    color:black;
 }
 
 hr {
@@ -94,28 +98,25 @@ hr {
     border-color: #999999;
 }
 
-/*.box {
+.box {
     margin-bottom: 20px;
-    border-radius: 20px;
     padding: 30px 15px;
-background-color: rgba(103, 186, 255, 0.4);
-    -moz-box-shadow: 6px 9px 20px #000000;
--webkit-box-shadow: 6px 9px 20px #000000;
-box-shadow: 6px 9px 20px #000000;    
+    box-shadow: 6px 9px 20px #000000;
+    background: #fff;
 }
 .box1 {
     margin-bottom: 20px;
     padding: 30px 50px;
     background: #fff;
     background: rgba(0, 7, 2, 0.5);
-}*/
+}
 
 .intro-text {
     text-transform: uppercase;
     font-size: 1.25em;
     font-weight: 400;
     letter-spacing: 1px;
-    
+
 }
 
 .img-border {
@@ -130,16 +131,16 @@ box-shadow: 6px 9px 20px #000000;
 }
 
 .footer {
-    background-color: #00aeff;
+    background-color: #202020;
 }
 
 .fiit {
-    background-color: #03567d;
+    background-color: #000;
     padding-bottom:15px;
     text-align: center;
-    
 
-    
+
+
 }
 
 .fiit1 {
@@ -149,7 +150,7 @@ box-shadow: 6px 9px 20px #000000;
     font-size: 20px;
     text-shadow:1px 2px 5px #000000;
 
-    
+
 }
 
 footer p {
@@ -158,27 +159,27 @@ footer p {
 }
 
 .img1 {
-   border-radius: 8px;
-   width: 80px;   
-   
-   } 
-   
+    border-radius: 8px;
+    width: 120px;   
+
+} 
+
 
 .back {
     background:  #000;
-   margin-bottom:  0px;
-   border: none;
-   padding-top:  10px;
+    margin-bottom:  0px;
+    border: none;
+    padding-top:  10px;
 
 }
-   
-  
+
+
 
 @media screen and (min-width:768px) {
     .brand {
         display: inherit;
         margin: 30px;
-       
+
         padding: 30px 0 10px;
         text-align: center;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -211,71 +212,85 @@ footer p {
         color: #fff;
     }
 
- 
-.u{
-    font-size:15px;
+
+    .u{
+        font-size:15px;
         letter-spacing: 2px;
-           
-}
 
-@media screen and (min-width:1200px) {
-    .box:after {
-        content: '';
-        display: table;
-        clear: both;
     }
-    .box1:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-}
- 
- #button li a:hover {
- background-color:#ffff;
- border-radius: 10px;
- color: black
- }
 
- 
- 
-.let{
-         color:red;
+    @media screen and (min-width:1200px) {
+        .box:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .box1:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
-    
-    
+
+    #button li a:hover {
+        background-color:#00c6c8;
+
+        color: black
+    }
+
+    #button li a{
+        color: #000;
+        font-size: 20px;
+    }
+
+    .barra {
+        padding-top: 20px;
+    }
+    .barra1 {
+        background-color:red;    
+    }
+
+    .let{
+        color:red;
+    }
+
+
     .title{
-    @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
-    font-family:'Encode Sans Condensed', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    
-    
-    letter-spacing: 1px;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    
-    
+        @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+        font-family:'Encode Sans Condensed', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        text-transform: uppercase;
+
+
+        letter-spacing: 1px;
+        color: white;
+        text-shadow: 2px 2px 4px black;
+
+
     }
-    
-   #logo {
-  transition: all 0.8s ease-in-out;
-}
-#logo:hover {
-  transform: rotate(-360deg);
+
+    #logo {
+        transition: all 0.8s ease-in-out;
+    }
+    #logo:hover {
+        transform: rotate(-360deg);
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1);
+
+    }
+
+    .ima {
+
+        padding: 10px;
+    }
+
 }
 
-.zoom:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1);
-    
-}
-
-.ima {
-    
-    padding: 10px;
-}
-
+#bs-example-navbar-collapse-1 {
+    background-color: white;
 }

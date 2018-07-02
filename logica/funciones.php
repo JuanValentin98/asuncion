@@ -16,45 +16,40 @@ class funciones {
         $menu = '
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-     <nav class="navbar navbar-inverse back" id="button">
+     <nav class="navbar " id="button">
    <div class="container">
-        <h4 class="navbar-brand" style=" display: inline-block;
-  padding: 10px;
-  font-size: 30px;
-  color: #00aeff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; 
-  font-family: Shrikhand, cursive;">Confecciones la Asuncion</h4>
+        
         
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle collapsed barra1" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="background-color:black;" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar" style="background-color:#fff;"></span>
+        <span class="icon-bar" style="background-color:#fff;"></span>
+        <span class="icon-bar" style="background-color:#fff;"></span>
       </button>
-
+       
+    
+    <img class="img1" src="img/Carousel/logoasuncion.png" alt="">
+       
         
       </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse col-md-7 col-md-offset-3 " id="bs-example-navbar-collapse-1" >
+    <div class="collapse navbar-collapse col-md-12 barra " id="bs-example-navbar-collapse-1" >
       <ul class="nav navbar-nav men">
-            <li><a href="index.php">Inicio</a></li>
-            
+      <li><a href="index.php"><i class="fa fa-home"></i> Inicio</a></li>
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Servicios<span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-cog"></i> Servicios<span class="caret"></span></a>
         <ul class="dropdown-menu">
         <li><a href="servicios.php">Elaboración</a></li>
         <li><a href="catalogo.php">Catalogo</a></li>
         <li><a href="bolsa.php">Bolsa de Trabajo</a></li>
         </ul>
     </li>
-            <li><a href="nosotros.php">Nosotros</a></li>
-            <li><a href="contact.php">Contacto</a></li>
+            <li><a href="nosotros.php" ><i class="fa fa-exclamation-circle"></i> Nosotros</a></li>
             <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Administrador<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user"></i> Administrador<span class="caret"></span></a>
     <ul class="dropdown-menu">';
         // condicion de que exista una variable de sesion
         if (isset($_SESSION['usuario'])) {
@@ -123,7 +118,7 @@ class funciones {
     //muestra el mismo footer
 
 
-  
+
 
     public function footer() {
         echo'<footer>
