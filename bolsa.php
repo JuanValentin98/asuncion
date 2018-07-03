@@ -22,6 +22,11 @@ session_start();
   <!-- Custom CSS -->
   <link href="css/business-casual.css" rel="stylesheet">
   <link href="css/Style.css" rel="stylesheet">
+         <!-- Boton arriba -->
+        <link rel="stylesheet" href="Up/fonts.css" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link href="css/Up.css" rel="stylesheet">
+        <script src="Up/arriba.js"></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -40,7 +45,7 @@ session_start();
 </head>
 
 <body>
-
+ <span class="ir-arriba icon-circle-up"></span>
 
   <?php $fun->menu(); ?>
 

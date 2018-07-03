@@ -14,24 +14,27 @@ session_start();
 
         <title>Confecciones La Asunción S.A DE C.V</title>
         <!-- Load Roboto font --> 
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
         <!-- Load css styles -->
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
-        <!--[if IE 7]>
-            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
-        <![endif]-->
         <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+        <link rel="stylesheet" href="Up/fonts.css" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
         <!-- Custom CSS -->
         <link href="css/business-casual.css" rel="stylesheet">
         <link href="css/Style.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/CaroAsun.css" type="text/css"/>
+        <!-- Boton arriba -->
+        <link href="css/Up.css" rel="stylesheet">
+        <script src="Up/arriba.js"></script>
+
 
 
         <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
         <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -40,7 +43,7 @@ session_start();
         <!--  codigo de play sin botones :  <audio src="music/lilly wood" autoplay="true" loop="true"></audio> -->
     </head>
     <body>
-
+        <span class="ir-arriba icon-circle-up"></span>
 
         <?php $fun->menu(); ?> 
         <!-- Start home section -->
@@ -102,7 +105,7 @@ session_start();
             <div class="row">
                 <div class="box">
                     <div class="col-md-12" >
-                        
+
                         <h2 class="brand-before text-center">
                             Bienvenidos a 
                         </h2>
@@ -225,7 +228,7 @@ session_start();
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modals.js"></script>
-    <script src="js/audio.js" ></script>
+
 
     <!-- Script to Activate the Carousel -->
     <script>

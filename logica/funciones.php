@@ -16,13 +16,13 @@ class funciones {
         $menu = '
     <!-- Navigation -->
      <SCRIPT LANGUAGE="JavaScript">var txt="CONFECCIONES LA ASUNCION SA DE CV   ";var espera=140;var refresco=null;function rotulo_title() {document.title=txt;txt=txt.substring(1,txt.length)+txt.charAt(0);refresco=setTimeout("rotulo_title()",espera);}rotulo_title();</script>
-     <nav class="navbar " id="button"style="background:-webkit-gradient(linear, 80% 20%, 25% 28%, from(#000F15), to(#A6AEAC))">
+     <nav class="barras" id="button" >
    <div class="container">
         
         
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header ">
-      <button type="button" class="navbar-toggle collapsed barra1" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="background-color:black;" aria-expanded="false">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="background-color:black;" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar" style="background-color:#fff;"></span>
         <span class="icon-bar" style="background-color:#fff;"></span>
