@@ -1,53 +1,153 @@
-h3 {
+/*
+* The function calc is working wrong in case calculations in the Firefox
+*/
+
+.photobox{
   display: inline-block;
-  padding: 10px;
-  font-size: 70px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  font-family: 'Shrikhand', cursive;
-
-}
- 
-.full-screen {
-  background-size: cover;
-  background-position: center;  
 }
 
-.cas{
-    margin-bottom: 180px;    
+.photobox__previewbox{
+  position: relative;
+  overflow: hidden;
 }
 
-
-.colorear {
-position: relative;
-/* Estas dos propiedades sólo sirven para centrar */
-display: table;
-margin:0 auto;
-}
-/* Y esta para evitar el margin automático de Blogger en los enlaces */
-
-.colorear:before {
-content: "";
-display: block;
-position: absolute;
-/* Todas las posiciones a cero */
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: rgba(11, 12, 19, 0.6);
-
+.photobox__preview{
+  display: block;
+  max-width: 100%;
 }
 
-.colorear1:before {
-content: "";
-display: block;
+.photobox__previewbox:before{
+  content: "";
+}
 
-/* Todas las posiciones a cero */
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: rgba(11, 12, 19, 0.6);
+/* type 1 */
 
+
+.photobox_type22 .photobox__preview{
+	transition: transform var(--photoboxAnimationDuration, .4s) cubic-bezier(0.71, 0.05, 0.29, 0.9);
+  will-change: transform;
+	transform: scale(1);
+}
+
+.photobox_type22:hover .photobox__preview{
+  transform: scale(1.2);
+}
+
+.photobox_type22 .photobox__previewbox:before{
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0;
+  background-color: var(--photoboxOverlay, rgba(0, 0, 0, .8));
+  clip-path: polygon(50% 10%, 15% 90%, 85% 90%);
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  
+  transition: transform calc(var(--photoboxAnimationDuration, .4s) / 2) ease-out,   opacity calc(var(--photoboxAnimationDuration, .4s) / 2) ease-out;
+  will-change: transform;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.photobox_type22:hover .photobox__previewbox:before{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(7);
+  transition-delay: calc(var(--photoboxAnimationDuration, .4s) / 2), 0s;
+  transition-duration: var(--photoboxAnimationDuration, .4s);
+}
+
+.photobox_type22 .photobox__label{
+  width: 95%;
+  text-align: center;
+  
+  opacity: 0;  
+  transition: opacity calc(var(--photoboxAnimationDuration, .4s) / 4) cubic-bezier(0.71, 0.05, 0.29, 0.9);
+  will-change: opacity;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.photobox_type22:hover .photobox__label{
+  opacity: 1;
+  transition-duration: var(--photoboxAnimationDuration, .4s);
+  transition-delay: var(--photoboxAnimationDuration, .4s);
+}
+
+.photobox{
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 33.33333%;
+  --photoboxOverlay: rgba(72, 27, 174, .7);
+  /*--photoboxAnimationDuration: .5s;*/
+}
+
+@media screen and (max-width: 480px){
+  .photobox{
+    width: 100%;
+  }
+}
+
+/*
+* demo page
+*/
+
+@media screen and (min-width: 768px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;   
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:focus{
+  text-decoration: underline;
+}
+
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page__demo{
+  flex-grow: 1;
+}
+
+.page__container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.main-container{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

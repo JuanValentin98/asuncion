@@ -16,6 +16,7 @@ session_start();
         <!-- Load Roboto font -->
        
         <!-- Load css styles -->
+        <link href="css/Up.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />      
         
         
@@ -28,7 +29,7 @@ session_start();
                         <!-- Boton arriba -->
         <link rel="stylesheet" href="Up/fonts.css" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <link href="css/Up.css" rel="stylesheet">
+        
         <script src="Up/arriba.js"></script>
         
         <!-- Fonts -->
