@@ -6,6 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="img/A.ico" type="imagen/x-icon" rel="shortcut icon" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,9 +92,10 @@ session_start();
                     </div>
                 </div>
          
-        <!--        SEPARADOR-->
+<br>
+        <!--SEPARADOR-->
         <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
-        <!--        SEPARADOR-->
+        <!--        SEPARADOR--><br>
         <div class="container">
             <div class="row">
                 <div class="box">
@@ -108,7 +110,12 @@ session_start();
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     <!-- <<<<<<< HEAD -->
                         </p> 
-                        <button type="button" class="btn btn-info"><a href="nosotros.php">Leer más </a></button>
+
+                         <div id="separar">
+  
+            <a href="nosotros.php" style="text-decoration: none;"><span class="boton3">Leer Más</span></a>
+            
+  </div> 
                         <!--                    <div class="col-md-4 col-md-offset-2" >
                                                 <img  class="col-md-offset-2" id="logo"width="250px" src="img/Index/mision1.png">
                         =======
@@ -133,9 +140,10 @@ session_start();
 
                     </div>
                 </div>
-                <!--        SEPARADOR-->
-                <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
-                <!--        SEPARADOR-->
+                <br>
+        <!--SEPARADOR-->
+        <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
+        <!--        SEPARADOR--><br>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="box">
@@ -225,35 +233,7 @@ session_start();
 
 
     <!-- Script to Activate the Carousel -->
-    <script>
-        var $item = $('.carousel .item');
-        var $wHeight = $(window).height();
-        $item.eq(0).addClass('active');
-        $item.height($wHeight);
-        $item.addClass('full-screen');
-
-        $('.carousel img').each(function () {
-            var $src = $(this).attr('src');
-            var $color = $(this).attr('data-color');
-            $(this).parent().css({
-                'background-image': 'url(' + $src + ')',
-                'background-color': $color
-            });
-            $(this).remove();
-        });
-
-        $(window).on('resize', function () {
-            $wHeight = $(window).height();
-            $item.height($wHeight);
-        });
-
-        $('.carousel').carousel({
-            interval: 6000,
-            pause: "false"
-        });
-    </script>
-
-    <?php $fun->footer(); ?>
+   <?php $fun->footer(); ?>
 
 
 

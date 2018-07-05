@@ -46,56 +46,58 @@ session_start();
 
         <?php $fun->menu(); ?>
 
-        <!--        SEPARADOR-->
+        <br>
+        <!--SEPARADOR-->
         <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
         <!--        SEPARADOR-->
         <div class="text-center">
             <h1 class="section-heading">Nuestros servicios</h1>
         </div>
-        
+        <br>
         <div class="container">
             <div class="row">
-                
+
                 <div class="box">
                     <div class="col-md-12">
                         <div class="col-sm-12">
                             <hr><h3 class="text-center">DISEÑO Y PATRONAJE</h3><hr>
-                        </div>
-                        
-                        <div class="col-sm-4 ">
-                            <ul class="demo-3">
-                                <li><figure>
-                                        <img class="img-responsive" src="img/Servicios/patronaje.jpg"  alt=""/>
-                                        <figcaption>
-                                            <h2 style="text-align: center">Patronaje</h2>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 ">
-                            <ul class="demo-3">
-                                <li><figure>
-                                        <img class="img-responsive" src="img/Servicios/fichas.png"  alt=""/>
-                                        <figcaption>
-                                            <h2 style="text-align: center">Fichas técnicas</h2>
-                                        </figcaption>
-                                    </figure></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 ">
-                            <ul class="demo-3">
-                                <li><figure>
-                                        <img class="img-responsive" src="img/Servicios/muestras.jpg"  alt=""/>
-                                        <figcaption>
-                                            <h2 style="text-align: center">Elaboración de muestras</h2>
-                                        </figcaption>
-                                    </figure></li>
-                            </ul>
+
+
+                            <div class="col-sm-4 ">
+                                <ul class="demo-3">
+                                    <li><figure>
+                                            <img class="img-responsive" src="img/Servicios/patronaje.jpg"  alt=""/>
+                                            <figcaption>
+                                                <h2 style="text-align: center">Patronaje</h2>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 ">
+                                <ul class="demo-3">
+                                    <li><figure>
+                                            <img class="img-responsive" src="img/Servicios/fichas.png"  alt=""/>
+                                            <figcaption>
+                                                <h2 style="text-align: center">Fichas técnicas</h2>
+                                            </figcaption>
+                                        </figure></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 ">
+                                <ul class="demo-3">
+                                    <li><figure>
+                                            <img class="img-responsive" src="img/Servicios/muestras.jpg"  alt=""/>
+                                            <figcaption>
+                                                <h2 style="text-align: center">Elaboración de muestras</h2>
+                                            </figcaption>
+                                        </figure></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="box">
                     <div class="col-md-12">
                         <div class="col-sm-12">
@@ -123,13 +125,13 @@ session_start();
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="box">
                     <div class="col-md-12">
                         <div class="col-sm-12">
                             <hr><h3 class="text-center">TRAZO</h3><hr>
                         </div>
-                        
+
                         <div class="col-sm-4 ">
                             <ul class="demo-3">
                                 <li><figure>
@@ -162,13 +164,13 @@ session_start();
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="box">
                     <div class="col-md-12">
                         <div class="col-sm-12">
                             <hr><h3 class="text-center">CORTE Y FOLEO</h3><hr>
                         </div>
-                        
+
                         <div class="col-md-4 col-md-offset-2 ">
                             <ul class="demo-3">
                                 <li><figure>
@@ -189,12 +191,12 @@ session_start();
                                     </figure></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
 
-                
-                
+
+
 
 
             </div>
@@ -211,8 +213,7 @@ session_start();
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modals.js"></script>
-    <script src="js/audio.js" ></script>
-
+   
 
 
     <?php $fun->footer(); ?>

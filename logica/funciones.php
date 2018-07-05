@@ -135,8 +135,8 @@ class funciones {
     </ul> 
     </div>
     
-    <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;">
-    <hr class="hr1">
+    <div class="col-xs-12" style="text-align:center; text-shadow:1px 2px 5px #000000;"><br>
+    <hr class="hr1" style="margin: 0 auto;">
     <h2 style="word-spacing: 5px;">VISITA NUESTRAS INSTALACIONES</h2>
    
  

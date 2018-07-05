@@ -55,9 +55,10 @@ session_start();
         <?php $fun->menu(); ?>
         <!-- /.navbar-collapse -->
 
-        <!--        SEPARADOR-->
+        <br>
+        <!--SEPARADOR-->
         <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
-        <!--        SEPARADOR-->
+        <!--        SEPARADOR--><br>
 
         <div class="wrap">
             

@@ -99,7 +99,7 @@ session_start();
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box mt-5 mx-auto">
                             <i><img src="img/Areas/supervision.jpg" alt="HTML5 Icon" style="width:270px;height:180px;"></i>
-                            <h2 class="mb-3">Supervicion</h2>
+                            <h2 class="mb-3">Supervisión</h2>
                             <p class="text-muted mb-0">You can use this theme as is, or you can make changes!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>

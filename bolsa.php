@@ -48,9 +48,10 @@ session_start();
  <span class="ir-arriba icon-circle-up"></span>
 
   <?php $fun->menu(); ?>
-         <!--        SEPARADOR-->
+         <br>
+        <!--SEPARADOR-->
         <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
-        <!--        SEPARADOR-->
+        <!--        SEPARADOR--><br>
 
   <div class="container">
 
