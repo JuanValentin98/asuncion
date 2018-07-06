@@ -20,7 +20,8 @@ session_start();
 
         <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
         <link rel="stylesheet" href="Up/fonts.css" />
-        <link rel="stylesheet" href="css/CaroAsun.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/jquery.cslider.css" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
 
         <!-- Bootstrap Core CSS -->
@@ -46,53 +47,101 @@ session_start();
     </head>
     <body>
         <span class="ir-arriba icon-circle-up"></span>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img class="slide" class="img-responsive"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"  alt="" />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"  />
+                </div>
+                <div class="slide">
+                    <img class="slide" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" />
+                </div>
+            </div>
+        </div>
+
+
 
         <?php $fun->menu(); ?> 
         <!-- Start home section -->
-                <div id="home" >
-                     
-                    <div id="da-slider" class="da-slider">
-                        <div class="triangle"></div>
-                      
-                        <div class="mask"></div>
-                         
-                        <div class="container">
-                            
-                            <div class="da-slide">
-                                <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                                <h4>Limpieza & Responsabilidad</h4>
-                                <div class="da-img">
-                                    <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
-                                </div>
-                            </div>
-                              
-                            <div class="da-slide">
-                                <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                                <h4>Limpieza & Responsabilidad</h4>
-                                <div class="da-img">
-                                    <img src="img/Carousel/sli1.jpg" width="320" alt="image02">
-                                </div>
-                            </div>
-                              
-                            <div class="da-slide">
-                                <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                                <h4>Limpieza & Responsabilidad</h4>                    
-                                <div class="da-img">
-                                    <img src="img/Carousel/sli2.jpg" width="320" alt="image03">
-                                </div>
-                                
-                            </div>
-                             
-                            <div class="da-arrows">
-                                <span class="da-arrows-prev"></span>
-                                <span class="da-arrows-next"></span>
-                            </div>
-                             
+        <div id="home" >
+
+            <div id="da-slider" class="da-slider">
+                <div class="triangle"></div>
+
+                <div class="mask"></div>
+
+                <div class="container">
+
+                    <div class="da-slide">
+                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
+                        <h4>Limpieza & Responsabilidad</h4>
+                        <div class="da-img">
+                            <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
                         </div>
                     </div>
+
+                    <div class="da-slide">
+                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
+                        <h4>Limpieza & Responsabilidad</h4>
+                        <div class="da-img">
+                            <img src="img/Carousel/sli1.jpg" width="320" alt="image02">
+                        </div>
+                    </div>
+
+                    <div class="da-slide">
+                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
+                        <h4>Limpieza & Responsabilidad</h4>                    
+                        <div class="da-img">
+                            <img src="img/Carousel/sli2.jpg" width="320" alt="image03">
+                        </div>
+
+                    </div>
+
+                    <div class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
+                    </div>
+
                 </div>
-         
-<br>
+            </div>
+        </div>
+
+        <br>
         <!--SEPARADOR-->
         <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
         <!--        SEPARADOR--><br>
@@ -111,11 +160,11 @@ session_start();
     <!-- <<<<<<< HEAD -->
                         </p> 
 
-                         <div id="separar">
-  
-            <a href="nosotros.php" style="text-decoration: none;"><span class="boton3">Leer Más</span></a>
-            
-  </div> 
+                        <div id="separar">
+
+                            <a href="nosotros.php" style="text-decoration: none;"><span class="boton3">Leer Más</span></a>
+
+                        </div> 
                         <!--                    <div class="col-md-4 col-md-offset-2" >
                                                 <img  class="col-md-offset-2" id="logo"width="250px" src="img/Index/mision1.png">
                         =======
@@ -141,9 +190,9 @@ session_start();
                     </div>
                 </div>
                 <br>
-        <!--SEPARADOR-->
-        <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
-        <!--        SEPARADOR--><br>
+                <!--SEPARADOR-->
+                <img class="img-responsive" src="img/div.png" style="opacity: 0.2; margin: 0 auto; " />
+                <!--        SEPARADOR--><br>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="box">
@@ -233,7 +282,7 @@ session_start();
 
 
     <!-- Script to Activate the Carousel -->
-   <?php $fun->footer(); ?>
+    <?php $fun->footer(); ?>
 
 
 
