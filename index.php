@@ -17,25 +17,22 @@ session_start();
         <!-- Load Roboto font --> 
 
         <!-- Load css styles -->
-
-        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
-        <link rel="stylesheet" href="Up/fonts.css" />
+         <link href="css/Up.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
         <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/jquery.cslider.css" />
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+        
         <!-- Custom CSS -->
         <link href="css/business-casual.css" rel="stylesheet">
         <link href="css/Style.css" rel="stylesheet">
         <!-- Boton arriba -->
-        <link href="css/Up.css" rel="stylesheet">
+       <link rel="stylesheet" href="Up/fonts.css" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        
         <script src="Up/arriba.js"></script>
-
-
-
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -44,9 +41,27 @@ session_start();
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Teko" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
         <!--  codigo de play sin botones :  <audio src="music/lilly wood" autoplay="true" loop="true"></audio> -->
+        
+        <style>
+            h3{
+                text-shadow:0px 0px 5px #ffffff;
+            }    
+            .item{
+                width: 1500px;
+                height: 300px;
+                margin: 0 auto;
+                
+            }
+            .item p{
+            text-shadow:0px 0px 5px #000;
+            }
+            
+        </style>
     </head>
     <body>
+        
         <span class="ir-arriba icon-circle-up"></span>
+        
         <div class="slider">
             <div class="slide-track">
                 <div class="slide">
@@ -94,52 +109,67 @@ session_start();
             </div>
         </div>
 
+        <?php $fun->menu(); ?>
+        </div>
+        <!-- Start home section --><br>
+        <div class="col-sm-12">
+            <div class="box img-rounded">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators img-circle">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
 
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner ">
 
-        <?php $fun->menu(); ?> 
-        <!-- Start home section -->
-        <div id="home" >
-
-            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-
-                <div class="mask"></div>
-
-                <div class="container">
-
-                    <div class="da-slide">
-                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                        <h4>Limpieza & Responsabilidad</h4>
-                        <div class="da-img">
-                            <img src="img/Carousel/logoasuncion.png" alt="image01" width="320">
-                        </div>
-                    </div>
-
-                    <div class="da-slide">
-                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                        <h4>Limpieza & Responsabilidad</h4>
-                        <div class="da-img">
-                            <img src="img/Carousel/sli1.jpg" width="320" alt="image02">
-                        </div>
-                    </div>
-
-                    <div class="da-slide">
-                        <h2 class="fittext2">Confecciones Asuncion SA DE CV</h2>
-                        <h4>Limpieza & Responsabilidad</h4>                    
-                        <div class="da-img">
-                            <img src="img/Carousel/sli2.jpg" width="320" alt="image03">
+                        <div class="item active img-responsive">
+                            <img src="img/estampado.jpg" alt="Los Angeles">
+                            <div class="carousel-caption ">
+                                <h3 >
+                                    Madre Teresa de Calcuta.
+                                </h3>
+                                <hr class="hr1">
+                                <p>“Yo hago lo que tú no puedes, y tú haces lo que yo no puedo. Juntos podemos hacer grandes cosas"</p>
+                            </div>
                         </div>
 
+                        <div class="item">
+                            <img src="img/sl2.jpg" alt="Chicago" style="width:100%;">
+                            <div class="carousel-caption">
+                                <h3> Vince Lombardi.</h3>
+                                <hr class="hr1">
+                                <p>“Los logros de una organización son los resultados del esfuerzo combinado de cada individuo”</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/sl1.jpg" alt="New York" style="width:100%;">
+                            <div class="carousel-caption">
+                                <h3>Ray Kroc.</h3>
+                                <hr class="hr1">
+                                <p>“Ninguno de nosotros es tan bueno como todos nosotros juntos”</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </div>
-
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
+
+
 
         <br>
         <!--SEPARADOR-->
@@ -261,19 +291,10 @@ session_start();
         </div>
 
 
-        <script src="js/jquery_1.js"></script>
-        <script type="text/javascript" src="js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="js/jquery.cslider.js"></script>
-        <!-- css3-mediaqueries.js for IE8 or older -->
-        <!--[if lt IE 9]>
-            <script src="js/respond.min.js"></script>
-        <![endif]-->
-        <script type="text/javascript" src="js/app.js"></script>
+        
     </body>
     <!--footer start from here-->
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="car.js"></script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
